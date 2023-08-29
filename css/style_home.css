@@ -460,6 +460,11 @@ div#comparison {
     #promotion > img {
         height: 120px;
     }
+
+    .description-month-comparison {
+        margin: 10px 0;
+        font-size: .9rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -529,6 +534,10 @@ div#comparison {
     }
 
     .text-promotion {
+        font-size: .8rem;
+    }
+
+    .description-month-comparison {
         font-size: .8rem;
     }
 
