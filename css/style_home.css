@@ -45,8 +45,8 @@ div.first-data {
     margin-right: 10px;
 }
 
-.color-balance {
-    background-color: rgb(70, 70, 70);
+.color-transfers {
+    background-color: var(--transfers-color);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -114,6 +114,15 @@ div.first-data {
 
 #btn-investments:hover {
     background-color: var(--investments-color);
+    color: var(--white-color);   
+}
+
+#btn-transfers {
+    border: 2px solid var(--transfers-color);    
+}
+
+#btn-transfers:hover {
+    background-color: var(--transfers-color);
     color: var(--white-color);   
 }
 
