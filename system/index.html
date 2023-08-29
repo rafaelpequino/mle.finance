@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu gerenciador - MLE finance</title>
+    <!--ESTILO PRINCIPAL SISTEMA-->
+    <link rel="stylesheet" href="../css/style_system.css">
+    <!--ESTILO HOME DO SISTEMA-->
+    <link rel="stylesheet" href="../css/style_home.css">
+    <!--SCRIPT PRINCIPAL SISTEMA-->
+    <script src="../js/script_sytem.js" defer></script>
+    <!--SCRIPT HOME DO SISTEMA-->
+    <script src="../js/script_home.js" defer></script>
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="first-logo">
+            <img src="../img/logo_MLEfinance.png" alt="Logo MLE finance">
+        </div><!--FIM FIRST-LOGO-->
+
+        <div class="user-space">
+            <i class="fa-regular fa-eye-slash" id="privacy-eye"></i><!--ÍCONE OLHO DE PRIVACIDADE-->
+            <div class="user-info">
+                <i class="fa-solid fa-circle-user" id="icon-user-photo"></i><!--ÍCONE FOTO DE USUÁRIO-->
+                <h5 id="user-name">Rafael Freire</h5><!--NOME DE USUÁRIO-->
+                <i class="fa-solid fa-chevron-down" id="dropdown-icon"></i><!--ÍCONE SETA PARA BAIXO-->
+            </div><!--FIM USER-INFO-->
+            <div id="open-close-sidebar" class="btn-sidebar-close">
+                <div class="feature"></div>
+                <div class="feature"></div>
+                <div class="feature"></div>
+            </div>
+        </div><!--FIM USER-->
+
+    </header><!--FIM HEADER-->
+
+    <main class="main">
+        <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
+            <div id="links-sidebar">
+                <a href="#" class="active link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-house-chimney"></i></div><!--ÍCONE HOME-->
+                    <span class="name-sidebar">Home</span>
+                </a><!--LINK SIDEBAR ATIVO-->
+                <a href="#" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-bullseye"></i></div><!--ÍCONE METAS-->
+                    <span class="name-sidebar">Metas</span>
+                </a><!--LINK SIDEBAR-->
+                <a href="#" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-dollar-sign"></i></div><!--ÍCONE DÍVIDAS-->
+                    <span class="name-sidebar">Dívidas</span>
+                </a><!--LINK SIDEBAR-->
+                <a href="#" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-chart-simple"></i></div><!--ÍCONE INVESTIMENTOS-->
+                    <span class="name-sidebar">Investimentos</span>
+                </a><!--LINK SIDEBAR-->
+                <a href="#" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-pencil"></i></i></div><!--ÍCONE CATEGORIAS-->
+                    <span class="name-sidebar">Categorias</span>
+                </a><!--LINK SIDEBAR-->
+                <hr class="hr-sidebar">
+                <a href="#" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-square-poll-horizontal"></i></div><!--ÍCONE RELATÓRIOS-->
+                    <span class="name-sidebar">Relatórios</span>
+                </a><!--LINK SIDEBAR-->
+                <hr class="hr-sidebar">
+                <a href="#" class="link-sidebar link-logout">
+                    <div class="icon"><i class="fa-solid fa-right-from-bracket"></i></div><!--ÍCONE SAIR-->
+                    <span class="name-sidebar">Sair</span>
+                </a><!--LINK SIDEBAR-->
+            </div>
+
+        </nav><!--FIM SIDEBAR-->
+
+        <div class="container">
+            <div class="first-data box">
+                <div class="data-box" id="revenues">
+                    <div class="title-data-box">
+                        <div class="color-revenues"></div>
+                        <span>Receitas</span>
+                    </div><!--FIM TITLE-DATA-BOX-->
+
+                    <div class="value-data-box">
+                        <div class="first-value">
+                            <span>R$</span>10.000,00
+                        </div>
+                        <div class="second-value">
+                            de R$20.000,00
+                        </div>
+                    </div><!--FIM VALUE-DATA-BOX-->
+                    <button type="button" class="btn-new" id="btn-revenues">Nova receita</button>
+                </div><!--FIM DATA-BOX REVENUES-->
+
+                <div class="data-box" id="expenses">
+                    <div class="title-data-box">
+                        <div class="color-expenses"></div>
+                        <span>Despesas</span>
+                    </div><!--FIM TITLE-DATA-BOX-->
+
+                    <div class="value-data-box">
+                        <div class="first-value">
+                            <span>R$</span>8.000,00
+                        </div>
+                        <div class="second-value">
+                            de R$15.000,00
+                        </div>
+                    </div><!--FIM VALUE-DATA-BOX-->
+                    <button type="button" class="btn-new" id="btn-expenses">Nova receita</button>
+                </div><!--FIM DATA-BOX EXPENSES-->
+
+                <div class="data-box" id="investments">
+                    <div class="title-data-box">
+                        <div class="color-investments"></div>
+                        <span>Investimentos</span>
+                    </div><!--FIM TITLE-DATA-BOX-->
+
+                    <div class="value-data-box">
+                        <div class="first-value">
+                            <span>R$</span>30.000,00
+                        </div>
+                        <div class="second-value">
+                            <a href="#">ver detalhes</a>
+                        </div>
+                    </div><!--FIM VALUE-DATA-BOX-->
+                    <button type="button" class="btn-new" id="btn-investments">Novo investimento</button>
+                </div><!--FIM DATA-BOX INVESTMENTS-->
+
+                <div class="data-box" id="balance">
+                    <div class="title-data-box">
+                        <div class="color-balance"></div>
+                        <span>Saldo atual</span>
+                    </div><!--FIM TITLE-DATA-BOX-->
+
+                    <div class="value-data-box">
+                        <div class="first-value balance-value">
+                            <span>R$</span>2.000,00
+                        </div>
+                    </div><!--FIM VALUE-DATA-BOX-->
+                </div><!--FIM DATA-BOX BALANCE-->
+
+            </div><!--FIM FIRST-DATA-->
+
+            <div class="columns-data">
+                <div class="column-left-3">
+                    <div class="box" id="accounts">
+                        <h5>Minha carteira</h5>
+                        <div href="" id="total-balance">
+                            <div class="data-balance">
+                                <div class="color-balance"></div>
+                                <div class="info-balance">
+                                    <div id="title-balance">Saldo total</div>
+                                    <h3 id="balance">R$1.700,00</h3>
+                                </div>
+                            </div>
+                            <div class="see-balance">
+                                <a href="">Ver transações</a>
+                            </div>
+
+                        </div>
+
+                        <a href="" class="account" id="inter">
+                            <div class="info-account">
+                                <div class="color-account"></div>
+                                <div class="data-account">
+                                    <div class="title-data-account">Banco inter</div>
+                                    <div class="subtitle-data-account">Conta corrente</div>
+                                </div>
+                            </div>
+                            <div class="value-account">
+                                1000000
+                            </div>
+                        </a>
+
+                        <a href="" class="account" id="nubank">
+                            <div class="info-account">
+                                <div class="color-account"></div>
+                                <div class="data-account">
+                                    <div class="title-data-account">Nubank</div>
+                                    <div class="subtitle-data-account">Conta corrente</div>
+                                </div>
+                            </div>
+                            <div class="value-account">
+                                1200
+                            </div>
+                        </a>
+                    </div>
+                </div><!--FIM COLUMN-LEFT-->
+                
+                <div class="column-center-3">
+                    <div class="box"></div>
+                    
+                </div><!--FIM COLUMN-CENTER-->
+                
+                <div class="column-right-3">
+                    <div class="box"></div>
+                
+                </div><!--FIM COLUMN-RIGHT-->
+            </div>
+
+
+
+        </div><!--FIM CONTAINER-->
+
+    </main><!--FIM MAIN-->
+    
+
+</body>
+</html>

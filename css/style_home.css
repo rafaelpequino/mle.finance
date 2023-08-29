@@ -1,0 +1,325 @@
+
+div.first-data {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 7px;
+}
+
+.data-box {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.data-box:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.150);
+}
+
+.title-data-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.color-revenues {
+    background-color: var(--first-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.color-expenses {
+    background-color: var(--expenses-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.color-investments {
+    background-color: var(--investments-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.color-balance {
+    background-color: rgb(70, 70, 70);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.first-value {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.first-value > span {
+    font-size: .9rem;
+    opacity: .7;
+}
+
+.balance-value {
+    font-weight: bold;
+}
+
+.second-value {
+    font-size: .9rem;
+    opacity: .7;
+    text-align: center;
+}
+
+.second-value > a {
+    color: #000;
+}
+
+.btn-new {
+    text-decoration: none;
+    display: block;
+    width: 150px;
+    margin: 15px auto 5px;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 20px;
+    transition: .3s;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+#btn-revenues {
+    border: 2px solid var(--first-color);
+}
+
+#btn-revenues:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+
+#btn-expenses {
+    border: 2px solid var(--expenses-color);    
+}
+
+#btn-expenses:hover {
+    background-color: var(--expenses-color);
+    color: var(--white-color);   
+}
+
+#btn-investments {
+    border: 2px solid var(--investments-color);    
+}
+
+#btn-investments:hover {
+    background-color: var(--investments-color);
+    color: var(--white-color);   
+}
+
+.columns-data {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+}
+
+.column-left-3 {
+    padding-right: 10px;
+    width: 100%;
+}
+
+.column-center-3 {
+    padding: 0 10px;
+    width: 100%;
+}
+
+.column-right-3 {
+    padding-left: 10px;
+    width: 100%;
+}
+
+#total-balance {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+}
+
+.color-balance {
+    background-color: var(--second-color);
+    width: 4px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.data-balance {
+    display: flex;
+}
+
+.see-balance > a {
+    color: #000;
+    font-size: .9rem;
+}
+
+a.account {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #000;
+    margin: 30px 0;
+}
+
+.info-account {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#inter > div > .color-account {
+    background-color: orange;
+}
+
+#nubank > div > .color-account {
+    background-color: rgb(174, 0, 255);
+}
+
+#total > div > .color-account {
+    background-color: rgb(46, 46, 46);
+}
+
+.color-account {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0; 
+}
+
+.data-account {
+    overflow-x: hidden;
+}
+
+.title-data-account {
+    font-size: 1rem;
+    width: max-content;
+}
+
+.subtitle-data-account {
+    font-size: .9rem;
+    opacity: .8;
+}
+
+.value-account {
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+
+.value-account > span {
+    font-size: .9rem;
+    opacity: .8;
+}
+
+
+@media (max-width: 1650px) {
+    .columns-data {
+        grid-template-columns: repeat(2, calc(100% / 2));
+    }
+
+    .column-right-3 {
+        padding-left: 0;
+        padding-right: 10px;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .columns-data {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .column-left-3, .column-center-3, .column-right-3 {
+        padding: 0;
+    }
+}
+
+
+@media (max-width: 870px) {
+
+    div.first-data {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .data-box:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+        padding-bottom: 20px;
+    }
+
+    .data-box:nth-last-child(-n+2) {
+        padding-top: 20px;
+    }
+    
+    .data-box:not(:last-child) {
+        border-right: none;
+    }
+
+    .data-box:nth-child(odd) {
+        border-right: 1px solid rgba(0, 0, 0, 0.150);
+    }
+}
+
+@media (max-width: 500px) {
+    
+    div.first-data {
+        grid-template-columns: 1fr;
+    }
+
+    .data-box:nth-child(-n+2) {
+        border-bottom: none;
+    }
+
+    .data-box:nth-child(odd) {
+        border-right: none;
+    }
+
+    .data-box:not(:first-child) {
+        padding-top: 20px;
+    }
+
+    .data-box:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+    }
+
+    .data-box:nth-child(3n) {
+        padding-bottom: 20px;
+    }
+
+    .color-account {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .title-data-account {
+        font-size: .9rem;
+    }
+    
+    .subtitle-data-account {
+        font-size: .8rem;
+    }
+    
+    .value-account {
+        font-size: 1rem;
+    }
+    
+    .value-account > span {
+        font-size: .7rem;
+    }
+
+}
