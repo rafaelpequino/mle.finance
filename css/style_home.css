@@ -213,7 +213,7 @@ a.account {
     overflow-x: hidden;
 }
 
-.title-data-account {
+.title-data-account, .title-limit {
     font-size: 1rem;
     width: max-content;
 }
@@ -232,6 +232,119 @@ a.account {
     font-size: .9rem;
     opacity: .8;
 }
+
+
+div#comparison {
+    height: 321px;
+}
+
+#graphics-comparison {
+    width: 85%;
+    height: 70%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.month-comparison {
+    width: 100%;
+    height: 100%;
+}
+
+.not-this-month {
+    opacity: .75;
+}
+
+.graphic-comparison {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 2px;
+}
+
+.graphic-comparison > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.revenues-graphic > div {
+    background-color: var(--first-color);
+    border-radius: 20px;
+}
+
+.expenses-graphic > div {
+    background-color: var(--expenses-color);
+    border-radius: 20px;
+}
+
+.investiments-graphic > div {
+    background-color: var(--investments-color);
+    border-radius: 20px;
+}
+
+.description-month-comparison {
+    margin-top: 10px;
+    text-align: center;
+    opacity: .9;
+}
+
+
+.my-limit {
+    padding: 7px 0;
+}
+
+.data-limit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.color-limit {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0; 
+    background-color: black;
+}
+
+.limit-control {
+    width: 100%;
+    margin: 10px 0 20px;
+}
+
+.values-limit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.values-limit > div {
+    font-size: .9rem;
+    opacity: .8;
+}
+
+.limit-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #acacac;
+    margin-top: 5px;
+}
+
+.limit-bar > div {
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--first-color);
+}
+
 
 
 @media (max-width: 1650px) {

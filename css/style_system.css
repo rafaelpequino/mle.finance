@@ -305,4 +305,15 @@ a.active {
         padding: 70px 5vw;
     }
 
+    main.main {
+        padding: 0 3vw;
+        background-color: #fff;
+    }
+
+    .box {
+        box-shadow: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.250);
+        border-radius: 0;
+    }
+
 }
