@@ -19,68 +19,69 @@
     <header class="header">
         <div class="first-logo">
             <img src="../img/logo_MLEfinance.png" alt="Logo MLE finance">
-        </div><!--FIM FIRST-LOGO-->
+        </div>
 
         <div class="user-space">
-            <i class="fa-regular fa-eye-slash" id="privacy-eye"></i><!--ÍCONE OLHO DE PRIVACIDADE-->
+            <i class="fa-regular fa-eye-slash" id="privacy-eye"></i> 
             <div class="user-info">
-                <i class="fa-solid fa-circle-user" id="icon-user-photo"></i><!--ÍCONE FOTO DE USUÁRIO-->
-                <h5 id="user-name">Rafael Freire</h5><!--NOME DE USUÁRIO-->
-                <i class="fa-solid fa-chevron-down" id="dropdown-icon"></i><!--ÍCONE SETA PARA BAIXO-->
-            </div><!--FIM USER-INFO-->
+                <i class="fa-solid fa-circle-user" id="icon-user-photo"></i> 
+                <h5 id="user-name">Rafael Freire</h5>
+                <i class="fa-solid fa-chevron-down" id="dropdown-icon"></i> 
+            </div>
             <div id="open-close-sidebar" class="btn-sidebar-close">
                 <div class="feature"></div>
                 <div class="feature"></div>
                 <div class="feature"></div>
             </div>
-        </div><!--FIM USER-->
+        </div>
 
-    </header><!--FIM HEADER-->
+    </header>
 
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
             <div id="links-sidebar">
                 <a href="#" class="active link-sidebar link-normal">
-                    <div class="icon"><i class="fa-solid fa-house-chimney"></i></div><!--ÍCONE HOME-->
+                    <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
                     <span class="name-sidebar">Home</span>
-                </a><!--LINK SIDEBAR ATIVO-->
+                </a>
                 <a href="#" class="link-sidebar link-normal">
-                    <div class="icon"><i class="fa-solid fa-bullseye"></i></div><!--ÍCONE METAS-->
+                    <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
                     <span class="name-sidebar">Metas</span>
-                </a><!--LINK SIDEBAR-->
+                </a>
                 <a href="#" class="link-sidebar link-normal">
-                    <div class="icon"><i class="fa-solid fa-dollar-sign"></i></div><!--ÍCONE DÍVIDAS-->
+                    <div class="icon"><i class="fa-solid fa-dollar-sign"></i></div>
                     <span class="name-sidebar">Dívidas</span>
-                </a><!--LINK SIDEBAR-->
+                </a>
                 <a href="#" class="link-sidebar link-normal">
-                    <div class="icon"><i class="fa-solid fa-chart-simple"></i></div><!--ÍCONE INVESTIMENTOS-->
+                    <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
                     <span class="name-sidebar">Investimentos</span>
-                </a><!--LINK SIDEBAR-->
+                </a>
                 <a href="#" class="link-sidebar link-normal">
-                    <div class="icon"><i class="fa-solid fa-pencil"></i></i></div><!--ÍCONE CATEGORIAS-->
+                    <div class="icon"><i class="fa-solid fa-pencil"></i></i></div>
                     <span class="name-sidebar">Categorias</span>
-                </a><!--LINK SIDEBAR-->
+                </a>
                 <hr class="hr-sidebar">
                 <a href="#" class="link-sidebar link-normal">
-                    <div class="icon"><i class="fa-solid fa-square-poll-horizontal"></i></div><!--ÍCONE RELATÓRIOS-->
+                    <div class="icon"><i class="fa-solid fa-square-poll-horizontal"></i></div>
                     <span class="name-sidebar">Relatórios</span>
-                </a><!--LINK SIDEBAR-->
+                </a>
                 <hr class="hr-sidebar">
                 <a href="#" class="link-sidebar link-logout">
-                    <div class="icon"><i class="fa-solid fa-right-from-bracket"></i></div><!--ÍCONE SAIR-->
+                    <div class="icon"><i class="fa-solid fa-right-from-bracket"></i></div>
                     <span class="name-sidebar">Sair</span>
-                </a><!--LINK SIDEBAR-->
+                </a>
             </div>
 
-        </nav><!--FIM SIDEBAR-->
+        </nav>
 
         <div class="container">
+            <!--BOX DADOS PRINCIPAIS (RECEITAS, DESPESAS, TRANSFERÊNCIAS E INVESTIMENTOS)-->
             <div class="first-data box">
                 <div class="data-box" id="revenues">
                     <div class="title-data-box">
                         <div class="color-revenues"></div>
                         <span>Receitas</span>
-                    </div><!--FIM TITLE-DATA-BOX-->
+                    </div>
 
                     <div class="value-data-box">
                         <div class="first-value">
@@ -89,15 +90,15 @@
                         <div class="second-value">
                             de R$20.000,00
                         </div>
-                    </div><!--FIM VALUE-DATA-BOX-->
+                    </div>
                     <button type="button" class="btn-new" id="btn-revenues">Nova receita</button>
-                </div><!--FIM DATA-BOX REVENUES-->
+                </div> 
 
                 <div class="data-box" id="expenses">
                     <div class="title-data-box">
                         <div class="color-expenses"></div>
                         <span>Despesas</span>
-                    </div><!--FIM TITLE-DATA-BOX-->
+                    </div>
 
                     <div class="value-data-box">
                         <div class="first-value">
@@ -106,15 +107,15 @@
                         <div class="second-value">
                             de R$15.000,00
                         </div>
-                    </div><!--FIM VALUE-DATA-BOX-->
+                    </div>
                     <button type="button" class="btn-new" id="btn-expenses">Nova despesa</button>
-                </div><!--FIM DATA-BOX EXPENSES-->
+                </div> 
 
                 <div class="data-box" id="transfers">
                     <div class="title-data-box">
                         <div class="color-transfers"></div>
                         <span>Transferências</span>
-                    </div><!--FIM TITLE-DATA-BOX-->
+                    </div>
 
                     <div class="value-data-box">
                         <div class="first-value">
@@ -123,15 +124,15 @@
                         <div class="second-value">
                             de R$750,00
                         </div>
-                    </div><!--FIM VALUE-DATA-BOX-->
+                    </div>
                     <button type="button" class="btn-new" id="btn-transfers">Nova transferência</button>
-                </div><!--FIM DATA-BOX TRANSFERS-->
+                </div> 
 
                 <div class="data-box" id="investments">
                     <div class="title-data-box">
                         <div class="color-investments"></div>
                         <span>Investimentos</span>
-                    </div><!--FIM TITLE-DATA-BOX-->
+                    </div>
 
                     <div class="value-data-box">
                         <div class="first-value">
@@ -140,11 +141,11 @@
                         <div class="second-value">
                             <a href="#">ver detalhes</a>
                         </div>
-                    </div><!--FIM VALUE-DATA-BOX-->
+                    </div>
                     <button type="button" class="btn-new" id="btn-investments">Novo investimento</button>
-                </div><!--FIM DATA-BOX INVESTMENTS-->
+                </div> 
 
-            </div><!--FIM FIRST-DATA-->
+            </div>
 
             <div class="columns-data">
                 <div class="column-left-3">
@@ -190,7 +191,67 @@
                             </div>
                         </a>
                     </div>
-                </div><!--FIM COLUMN-LEFT-->
+
+                    <div class="box" id="cards">
+                        <h5>Meus cartões de crédito</h5>
+                        <a href="" class="my-card">
+                            <div class="info-card">
+                                <div class="name-card">
+                                    <div class="color-card" style="background-color: orange;"></div>
+                                    <div class="data-card">
+                                        <div class="title-data-card">Banco inter</div>
+                                    </div>
+                                </div>
+                                <div class="pay-card">
+                                    <div class="text-pay-card">Fatura atual</div>
+                                    <div class="value-pay-card">
+                                        2100
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-control">
+                                <div class="values-card">
+                                    <div class="already-used">Utilizado: R$3.500</div>
+                                    <div class="to-be-used">Limite: R$5.000</div>
+                                </div>
+                                <div class="card-bar">
+                                    <div style="width: 70%; background-color: #E7E048;"></div>
+                                </div>
+                            </div>
+
+                        </a>
+
+                        <a href="" class="my-card">
+                            <div class="info-card">
+                                <div class="name-card">
+                                    <div class="color-card" style="background-color: #0874BA;"></div>
+                                    <div class="data-card">
+                                        <div class="title-data-card">Caixa Econômica</div>
+                                    </div>
+                                </div>
+                                <div class="pay-card">
+                                    <div class="text-pay-card">Fatura atual</div>
+                                    <div class="value-pay-card">
+                                        200
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-control">
+                                <div class="values-card">
+                                    <div class="already-used">Utilizado: R$200</div>
+                                    <div class="to-be-used">Limite: R$2.000</div>
+                                </div>
+                                <div class="card-bar">
+                                    <div style="width: 10%; background-color: #39B54A;"></div>
+                                </div>
+                            </div>
+
+                        </a>
+
+                    </div>
+                
+                    
+                </div>
                 
                 <div class="column-center-3">
                     <div class="box" id="comparison">
@@ -203,7 +264,7 @@
                                     <div class="investiments-graphic"><div style="height: 10%;"></div></div>
                                 </div>
                                 <div class="description-month-comparison">jun 23</div>
-                            </div><!--FIM MONTH-COMPARISON-->
+                            </div>
 
                             <div class="month-comparison not-this-month">
                                 <div class="graphic-comparison">
@@ -212,7 +273,7 @@
                                     <div class="investiments-graphic"><div style="height: 30%;"></div></div>
                                 </div>
                                 <div class="description-month-comparison">jul 23</div>
-                            </div><!--FIM MONTH-COMPARISON-->
+                            </div>
 
                             <div class="month-comparison not-this-month">
                                 <div class="graphic-comparison">
@@ -221,7 +282,7 @@
                                     <div class="investiments-graphic"><div style="height: 2%;"></div></div>
                                 </div>
                                 <div class="description-month-comparison">ago 23</div>
-                            </div><!--FIM MONTH-COMPARISON-->
+                            </div>
 
                             <div class="month-comparison">
                                 <div class="graphic-comparison">
@@ -230,19 +291,24 @@
                                     <div class="investiments-graphic"><div style="height: 0%;"></div></div>
                                 </div>
                                 <div class="description-month-comparison">set 23</div>
-                            </div><!--FIM MONTH-COMPARISON-->
+                            </div>
                             
-                        </div><!--FIM GRAPHICS-COMPARISON-->
-                    </div><!--FIM COMPARISON-->
+                        </div>
+                    </div>
+
+                    <a href="" class="box" id="promotion">
+                        <div class="text-promotion">Clique e adquira nosso e-book completo de gestão financeira</div>
+                        <img src="../img/qr-code-insta.png" alt="">
+                    </a>
                     
-                </div><!--FIM COLUMN-CENTER-->
+                </div>
                 
                 <div class="column-right-3">
                     <div class="box" id="limits">
                         <h5>Meus limites</h5>
-                        <div href="" class="my-limit">
+                        <div class="my-limit">
                             <div class="data-limit">
-                                <div class="color-limit"></div>
+                                <div class="color-limit" style="background-color: #C13D3D;"></div>
                                 <div class="title-limit">Compras</div>
                             </div>
                             <div class="limit-control">
@@ -251,55 +317,73 @@
                                     <div class="to-be-used">Limite: R$3.000</div>
                                 </div>
                                 <div class="limit-bar">
-                                    <div style="width: 75%;"></div>
+                                    <div style="width: 75%; background-color: #E7E048;"></div>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div href="" class="my-limit">
+                        <div class="my-limit">
                             <div class="data-limit">
-                                <div class="color-limit"></div>
-                                <div class="title-limit">Compras</div>
+                                <div class="color-limit" style="background-color: #E27715;"></div>
+                                <div class="title-limit">Mercado</div>
                             </div>
                             <div class="limit-control">
                                 <div class="values-limit">
-                                    <div class="already-used">Utilizado: R$2.500</div>
-                                    <div class="to-be-used">Limite: R$3.000</div>
+                                    <div class="already-used">Utilizado: R$200</div>
+                                    <div class="to-be-used">Limite: R$700</div>
                                 </div>
                                 <div class="limit-bar">
-                                    <div style="width: 75%;"></div>
+                                    <div style="width: 25%; background-color: #39B54A;"></div>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div href="" class="my-limit">
+                        <div class="my-limit">
                             <div class="data-limit">
-                                <div class="color-limit"></div>
-                                <div class="title-limit">Compras</div>
+                                <div class="color-limit" style="background-color: #E53ACA;"></div>
+                                <div class="title-limit">Assinaturas</div>
                             </div>
                             <div class="limit-control">
                                 <div class="values-limit">
-                                    <div class="already-used">Utilizado: R$2.500</div>
-                                    <div class="to-be-used">Limite: R$3.000</div>
+                                    <div class="already-used">Utilizado: R$200</div>
+                                    <div class="to-be-used">Limite: R$200</div>
                                 </div>
                                 <div class="limit-bar">
-                                    <div style="width: 75%;"></div>
+                                    <div style="width: 100%; background-color: #B53939;"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="my-limit">
+                            <div class="data-limit">
+                                <div class="color-limit" style="background-color: #3A7FE5;"></div>
+                                <div class="title-limit">Educação</div>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <div class="limit-control">
+                                <div class="values-limit">
+                                    <div class="already-used">Utilizado: R$700</div>
+                                    <div class="to-be-used">Limite: R$500</div>
+                                </div>
+                                <div class="limit-bar">
+                                    <div style="width: 120%; background-color: #FF0000;"></div>
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 
-                </div><!--FIM COLUMN-RIGHT-->
+                </div>
             </div>
 
 
 
-        </div><!--FIM CONTAINER-->
+        </div>
 
-    </main><!--FIM MAIN-->
+    </main>
     
 
 </body>

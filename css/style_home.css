@@ -180,7 +180,39 @@ a.account {
     justify-content: space-between;
     text-decoration: none;
     color: #000;
-    margin: 30px 0;
+    margin: 20px 0;
+}
+
+.info-card { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+}
+
+.name-card {
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.pay-card {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.text-pay-card {
+    font-size: .8rem;
+    opacity: .8;
+}
+
+.value-pay-card {
+    font-size: 1.1rem;
+    opacity: 1;
 }
 
 .info-account {
@@ -296,22 +328,35 @@ div#comparison {
 
 
 .my-limit {
-    padding: 7px 0;
+    padding: 7px 0 14px;
+}
+
+.my-card {
+    display: block;
+    padding: 7px 0 24px;
+    text-decoration: none;
+    color: #000;
 }
 
 .data-limit {
     width: 100%;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-.color-limit {
+.fa-triangle-exclamation {
+    position: absolute;
+    right: 0;
+    color: orange;
+}
+
+.color-limit, .color-card {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;
     flex-shrink: 0; 
-    background-color: black;
 }
 
 .limit-control {
@@ -319,30 +364,47 @@ div#comparison {
     margin: 10px 0 20px;
 }
 
-.values-limit {
+.values-limit, .values-card {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.values-limit > div {
+.values-limit > div, .values-card > div {
     font-size: .9rem;
     opacity: .8;
 }
 
-.limit-bar {
+.limit-bar, .card-bar {
     width: 100%;
     height: 10px;
     border-radius: 10px;
     background-color: #acacac;
     margin-top: 5px;
+    overflow: hidden;
 }
 
-.limit-bar > div {
+.limit-bar > div, .card-bar > div {
     height: 100%;
     border-radius: 10px;
+}
+
+#promotion {
     background-color: var(--first-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.text-promotion {
+    color: var(--white-color);
+    padding-right: 20px;
+    text-align: center;
+}
+
+#promotion > img {
+    height: 160px;
 }
 
 
@@ -394,6 +456,10 @@ div#comparison {
     .data-box:nth-child(odd) {
         border-right: 1px solid rgba(0, 0, 0, 0.150);
     }
+
+    #promotion > img {
+        height: 120px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -422,18 +488,23 @@ div#comparison {
         padding-bottom: 20px;
     }
 
-    .color-account {
+    .color-account, .color-limit, .color-card {
         width: 40px;
         height: 40px;
         margin-right: 10px;
     }
 
-    .title-data-account {
+    .title-data-account, .title-limit, .title-data-card {
         font-size: .9rem;
     }
     
     .subtitle-data-account {
         font-size: .8rem;
+    }
+
+    .values-limit > div {
+        font-size: .8rem;
+        opacity: .8;
     }
     
     .value-account {
@@ -442,6 +513,23 @@ div#comparison {
     
     .value-account > span {
         font-size: .7rem;
+    }
+
+    .text-pay-card {
+        font-size: .7rem;
+    }
+    
+    .value-pay-card {
+        font-size: 1rem;
+    }
+    
+
+    #promotion > img {
+        height: 100px;
+    }
+
+    .text-promotion {
+        font-size: .8rem;
     }
 
 }
