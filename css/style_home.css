@@ -1,3 +1,4 @@
+/*--------------------------INÍCIO FIRST DATA--------------------------*/
 
 div.first-data {
     width: 100%;
@@ -63,10 +64,6 @@ div.first-data {
     opacity: .7;
 }
 
-.balance-value {
-    font-weight: bold;
-}
-
 .second-value {
     font-size: .9rem;
     opacity: .7;
@@ -80,7 +77,7 @@ div.first-data {
 .btn-new {
     text-decoration: none;
     display: block;
-    width: 150px;
+    width: 180px;
     margin: 15px auto 5px;
     padding: 5px;
     background-color: transparent;
@@ -125,6 +122,20 @@ div.first-data {
     background-color: var(--transfers-color);
     color: var(--white-color);   
 }
+
+#btn-personal-transfers {
+    border: 2px solid var(--personal-transfers-color);    
+}
+
+#btn-personal-transfers:hover {
+    background-color: var(--personal-transfers-color);
+    color: var(--white-color);   
+}
+
+/*--------------------------FIM FIRST DATA--------------------------*/
+
+
+/*--------------------------INÍCIO COLUMNS DATA--------------------------*/
 
 .columns-data {
     width: 100%;
@@ -181,6 +192,14 @@ a.account {
     text-decoration: none;
     color: #000;
     margin: 20px 0;
+}
+
+
+.my-card {
+    display: block;
+    margin: 24px 0 7px;
+    text-decoration: none;
+    color: #000;
 }
 
 .info-card { 
@@ -267,13 +286,13 @@ a.account {
 
 
 div#comparison {
-    height: 321px;
+    min-height: 400px;
 }
 
 #graphics-comparison {
     width: 85%;
-    height: 70%;
-    margin: 10px auto;
+    height: 200px;
+    margin: 40px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -292,7 +311,7 @@ div#comparison {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0 2px;
 }
 
@@ -305,17 +324,22 @@ div#comparison {
     justify-content: end;
 }
 
-.revenues-graphic > div {
+.revenues-graphic > div, .color-subtitle-revenues {
     background-color: var(--first-color);
     border-radius: 20px;
 }
 
-.expenses-graphic > div {
+.expenses-graphic > div, .color-subtitle-expenses {
     background-color: var(--expenses-color);
     border-radius: 20px;
 }
 
-.investiments-graphic > div {
+.transfers-graphic > div, .color-subtitle-transfers {
+    background-color: var(--transfers-color);
+    border-radius: 20px;
+}
+
+.investiments-graphic > div, .color-subtitle-investments {
     background-color: var(--investments-color);
     border-radius: 20px;
 }
@@ -323,19 +347,53 @@ div#comparison {
 .description-month-comparison {
     margin-top: 10px;
     text-align: center;
+    font-size: .9rem;
     opacity: .9;
+}
+
+.graphic-line {
+    transition: .2s;
+    cursor: pointer;
+
+}
+
+.graphic-line:hover {
+    transform: scale(1.05);
+}
+
+.graphic-subtitle {
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    overflow: hidden;
+}
+
+.subtitle {
+    width: 100%;
+    padding: 10px 15px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.color-subtitle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.description-subtitle {
+    font-size: .9rem;
+    opacity: .8;
 }
 
 
 .my-limit {
     padding: 7px 0 14px;
-}
-
-.my-card {
-    display: block;
-    padding: 7px 0 24px;
-    text-decoration: none;
     color: #000;
+    text-decoration: none;
 }
 
 .data-limit {
@@ -408,6 +466,20 @@ div#comparison {
 }
 
 
+a.btn-new-item {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: .8rem;
+    opacity: .8;
+    color: #000;
+    margin: 25px 0 6px;
+}
+
+
+/*--------------------------FIM COLUMNS DATA--------------------------*/
+
+
 
 @media (max-width: 1650px) {
     .columns-data {
@@ -419,22 +491,16 @@ div#comparison {
         padding-right: 10px;
         width: 100%;
     }
-}
 
-
-@media (max-width: 800px) {
-
-    .columns-data {
-        grid-template-columns: repeat(1, 100%);
-    }
-
-    .column-left-3, .column-center-3, .column-right-3 {
-        padding: 0;
+    .column-center-3 {
+        padding-right: 0;
+        padding-left: 10px;
+        width: 100%;
     }
 }
 
 
-@media (max-width: 870px) {
+@media (max-width: 1000px) {
 
     div.first-data {
         grid-template-columns: 1fr 1fr;
@@ -464,6 +530,26 @@ div#comparison {
     .description-month-comparison {
         margin: 10px 0;
         font-size: .9rem;
+    }
+
+    
+    .graphic-subtitle {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .columns-data {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .column-left-3, .column-center-3, .column-right-3 {
+        padding: 0;
+    }
+    .graphic-subtitle {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -539,6 +625,10 @@ div#comparison {
 
     .description-month-comparison {
         font-size: .8rem;
+    }
+
+    .graphic-subtitle {
+        grid-template-columns: repeat(1, 1fr);
     }
 
 }

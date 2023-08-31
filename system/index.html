@@ -145,7 +145,7 @@
                     <button type="button" class="btn-new" id="btn-investments">Novo investimento</button>
                 </div> 
 
-            </div>
+            </div> <!--FIM FIRST DATA-->
 
             <div class="columns-data">
                 <div class="column-left-3">
@@ -157,10 +157,11 @@
                                 <div class="info-balance">
                                     <div id="title-balance">Saldo total</div>
                                     <h3 id="balance">R$1.700,00</h3>
+                                    <a href="">Ver transações</a>
                                 </div>
                             </div>
                             <div class="see-balance">
-                                <a href="">Ver transações</a>
+                                <button type="button" class="btn-new" id="btn-personal-transfers">Transferência pessoal</button>
                             </div>
 
                         </div>
@@ -190,6 +191,8 @@
                                 1200
                             </div>
                         </a>
+
+                        <a href="" class="btn-new-item">+ adicionar</a>
                     </div>
 
                     <div class="box" id="cards">
@@ -248,6 +251,7 @@
 
                         </a>
 
+                        <a href="" class="btn-new-item">+ adicionar</a>
                     </div>
                 
                     
@@ -259,40 +263,63 @@
                         <div id="graphics-comparison">
                             <div class="month-comparison not-this-month">
                                 <div class="graphic-comparison">
-                                    <div class="revenues-graphic"><div style="height: 90%;"></div></div>
-                                    <div class="expenses-graphic"><div style="height: 80%;"></div></div>
-                                    <div class="investiments-graphic"><div style="height: 10%;"></div></div>
+                                    <div class="graphic-line revenues-graphic"><div style="height: 90%;"></div></div>
+                                    <div class="graphic-line expenses-graphic"><div style="height: 60%;"></div></div>
+                                    <div class="graphic-line transfers-graphic""><div style="height: 20%;"></div></div>
+                                    <div class="graphic-line investiments-graphic"><div style="height: 10%;"></div></div>
                                 </div>
-                                <div class="description-month-comparison">jun 23</div>
+                                <div class="description-month-comparison">jun</div>
                             </div>
 
                             <div class="month-comparison not-this-month">
                                 <div class="graphic-comparison">
-                                    <div class="revenues-graphic"><div style="height: 100%;"></div></div>
-                                    <div class="expenses-graphic"><div style="height: 70%;"></div></div>
-                                    <div class="investiments-graphic"><div style="height: 30%;"></div></div>
+                                    <div class="graphic-line revenues-graphic"><div style="height: 100%;"></div></div>
+                                    <div class="graphic-line expenses-graphic"><div style="height: 58%;"></div></div>
+                                    <div class="graphic-line transfers-graphic""><div style="height: 12%;"></div></div>
+                                    <div class="graphic-line investiments-graphic"><div style="height: 30%;"></div></div>
                                 </div>
-                                <div class="description-month-comparison">jul 23</div>
+                                <div class="description-month-comparison">jul</div>
                             </div>
 
                             <div class="month-comparison not-this-month">
                                 <div class="graphic-comparison">
-                                    <div class="revenues-graphic"><div style="height: 98%;"></div></div>
-                                    <div class="expenses-graphic"><div style="height: 96%;"></div></div>
-                                    <div class="investiments-graphic"><div style="height: 2%;"></div></div>
+                                    <div class="graphic-line revenues-graphic"><div style="height: 98%;"></div></div>
+                                    <div class="graphic-line expenses-graphic"><div style="height: 91%;"></div></div>
+                                    <div class="graphic-line transfers-graphic""><div style="height: 5%;"></div></div>
+                                    <div class="graphic-line investiments-graphic"><div style="height: 2%;"></div></div>
                                 </div>
-                                <div class="description-month-comparison">ago 23</div>
+                                <div class="description-month-comparison">ago</div>
                             </div>
 
                             <div class="month-comparison">
                                 <div class="graphic-comparison">
-                                    <div class="revenues-graphic"><div style="height: 80%;"></div></div>
-                                    <div class="expenses-graphic"><div style="height: 80%;"></div></div>
-                                    <div class="investiments-graphic"><div style="height: 0%;"></div></div>
+                                    <div class="graphic-line revenues-graphic"><div style="height: 80%;"></div></div>
+                                    <div class="graphic-line expenses-graphic"><div style="height: 70%;"></div></div>
+                                    <div class="graphic-line transfers-graphic""><div style="height: 5%;"></div></div>
+                                    <div class="graphic-line investiments-graphic"><div style="height: 5%;"></div></div>
                                 </div>
-                                <div class="description-month-comparison">set 23</div>
+                                <div class="description-month-comparison">set</div>
                             </div>
                             
+                        </div>
+
+                        <div class="graphic-subtitle">
+                            <div class="subtitle subtitle-revenues">
+                                <div class="color-subtitle color-subtitle-revenues"></div>
+                                <div class="description-subtitle">Receitas</div>
+                            </div>
+                            <div class="subtitle subtitle-revenues">
+                                <div class="color-subtitle color-subtitle-expenses"></div>
+                                <div class="description-subtitle">Despesas</div>
+                            </div>
+                            <div class="subtitle subtitle-revenues">
+                                <div class="color-subtitle color-subtitle-transfers"></div>
+                                <div class="description-subtitle">Transferências</div>
+                            </div>
+                            <div class="subtitle subtitle-revenues">
+                                <div class="color-subtitle color-subtitle-investments"></div>
+                                <div class="description-subtitle">Investimentos</div>
+                            </div>
                         </div>
                     </div>
 
@@ -306,7 +333,7 @@
                 <div class="column-right-3">
                     <div class="box" id="limits">
                         <h5>Meus limites</h5>
-                        <div class="my-limit">
+                        <a href="" class="my-limit">
                             <div class="data-limit">
                                 <div class="color-limit" style="background-color: #C13D3D;"></div>
                                 <div class="title-limit">Compras</div>
@@ -321,9 +348,9 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </a>
 
-                        <div class="my-limit">
+                        <a href="" class="my-limit">
                             <div class="data-limit">
                                 <div class="color-limit" style="background-color: #E27715;"></div>
                                 <div class="title-limit">Mercado</div>
@@ -338,9 +365,9 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </a>
 
-                        <div class="my-limit">
+                        <a href="" class="my-limit">
                             <div class="data-limit">
                                 <div class="color-limit" style="background-color: #E53ACA;"></div>
                                 <div class="title-limit">Assinaturas</div>
@@ -355,9 +382,9 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </a>
 
-                        <div class="my-limit">
+                        <a href="" class="my-limit">
                             <div class="data-limit">
                                 <div class="color-limit" style="background-color: #3A7FE5;"></div>
                                 <div class="title-limit">Educação</div>
@@ -373,7 +400,8 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </a>
+                        <a href="" class="btn-new-item">+ adicionar</a>
                     </div>
                 
                 </div>

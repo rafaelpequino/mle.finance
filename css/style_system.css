@@ -13,7 +13,8 @@
 
     --expenses-color: #B53939;
     --investments-color: #395CB5;
-    --transfers-color: rgb(70, 70, 70);
+    --transfers-color: #bba004;
+    --personal-transfers-color: rgb(70,70,70);
 }
 
 * {
