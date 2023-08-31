@@ -38,4 +38,33 @@ document.addEventListener('DOMContentLoaded', () => {
         
         valueElement.innerHTML = `<span>R$</span>${formattedValueWithCurrency.slice(3)}`;
     });
+
+
+    //ESCOLHER COLUNA DOS LIMITES
+    function changeLimitsColumn() {
+    let viewport = window.innerWidth;
+    const divMyLimits = document.getElementById('limits')
+
+    const columnLeft = document.getElementById('column-left')
+    const columnRight = document.getElementById('column-right')
+
+    // Remover a divMyLimits de ambas as colunas
+    if (divMyLimits.parentNode === columnLeft) {
+        columnLeft.removeChild(divMyLimits);
+    } else if (divMyLimits.parentNode === columnRight) {
+        columnRight.removeChild(divMyLimits);
+    }
+
+    // Adicionar a divMyLimits à coluna apropriada
+    if (viewport > 1650) {
+        columnRight.appendChild(divMyLimits);
+    } else {
+        columnLeft.appendChild(divMyLimits);
+    }
+}
+
+window.addEventListener('resize', changeLimitsColumn);
+
+changeLimitsColumn();
+
 });
