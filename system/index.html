@@ -88,7 +88,7 @@
                             <span>R$</span>10.000,00
                         </div>
                         <div class="second-value">
-                            de R$20.000,00
+                            previsto: R$20.000,00
                         </div>
                     </div>
                     <button type="button" class="btn-new" id="btn-revenues">Nova receita</button>
@@ -105,7 +105,7 @@
                             <span>R$</span>8.000,00
                         </div>
                         <div class="second-value">
-                            de R$15.000,00
+                            previsto: R$15.000,00
                         </div>
                     </div>
                     <button type="button" class="btn-new" id="btn-expenses">Nova despesa</button>
@@ -122,7 +122,7 @@
                             <span>R$</span>750,00
                         </div>
                         <div class="second-value">
-                            de R$750,00
+                            previsto: R$750,00
                         </div>
                     </div>
                     <button type="button" class="btn-new" id="btn-transfers">Nova transferência</button>
@@ -157,13 +157,13 @@
                                 <div class="info-balance">
                                     <div id="title-balance">Saldo total</div>
                                     <h3 id="balance">R$1.700,00</h3>
-                                    <a href="">Ver transações</a>
                                 </div>
                             </div>
-                            <div class="see-balance">
-                                <button type="button" class="btn-new" id="btn-personal-transfers">Transferência pessoal</button>
-                            </div>
+                            <div class="see-transactions"><a href="">Ver transações</a></div>
 
+                        </div>
+                        <div class="see-balance">
+                            <button type="button" class="btn-new" id="btn-personal-transfers">Transferência pessoal</button>
                         </div>
 
                         <a href="" class="account" id="inter">
@@ -328,35 +328,22 @@
                         <img src="../img/qr-code-insta.png" alt="">
                     </a>
 
-                    <div class="box" id="accounts">
+                    <div class="box" id="last-transactions">
                         <h5>Últimas transações</h5>
                         
 
-                        <a href="" class="account" id="inter">
-                            <div class="info-account">
-                                <div class="color-account"></div>
-                                <div class="data-account">
-                                    <div class="title-data-account">Assaí</div>
-                                    <div class="subtitle-data-account">Mercado</div>
+                        <div class="transaction">
+                            <div class="info-transaction">
+                                <div class="color-transaction" style="background-color: #0874BA;"></div>
+                                <div class="data-transaction">
+                                    <div class="title-data-transaction">Assaí</div>
+                                    <div class="subtitle-data-transaction">Mercado</div>
                                 </div>
                             </div>
-                            <div class="value-account">
+                            <div class="value-transaction expense-transaction">
                                 500
                             </div>
-                        </a>
-
-                        <a href="" class="account" id="nubank">
-                            <div class="info-account">
-                                <div class="color-account"></div>
-                                <div class="data-account">
-                                    <div class="title-data-account">Celular</div>
-                                    <div class="subtitle-data-account">Compra</div>
-                                </div>
-                            </div>
-                            <div class="value-account">
-                                1200
-                            </div>
-                        </a>
+                        </div>
 
                         <a href="" class="btn-new-item">ver tudo</a>
                     </div>

@@ -287,7 +287,7 @@ a.active {
 @media (max-width: 500px) {
 
     .first-logo > img {
-        height: 40px;
+        height: 45px;
     }
 
     #user-name {
@@ -309,13 +309,6 @@ a.active {
     main.main {
         padding: 0 3vw;
         background-color: #fff;
-    }
-
-    .box {
-        box-shadow: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.250);
-        border-radius: 0;
-        padding-bottom: 30px;
     }
 
 }
