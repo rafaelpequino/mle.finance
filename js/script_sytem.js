@@ -1,3 +1,9 @@
+//LIBERAR PÁGINA APÓS SITE CARREGADO
+window.onload = function() {
+    document.body.style.display = 'block';
+};
+
+
 function bloquearRolagem() {
     // Armazena a posição atual da rolagem para que possamos restaurá-la posteriormente
     const scrollPos = window.scrollY;
