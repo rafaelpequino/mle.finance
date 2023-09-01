@@ -10,33 +10,48 @@ function formatNumberToShort(number) {
 document.addEventListener('DOMContentLoaded', () => {
     const valuesAccounts = document.getElementsByClassName('account');
     const valuesPayCard = document.getElementsByClassName('pay-card');
+    const valuesTransactions = document.getElementsByClassName('transaction');
     
     Array.from(valuesAccounts).forEach(account => {
-        const valueElement = account.querySelector('.value-account');
-        const originalValue = parseFloat(valueElement.textContent.replace(/,/g, ''));
+        const valueElementAccount = account.querySelector('.value-account');
+        const originalValueAccount = parseFloat(valueElementAccount.textContent.replace(/,/g, ''));
         
-        const formattedValueWithCurrency = originalValue.toLocaleString('pt-BR', {
+        const formattedValueWithCurrency = originalValueAccount.toLocaleString('pt-BR', {
             style: 'currency',
             currency: 'BRL'
         });
         
-        const formattedValueShort = formatNumberToShort(originalValue);
+        const formattedValueShort = formatNumberToShort(originalValueAccount);
         
-        valueElement.innerHTML = `<span>R$</span>${formattedValueWithCurrency.slice(3)}`;
+        valueElementAccount.innerHTML = `<span>R$</span>${formattedValueWithCurrency.slice(3)}`;
     });
 
     Array.from(valuesPayCard).forEach(card => {
-        const valueElement = card.querySelector('.value-pay-card');
-        const originalValue = parseFloat(valueElement.textContent.replace(/,/g, ''));
+        const valueElementCard = card.querySelector('.value-pay-card');
+        const originalValueCard = parseFloat(valueElementCard.textContent.replace(/,/g, ''));
         
-        const formattedValueWithCurrency = originalValue.toLocaleString('pt-BR', {
+        const formattedValueWithCurrency = originalValueCard.toLocaleString('pt-BR', {
             style: 'currency',
             currency: 'BRL'
         });
         
-        const formattedValueShort = formatNumberToShort(originalValue);
+        const formattedValueShort = formatNumberToShort(originalValueCard);
         
-        valueElement.innerHTML = `<span>R$</span>${formattedValueWithCurrency.slice(3)}`;
+        valueElementCard.innerHTML = `<span>R$</span>${formattedValueWithCurrency.slice(3)}`;
+    });
+
+    Array.from(valuesTransactions).forEach(card => {
+        const valueElementTransactions = card.querySelector('.value-transaction');
+        const originalValueTransactions = parseFloat(valueElementTransactions.textContent.replace(/,/g, ''));
+        
+        const formattedValueWithCurrency = originalValueTransactions.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        });
+        
+        const formattedValueShort = formatNumberToShort(originalValueTransactions);
+        
+        valueElementTransactions.innerHTML = `<span>R$</span>${formattedValueWithCurrency.slice(3)}`;
     });
 
 

@@ -608,17 +608,17 @@ a.btn-new-item {
         padding-bottom: 20px;
     }
 
-    .color-account, .color-limit, .color-card {
+    .color-account, .color-limit, .color-card, .color-transaction {
         width: 40px;
         height: 40px;
         margin-right: 10px;
     }
 
-    .title-data-account, .title-limit, .title-data-card {
+    .title-data-account, .title-limit, .title-data-card, .subtitle-data-transaction {
         font-size: .9rem;
     }
     
-    .subtitle-data-account {
+    .subtitle-data-account, .subtitle-data-transaction {
         font-size: .8rem;
     }
 
