@@ -160,6 +160,7 @@ div.first-data {
 
 #total-balance {
     width: 100%;
+    height: max-content;
     display: flex;
     text-decoration: none;
     align-items: center;
@@ -168,11 +169,25 @@ div.first-data {
 }
 
 .color-balance {
-    background-color: var(--second-color);
+    background-color: var(--black-color);
     width: 4px;
-    height: 50px;
+    height: 58px;
     border-radius: 5px;
     margin-right: 10px;
+}
+
+#title-balance {
+    opacity: .8;
+    font-size: .9rem;
+}
+
+.color-balance {
+    height: 54px;
+}
+
+#balance {
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
 .data-balance {
@@ -184,6 +199,7 @@ div.first-data {
     display: flex;
     align-items: center;
     justify-content: end;
+    font-size: .8rem;
 }
 
 .see-transactions > a {
@@ -552,6 +568,10 @@ a.btn-new-item {
         border-right: 1px solid rgba(0, 0, 0, 0.150);
     }
 
+    #balance {
+        font-size: 1.5rem;
+    }
+
     #promotion > img {
         height: 120px;
     }
@@ -564,6 +584,17 @@ a.btn-new-item {
     
     .graphic-subtitle {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .color-balance {
+        height: 50px;
+    }
+    
+    #balance {
+        font-size: 1.3rem;
+        font-weight: 600;
     }
 }
 
@@ -614,7 +645,7 @@ a.btn-new-item {
         margin-right: 10px;
     }
 
-    .title-data-account, .title-limit, .title-data-card, .subtitle-data-transaction {
+    .title-data-account, .title-limit, .title-data-card, .title-data-transaction {
         font-size: .9rem;
     }
     
@@ -646,6 +677,10 @@ a.btn-new-item {
 
     #title-balance {
         font-size: .8rem;
+    }
+
+    .color-balance {
+        height: 45px;
     }
 
     #balance {
