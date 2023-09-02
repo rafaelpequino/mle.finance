@@ -3,14 +3,39 @@ window.onload = function() {
     document.body.style.display = 'block';
 };
 
-//HIDE SHOW DROPDOWN
-const btnOpenDropdown  = document.getElementById('user-info') 
-const dropdownMenu  = document.getElementById('dropdown-menu') 
+// HIDE SHOW DROPDOWN
+const btnOpenDropdown = document.getElementById('user-info');
+const dropdownMenu = document.getElementById('dropdown-menu');
 
-btnOpenDropdown.addEventListener("click", function() {
-    dropdownMenu.classList.toggle('show-dropdown')
-    dropdownMenu.classList.toggle('hide-dropdown')
-})
+// Variável para rastrear o estado do dropdown
+let isDropdownOpen = false;
+
+btnOpenDropdown.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    if (!isDropdownOpen) {
+        dropdownMenu.classList.add('show-dropdown');
+        dropdownMenu.classList.remove('hide-dropdown');
+        document.addEventListener('click', closeDropdown);
+        isDropdownOpen = true;
+    } else {
+        closeDropdown();
+    }
+});
+
+function closeDropdown() {
+    dropdownMenu.classList.remove('show-dropdown');
+    dropdownMenu.classList.add('hide-dropdown');
+    document.removeEventListener('click', closeDropdown);
+    isDropdownOpen = false;
+}
+
+document.addEventListener('click', function (e) {
+    if (isDropdownOpen && e.target !== btnOpenDropdown) {
+        closeDropdown();
+    }
+});
+
 
 function bloquearRolagem() {
     // Armazena a posição atual da rolagem para que possamos restaurá-la posteriormente
