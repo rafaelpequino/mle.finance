@@ -3,6 +3,14 @@ window.onload = function() {
     document.body.style.display = 'block';
 };
 
+//HIDE SHOW DROPDOWN
+const btnOpenDropdown  = document.getElementById('user-info') 
+const dropdownMenu  = document.getElementById('dropdown-menu') 
+
+btnOpenDropdown.addEventListener("click", function() {
+    dropdownMenu.classList.toggle('show-dropdown')
+    dropdownMenu.classList.toggle('hide-dropdown')
+})
 
 function bloquearRolagem() {
     // Armazena a posição atual da rolagem para que possamos restaurá-la posteriormente
