@@ -8,7 +8,7 @@ div.first-data {
 .columns-first-data {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 
@@ -26,23 +26,27 @@ div.first-data {
 .color-balance {
     background-color: var(--black-color);
     width: 4px;
-    height: 58px;
+    height: 40px;
     border-radius: 5px;
     margin-right: 10px;
 }
 
-#title-balance {
-    opacity: .8;
-    font-size: .9rem;
+.info-balance {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
-.color-balance {
-    height: 54px;
+#title-balance {
+    opacity: .7;
+    font-size: 1.1rem;
 }
 
 #balance {
     font-size: 1.7rem;
     font-weight: 600;
+    margin-left: 15px;
 }
 
 .data-balance {
@@ -556,7 +560,7 @@ a.btn-new-item {
 
 @media (max-width: 1000px) {
 
-    div.first-data {
+    .columns-first-data {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -596,19 +600,27 @@ a.btn-new-item {
     }
 }
 
-@media (max-width: 900px) {
-    .color-balance {
-        height: 50px;
+@media (max-width: 800px) {
+
+    #total-balance {
+        display: block;
+    }
+
+    .see-transactions {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 12px auto 8px;
+    }
+
+    #title-balance {
+        font-size: 1rem;
     }
     
     #balance {
-        font-size: 1.3rem;
-        font-weight: 600;
+        font-size: 1.5rem;
+        margin-left: 10px;
     }
-}
-
-
-@media (max-width: 800px) {
 
     .columns-data {
         grid-template-columns: repeat(1, 100%);
@@ -622,9 +634,23 @@ a.btn-new-item {
     }
 }
 
+
+@media (max-width: 600px) {
+    #title-balance {
+        font-size: .9rem;
+    }
+    
+    #balance {
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+
+}
+
+
 @media (max-width: 500px) {
     
-    div.first-data {
+    .columns-first-data {
         grid-template-columns: 1fr;
     }
 
@@ -684,20 +710,29 @@ a.btn-new-item {
     }
 
 
+    .info-balance {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
     #title-balance {
-        font-size: .8rem;
-    }
-
-    .color-balance {
-        height: 45px;
-    }
-
-    #balance {
+        opacity: .9;
         font-size: 1rem;
     }
     
+    #balance {
+        font-size: 1.6rem;
+        margin-left: 0;
+    }
+
+    .color-balance {
+        display: none;
+    }
+    
     .see-transactions > a {
-        font-size: .9rem;
+        font-size: .8rem;
+        opacity: .9;
     }
 
     #promotion > img {
