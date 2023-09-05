@@ -50,8 +50,8 @@ div.first-data {
     margin-left: 15px;
 }
 
-
 /*--------------------------FIM FIRST DATA--------------------------*/
+
 
 /*-----------------------INÍCIO COLUMNS DATA------------------------*/
 
@@ -243,6 +243,11 @@ div.first-data {
 
 @media (max-width: 500px) {
 
+    .circle-color {
+        width: 38px;
+        height: 38px;
+    }
+
     #total-balance {
         height: 80px;
     }
@@ -257,8 +262,52 @@ div.first-data {
     }
     
     #balance {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: 700;
         margin: 0;
+    }
+
+    .name-account, .name-card {
+        font-size: .9rem;
+    }
+
+    .total-account {
+        font-weight: 400;
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .fa-credit-card {
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+    
+    .limit-card > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .limit-card > div > span {
+        display: block;
+    }
+    
+    .limit-card > div:first-child {
+        align-items: flex-start;
+    }
+    
+    .limit-card > div:last-child {
+        align-items: flex-end;
+    }
+
+    .title-revenue, .title-expense {
+        font-size: .9rem;
+    }
+
+    .subtitle-revenue, .subtitle-expense {
+        font-size: .7rem;
+    }
+
+    .total-transaction {
+        font-size: .9rem;
     }
 }
