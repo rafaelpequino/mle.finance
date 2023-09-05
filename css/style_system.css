@@ -245,6 +245,15 @@ a.active {
 }
 
 
+@media (max-width: 1400px) {
+
+    .container {
+        padding: 20px 0 20px 40px;
+    }
+
+}
+
+
 @media (max-width: 1200px) {
 
     body {
@@ -334,7 +343,7 @@ a.active {
 }
 
 
-@media (max-width: 870px) {
+@media (max-width: 900px) {
 
     main.main {
         padding: 0 5vw;

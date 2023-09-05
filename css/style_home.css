@@ -8,7 +8,7 @@ div.first-data {
 
 #total-balance {
     width: 100%;
-    height: max-content;
+    height: 50px;
     display: flex;
     text-decoration: none;
     align-items: center;
@@ -17,10 +17,17 @@ div.first-data {
     padding: 0 15px;
 }
 
+.data-balance {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .color-balance {
     background-color: var(--second-color);
     width: 4px;
-    height: 40px;
+    height: 100%;
     border-radius: 5px;
     margin-right: 10px;
 }
@@ -43,11 +50,6 @@ div.first-data {
     margin-left: 15px;
 }
 
-.data-balance {
-    display: flex;
-    width: 100%;
-}
-
 
 /*--------------------------FIM FIRST DATA--------------------------*/
 
@@ -62,6 +64,27 @@ div.first-data {
     gap: 20px;
 } 
 
+.circle-color {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.add {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--black-color);
+    text-decoration: none;
+    opacity: .8;
+    font-size: .8rem;
+}
+
+.total {
+    width: max-content;
+}
+
 .invoices {
     display: flex;
     width: max-content;
@@ -75,8 +98,167 @@ div.first-data {
     margin-right: 10px;
 }
 
-
 .title-invoices {
     opacity: .6;
     font-size: .9rem;
+}
+
+.hr-cards {
+    margin: 20px 0;
+    height: 1px; 
+    border: none;
+    background-image: linear-gradient(to right, #00000010, #00000040, #00000010);
+
+}
+
+.account, .revenue, .expense {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+.total-account {
+    font-weight: 450;
+    font-size: 1.1rem;
+    width: max-content;
+}
+
+.card {
+    margin: 15px 0 30px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.info-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-credit-card {
+    display: block;
+    margin-right: 15px;
+    font-size: 2rem;
+}
+
+.title-card, .title-revenue, .title-expense {
+    display: flex;
+    align-items: center;
+}
+
+.pay-card {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+
+.title-invoice-card {
+    opacity: .8;
+    font-size: .8rem;
+}
+
+.info-limit-card {
+    margin: 10px 0;
+}
+
+.limit-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: .8;
+    font-size: .9rem;
+}
+
+.limit-card > div {
+    max-width: max-content;
+}
+
+.limit-card > div:first-child {
+    margin-right: 10px;
+}
+
+.limit-card > div:last-child {
+    margin-left: 10px;
+}
+
+.limit-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #00000052;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.used-limit-bar {
+    height: 10px;
+    border-radius: 10px;
+}
+
+.subtitle-revenue, .subtitle-expense {
+    opacity: .8;
+    font-size: .8rem;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .columns-data {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    } 
+}
+
+
+@media (max-width: 800px) {
+
+    .columns-data {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    } 
+}
+
+
+@media (max-width: 700px) {
+
+    #title-balance {
+        font-size: 1rem;
+    }
+    
+    #balance {
+        font-size: 1.5rem;
+        font-weight: 550;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    #total-balance {
+        height: 80px;
+    }
+
+    .info-balance {
+        width: max-content;
+        display: block;
+    }
+
+    #title-balance {
+        font-size: .9rem;
+    }
+    
+    #balance {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0;
+    }
 }
