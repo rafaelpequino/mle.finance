@@ -10,7 +10,10 @@ const dropdownMenu = document.getElementById('dropdown-menu');
 // Variável para rastrear o estado do dropdown
 let isDropdownOpen = false;
 
-btnOpenDropdown.addEventListener("click", function (e) {
+window.addEventListener('scroll', closeDropdown);
+btnOpenDropdown.addEventListener("click", actionDropdown)
+
+function actionDropdown (e) {
     e.stopPropagation();
 
     if (!isDropdownOpen) {
@@ -21,7 +24,7 @@ btnOpenDropdown.addEventListener("click", function (e) {
     } else {
         closeDropdown();
     }
-});
+};
 
 function closeDropdown() {
     dropdownMenu.classList.remove('show-dropdown');
