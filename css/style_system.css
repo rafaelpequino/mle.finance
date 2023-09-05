@@ -27,7 +27,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    max-width: 2000px;
+    max-width: 2200px;
     margin: auto;
     margin-bottom: 100px;
     background-color: var(--white-color);
@@ -53,6 +53,10 @@ header.header {
 .user-space {
     display: flex;
     align-items: center;
+    user-select: none;
+    -webkit-user-select: none; /* Para navegadores WebKit (Chrome, Safari, etc.) */
+    -moz-user-select: none; /* Para navegadores Firefox */
+    -ms-user-select: none; /* Para navegadores Microsoft Edge */
 }
 
 i#privacy-eye {
@@ -105,12 +109,10 @@ i#dropdown-icon {
 }
 
 .show-dropdown {
-    visibility: visible;
     transform: scale(1);
 }
 
 .hide-dropdown {
-    visibility: hidden;
     transform: scale(0);
 }
 
@@ -141,7 +143,9 @@ i#dropdown-icon {
 main.main {
     display: flex;
     justify-content: space-between;
-    padding: 15px 5vw;
+    padding: 15px 50px;
+    max-width: 1800px;
+    margin: auto;
 }
 
 nav#sidebar {
@@ -219,15 +223,17 @@ a.active {
 
 .container {
     width: calc(100% - 200px);
+    max-width: 1400px;
     height: max-content;
-    padding: 20px 0 20px 4vw;
+    padding: 20px 0 20px 80px;
+    margin: 0   auto;
 }
 
 .box {
     width: 100%;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.150);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.100);
     border-radius: 15px;
     box-sizing: border-box;
     margin-bottom: 20px;

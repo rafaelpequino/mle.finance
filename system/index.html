@@ -50,6 +50,10 @@
                     <span class="name-sidebar">Home</span>
                 </a>
                 <a href="#" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-right-left"></i></div>
+                    <span class="name-sidebar">Transações</span>
+                </a>
+                <a href="#" class="link-sidebar link-normal">
                     <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
                     <span class="name-sidebar">Metas</span>
                 </a>
@@ -62,15 +66,23 @@
                     <span class="name-sidebar">Investimentos</span>
                 </a>
                 <a href="#" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+                    <span class="name-sidebar">Meus limites</span>
+                </a>
+                <a href="#" class="link-sidebar link-normal">
                     <div class="icon"><i class="fa-solid fa-pencil"></i></i></div>
                     <span class="name-sidebar">Categorias</span>
                 </a>
+
                 <hr class="hr-sidebar">
+
                 <a href="#" class="link-sidebar link-normal">
                     <div class="icon"><i class="fa-solid fa-square-poll-horizontal"></i></div>
                     <span class="name-sidebar">Relatórios</span>
                 </a>
+
                 <hr class="hr-sidebar">
+
                 <a href="#" class="link-sidebar link-logout">
                     <div class="icon"><i class="fa-solid fa-right-from-bracket"></i></div>
                     <span class="name-sidebar">Sair</span>
@@ -86,366 +98,50 @@
                     <div class="data-balance">
                         <div class="color-balance"></div>
                         <div class="info-balance">
-                            <div id="title-balance">Olá, Rafa! Seu saldo total hoje é:</div>
-                            <h3 id="balance" style="color: var(--first-color);">R$1.000.000.700,00</h3>
+                            <div id="title-balance">Olá, Rafael Freire! Seu saldo total hoje é:</div>
+                            <h3 id="balance" class="balance" style="color: var(--black-color);">1000000</h3>
                         </div>
                     </div>
-                    <div class="see-transactions"><a href="">Ver transações</a></div>
 
-                </div>
-                <div class="columns-first-data">
-                    <div class="data-box" id="revenues">
-                        <div class="title-data-box">
-                            <div class="color-revenues"></div>
-                            <span>Receitas</span>
-                        </div>
-                        <div class="value-data-box">
-                            <div class="first-value">
-                                <span>R$</span>10.000,00
-                            </div>
-                            <div class="second-value">
-                                previsto: R$20.000,00
-                            </div>
-                        </div>
-                        <button type="button" class="btn-new" id="btn-revenues">Nova receita</button>
-                    </div>
-                    <div class="data-box" id="expenses">
-                        <div class="title-data-box">
-                            <div class="color-expenses"></div>
-                            <span>Despesas</span>
-                        </div>
-                        <div class="value-data-box">
-                            <div class="first-value">
-                                <span>R$</span>8.000,00
-                            </div>
-                            <div class="second-value">
-                                previsto: R$15.000,00
-                            </div>
-                        </div>
-                        <button type="button" class="btn-new" id="btn-expenses">Nova despesa</button>
-                    </div>
-                    <div class="data-box" id="transfers">
-                        <div class="title-data-box">
-                            <div class="color-transfers"></div>
-                            <span>Transferências</span>
-                        </div>
-                        <div class="value-data-box">
-                            <div class="first-value">
-                                <span>R$</span>750,00
-                            </div>
-                            <div class="second-value">
-                                previsto: R$750,00
-                            </div>
-                        </div>
-                        <button type="button" class="btn-new" id="btn-transfers">Nova transferência</button>
-                    </div>
-                    <div class="data-box" id="investments">
-                        <div class="title-data-box">
-                            <div class="color-investments"></div>
-                            <span>Investimentos</span>
-                        </div>
-                        <div class="value-data-box">
-                            <div class="first-value">
-                                <span>R$</span>30.000,00
-                            </div>
-                            <div class="second-value">
-                                <a href="#">ver detalhes</a>
-                            </div>
-                        </div>
-                        <button type="button" class="btn-new" id="btn-investments">Novo investimento</button>
-                    </div>
                 </div>
 
             </div> <!--FIM FIRST DATA-->
 
             <div class="columns-data">
-                <div class="column-left-3" id="column-left">
+
+                <div class="left-column">
                     <div class="box" id="accounts">
                         <h5>Minha carteira</h5>
-                        
-                        <div class="see-balance">
-                            <button type="button" class="btn-new" id="btn-personal-transfers">Transferência pessoal</button>
-                        </div>
-
-                        <a href="" class="account" id="inter">
-                            <div class="info-account">
-                                <div class="color-account"></div>
-                                <div class="data-account">
-                                    <div class="title-data-account">Banco inter</div>
-                                    <div class="subtitle-data-account">Conta corrente</div>
-                                </div>
-                            </div>
-                            <div class="value-account">
-                                500
-                            </div>
-                        </a>
-
-                        <a href="" class="account" id="nubank">
-                            <div class="info-account">
-                                <div class="color-account"></div>
-                                <div class="data-account">
-                                    <div class="title-data-account">Nubank</div>
-                                    <div class="subtitle-data-account">Conta corrente</div>
-                                </div>
-                            </div>
-                            <div class="value-account">
-                                1200
-                            </div>
-                        </a>
-
-                        <a href="" class="btn-new-item">+ adicionar</a>
                     </div>
 
                     <div class="box" id="cards">
-                        <h5>Meus cartões de crédito</h5>
-                        <a href="" class="my-card">
-                            <div class="info-card">
-                                <div class="name-card">
-                                    <div class="color-card" style="background-color: orange;"></div>
-                                    <div class="data-card">
-                                        <div class="title-data-card">Banco inter</div>
-                                    </div>
+                        <h5>Meus cartões</h5>
+                        <div class="invoices">
+                            <div class="color-invoices"></div>
+                            <div class="info-invoices">
+                                <div class="title-invoices">
+                                    Total das faturas
                                 </div>
-                                <div class="pay-card">
-                                    <div class="text-pay-card">Fatura atual</div>
-                                    <div class="value-pay-card">
-                                        2100
-                                    </div>
+                                <div class="total-invoices" id="total-invoices">
+                                    3250
                                 </div>
                             </div>
-                            <div class="card-control">
-                                <div class="values-card">
-                                    <div class="already-used">Utilizado: R$3.500</div>
-                                    <div class="to-be-used">Limite: R$5.000</div>
-                                </div>
-                                <div class="card-bar">
-                                    <div style="width: 70%; background-color: #E7E048;"></div>
-                                </div>
-                            </div>
-
-                        </a>
-
-                        <a href="" class="my-card">
-                            <div class="info-card">
-                                <div class="name-card">
-                                    <div class="color-card" style="background-color: #0874BA;"></div>
-                                    <div class="data-card">
-                                        <div class="title-data-card">Caixa Econômica</div>
-                                    </div>
-                                </div>
-                                <div class="pay-card">
-                                    <div class="text-pay-card">Fatura atual</div>
-                                    <div class="value-pay-card">
-                                        200
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-control">
-                                <div class="values-card">
-                                    <div class="already-used">Utilizado: R$200</div>
-                                    <div class="to-be-used">Limite: R$2.000</div>
-                                </div>
-                                <div class="card-bar">
-                                    <div style="width: 10%; background-color: #39B54A;"></div>
-                                </div>
-                            </div>
-
-                        </a>
-
-                        <a href="" class="btn-new-item">+ adicionar</a>
+                        </div>
                     </div>
-                
-                    
                 </div>
-                
-                <div class="column-center-3" id="column-center">
-                    <div class="box" id="comparison">
-                        <h5>Comparativo de transações</h5>
-                        <div id="graphics-comparison">
-                            <div class="month-comparison not-this-month">
-                                <div class="graphic-comparison">
-                                    <div class="graphic-line revenues-graphic"><div style="height: 90%;"></div></div>
-                                    <div class="graphic-line expenses-graphic"><div style="height: 60%;"></div></div>
-                                    <div class="graphic-line transfers-graphic""><div style="height: 20%;"></div></div>
-                                    <div class="graphic-line investiments-graphic"><div style="height: 10%;"></div></div>
-                                </div>
-                                <div class="description-month-comparison">jun</div>
-                            </div>
 
-                            <div class="month-comparison not-this-month">
-                                <div class="graphic-comparison">
-                                    <div class="graphic-line revenues-graphic"><div style="height: 100%;"></div></div>
-                                    <div class="graphic-line expenses-graphic"><div style="height: 58%;"></div></div>
-                                    <div class="graphic-line transfers-graphic""><div style="height: 12%;"></div></div>
-                                    <div class="graphic-line investiments-graphic"><div style="height: 30%;"></div></div>
-                                </div>
-                                <div class="description-month-comparison">jul</div>
-                            </div>
-
-                            <div class="month-comparison not-this-month">
-                                <div class="graphic-comparison">
-                                    <div class="graphic-line revenues-graphic"><div style="height: 98%;"></div></div>
-                                    <div class="graphic-line expenses-graphic"><div style="height: 91%;"></div></div>
-                                    <div class="graphic-line transfers-graphic""><div style="height: 5%;"></div></div>
-                                    <div class="graphic-line investiments-graphic"><div style="height: 2%;"></div></div>
-                                </div>
-                                <div class="description-month-comparison">ago</div>
-                            </div>
-
-                            <div class="month-comparison">
-                                <div class="graphic-comparison">
-                                    <div class="graphic-line revenues-graphic"><div style="height: 80%;"></div></div>
-                                    <div class="graphic-line expenses-graphic"><div style="height: 70%;"></div></div>
-                                    <div class="graphic-line transfers-graphic""><div style="height: 5%;"></div></div>
-                                    <div class="graphic-line investiments-graphic"><div style="height: 5%;"></div></div>
-                                </div>
-                                <div class="description-month-comparison">set</div>
-                            </div>
-                            
-                        </div>
-
-                        <div class="graphic-subtitle">
-                            <div class="subtitle subtitle-revenues">
-                                <div class="color-subtitle color-subtitle-revenues"></div>
-                                <div class="description-subtitle">Receitas</div>
-                            </div>
-                            <div class="subtitle subtitle-revenues">
-                                <div class="color-subtitle color-subtitle-expenses"></div>
-                                <div class="description-subtitle">Despesas</div>
-                            </div>
-                            <div class="subtitle subtitle-revenues">
-                                <div class="color-subtitle color-subtitle-transfers"></div>
-                                <div class="description-subtitle">Transferências</div>
-                            </div>
-                            <div class="subtitle subtitle-revenues">
-                                <div class="color-subtitle color-subtitle-investments"></div>
-                                <div class="description-subtitle">Investimentos</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="" class="box" id="promotion">
-                        <div class="text-promotion">Clique e adquira nosso e-book   completo de gestão financeira</div>
-                        <img src="../img/qr-code-insta.png" alt="">
-                    </a>
-
-                    <div class="box" id="last-transactions">
-                        <h5>Últimas transações</h5>
-                        
-                        <div class="transaction">
-                            <div class="info-transaction">
-                                <div class="color-transaction" style="background-color: #0874BA;"></div>
-                                <div class="data-transaction">
-                                    <div class="title-data-transaction">Assaí</div>
-                                    <div class="subtitle-data-transaction">Mercado</div>
-                                </div>
-                            </div>
-                            <div class="value-transaction expense-transaction">
-                                500
-                            </div>
-                        </div>
-
-                        <a href="" class="btn-new-item">ver tudo</a>
-                    </div>
-
-                    <div class="box" id="last-transactions">
-                        <h5>Transações programadas</h5>
-                        
-                        <div class="transaction">
-                            <div class="info-transaction">
-                                <div class="color-transaction" style="background-color: #39B54A;"></div>
-                                <div class="data-transaction">
-                                    <div class="title-data-transaction">Salário líquido</div>
-                                    <div class="subtitle-data-transaction">Salário</div>
-                                </div>
-                            </div>
-                            <div class="value-transaction revenue-transaction">
-                                10000
-                            </div>
-                        </div>
-
-                        <a href="" class="btn-new-item">ver tudo</a>
+                <div class="right-column">
+                    <div class="box" id="revenues">
+                        <h5>Próximas receitas</h5>
                     </div>
                     
-                    
-                </div>
-                
-                <div class="column-right-3" id="column-right">
-                    <div class="box" id="limits">
-                        <h5>Meus limites</h5>
-                        <a href="" class="my-limit">
-                            <div class="data-limit">
-                                <div class="color-limit" style="background-color: #C13D3D;"></div>
-                                <div class="title-limit">Compras</div>
-                            </div>
-                            <div class="limit-control">
-                                <div class="values-limit">
-                                    <div class="already-used">Utilizado: R$2.500</div>
-                                    <div class="to-be-used">Limite: R$3.000</div>
-                                </div>
-                                <div class="limit-bar">
-                                    <div style="width: 75%; background-color: #E7E048;"></div>
-                                </div>
-                            </div>
-
-                        </a>
-
-                        <a href="" class="my-limit">
-                            <div class="data-limit">
-                                <div class="color-limit" style="background-color: #E27715;"></div>
-                                <div class="title-limit">Mercado</div>
-                            </div>
-                            <div class="limit-control">
-                                <div class="values-limit">
-                                    <div class="already-used">Utilizado: R$200</div>
-                                    <div class="to-be-used">Limite: R$700</div>
-                                </div>
-                                <div class="limit-bar">
-                                    <div style="width: 25%; background-color: #39B54A;"></div>
-                                </div>
-                            </div>
-
-                        </a>
-
-                        <a href="" class="my-limit">
-                            <div class="data-limit">
-                                <div class="color-limit" style="background-color: #E53ACA;"></div>
-                                <div class="title-limit">Assinaturas</div>
-                            </div>
-                            <div class="limit-control">
-                                <div class="values-limit">
-                                    <div class="already-used">Utilizado: R$200</div>
-                                    <div class="to-be-used">Limite: R$200</div>
-                                </div>
-                                <div class="limit-bar">
-                                    <div style="width: 100%; background-color: #B53939;"></div>
-                                </div>
-                            </div>
-
-                        </a>
-
-                        <a href="" class="my-limit">
-                            <div class="data-limit">
-                                <div class="color-limit" style="background-color: #3A7FE5;"></div>
-                                <div class="title-limit">Educação</div>
-                                <i class="fa-solid fa-triangle-exclamation"></i>
-                            </div>
-                            <div class="limit-control">
-                                <div class="values-limit">
-                                    <div class="already-used">Utilizado: R$700</div>
-                                    <div class="to-be-used">Limite: R$500</div>
-                                </div>
-                                <div class="limit-bar">
-                                    <div style="width: 120%; background-color: #FF0000;"></div>
-                                </div>
-                            </div>
-
-                        </a>
-                        <a href="" class="btn-new-item">+ adicionar</a>
+                    <div class="box" id="expenses">
+                        <h5>Próximas despesas</h5>
                     </div>
-                
-                </div>
+
             </div>
+
+            
 
 
 
