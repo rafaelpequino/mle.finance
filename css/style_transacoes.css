@@ -27,6 +27,10 @@ i.fa-square-check {
     font-size: 1.4rem;
 }
 
+.transactions {
+    margin: 20px 0;
+}
+
 .transaction {
     width: 100%;
     display: grid;
@@ -60,7 +64,6 @@ i.fa-square-check {
     height: 40px;
     border-radius: 50%;
     min-width: 40px;
-
 }
 
 .account-transaction {
@@ -102,29 +105,41 @@ i.fa-square-check {
     .account-transaction {
         display: none;
     }
+
+    .month-reference > h3 {
+        margin: 0 20px;
+        font-weight: 500;
+        font-size: 1rem;
+    }
 }
 
 
 @media (max-width: 630px) {
-    .name-transaction {
-        font-size: .9rem;
+    .color-transaction {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+    }
 
+    .name-transaction {
+        font-size: .8rem;
+    }
+
+    .category-transaction {
+        font-size: .7rem;
     }
 
     .value-transaction {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .info-value-transaction {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        justify-content: flex-end;
         width: 100%;
         overflow: hidden;
     }
 
     i.fa-square,i.fa-square-check {
         font-size: 1.2rem;
+        margin-left: -7px;
     }
 }

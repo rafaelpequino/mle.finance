@@ -111,27 +111,35 @@
                 <h4 class="title-total-transactions">Setembro 2023</h4>
                 <div class="total-transactions">
                     <div href="#" class="total-revenues">
-                        <h5 class="title-total-revenues">Receitas</h5>
-                        <div id="value-total-revenues">50000000</div>
-                        <button type="button" class="btn-new-revenue">+ nova receita</button>
+                        <div class="info-total-revenues">
+                            <h5 class="title-total-revenues">Receitas</h5>
+                            <div id="value-total-revenues">50000000</div>
+                        </div>
+                        <button type="button" class="btn-new-revenue"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     
                     <div href="#" class="total-expenses">
-                        <h5 class="title-total-expenses">Despesas</h5>
-                        <div id="value-total-expenses">20000000</div>
-                        <button type="button" class="btn-new-expense">- nova despesa</button>
+                        <div class="info-total-expenses">
+                            <h5 class="title-total-expenses">Despesas</h5>
+                            <div id="value-total-expenses">20000000</div>
+                        </div>
+                        <button type="button" class="btn-new-expense"><i class="fa-solid fa-minus"></i></button>
                     </div>
 
                     <div href="#" class="total-transfers">
-                        <h5 class="title-total-transfers">Transferências</h5>
-                        <div id="value-total-transfers">15000000</div>
-                        <button type="button" class="btn-new-transfer">nova transferência</button>
+                        <div class="info-total-transfers">
+                            <h5 class="title-total-transfers">Transferências</h5>
+                            <div id="value-total-transfers">15000000</div>
+                        </div>
+                        <button type="button" class="btn-new-transfer"><i class="fa-solid fa-right-left"></i></button>
                     </div>
 
                     <div href="#" class="total-investments">
-                        <h5 class="title-total-investments">Investimentos</h5>
-                        <div id="value-total-investments">10000000</div>
-                        <button type="button" class="btn-new-investment">novo investimento</button>
+                        <div class="info-total-investments">
+                            <h5 class="title-total-investments">Investimentos</h5>
+                            <div id="value-total-investments">10000000</div>
+                        </div>
+                        <button type="button" class="btn-new-investment"><i class="fa-solid fa-coins"></i></button>
                     </div>
                 </div>
                 <a href="" class="see-transactions">ver todas as transações</a>
@@ -145,18 +153,32 @@
 
                         <a href="#" class="account">
                             <div class="title-card">
-                                <div class="circle-color" style="background-color: rgb(216, 137, 10);"></div>
-                                <div class="name-account">Banco Inter</div>
+                                <i class="fa-solid fa-building-columns" style="color: rgb(216, 137, 10);"></i>
+                                <div class="name-type-account">
+                                    <div class="name-account">Banco Inter</div>
+                                    <div class="type-account">Conta corrente</div>
+                                </div>
                             </div>
                             <div class="total-account">750000</div>
                         </a>
 
                         <a href="#" class="account">
                             <div class="title-card">
-                                <div class="circle-color" style="background-color: rgb(40, 40, 40);"></div>
-                                <div class="name-account">C6 Bank</div>
+                                <i class="fa-solid fa-building-columns" style="color: rgb(40, 40, 40);"></i>
+                                <div class="name-type-account">
+                                    <div class="name-account">C6 Bank</div>
+                                    <div class="type-account">Conta corrente</div>
+                                </div>
                             </div>
-                            <div class="total-account">250000</div>
+                            <div class="total-account">240000</div>
+                        </a>
+
+                        <a href="#" class="account">
+                            <div class="title-card">
+                                <i class="fa-solid fa-money-bill" style="color: rgb(53, 53, 53);"></i>
+                                <div class="name-account">Dinheiro</div>
+                            </div>
+                            <div class="total-account">10000</div>
                         </a>
 
                         <a href="" class="add">+ adicionar</a>
@@ -188,7 +210,7 @@
                                 </div>
                                 <div class="pay-card">
                                     <div class="title-invoice-card">Fatura atual</div>
-                                    <div class="invoice-card">1750</div>
+                                    <div class="invoice-card">1000</div>
                                 </div>
                             </div>
                             <div class="info-limit-card">
@@ -236,7 +258,7 @@
 
                         <div href="#" class="revenue">
                             <div class="title-revenue">
-                                <div class="circle-color" style="background-color: var(--first-color);"></div>
+                                <div class="circle-color" style="background-color: #66d274;"> <i class="fa-solid fa-dollar-sign"></i> </div>
                                 <div class="name-revenue">
                                     <div class="title-revenue">Salário</div>
                                     <div class="subtitle-revenue">Salário</div>
@@ -247,7 +269,7 @@
 
                         <div href="#" class="revenue">
                             <div class="title-revenue">
-                                <div class="circle-color" style="background-color: var(--first-color);"></div>
+                                <div class="circle-color" style="background-color: #66d274;"> <i class="fa-solid fa-chart-simple"></i> </div>
                                 <div class="name-revenue">
                                     <div class="title-revenue">FIIs</div>
                                     <div class="subtitle-revenue">Dividendos</div>
@@ -258,7 +280,7 @@
 
                         <div href="#" class="revenue">
                             <div class="title-revenue">
-                                <div class="circle-color" style="background-color: var(--first-color);"></div>
+                                <div class="circle-color" style="background-color: #66d274;"> <i class="fa-solid fa-dollar-sign"></i> </div>
                                 <div class="name-revenue">
                                     <div class="title-revenue">Salário</div>
                                     <div class="subtitle-revenue">Salário</div>
@@ -276,7 +298,7 @@
 
                         <div href="#" class="expense">
                             <div class="title-expense">
-                                <div class="circle-color" style="background-color: var(--expenses-color) ;"></div>
+                                <div class="circle-color" style="background-color: #859be9;"> <i class="fa-solid fa-house"></i> </div>
                                 <div class="name-expense">
                                     <div class="title-expense">Aluguel</div>
                                     <div class="subtitle-expense">Moradia</div>
@@ -287,7 +309,7 @@
 
                         <div href="#" class="expense">
                             <div class="title-expense">
-                                <div class="circle-color" style="background-color: var(--expenses-color) ;"></div>
+                                <div class="circle-color" style="background-color: #dca347;"> <i class="fa-solid fa-cart-shopping"></i> </div>
                                 <div class="name-expense">
                                     <div class="title-expense">Assaí</div>
                                     <div class="subtitle-expense">Mercado</div>
@@ -298,13 +320,13 @@
 
                         <div href="#" class="expense">
                             <div class="title-expense">
-                                <div class="circle-color" style="background-color: var(--expenses-color);"></div>
+                                <div class="circle-color" style="background-color: #85C1E9;"> <i class="fa-solid fa-book"></i> </div>
                                 <div class="name-expense">
-                                    <div class="title-expense">Conta de luz</div>
-                                    <div class="subtitle-expense">Moradia</div>
+                                    <div class="title-expense">Faculdade</div>
+                                    <div class="subtitle-expense">Estudos</div>
                                 </div>
                             </div>
-                            <div class="total-transaction">500</div>
+                            <div class="total-transaction">1000</div>
                         </div>
 
                         <a href="" class="add">ver transações</a>
