@@ -371,6 +371,10 @@ div.first-data {
     font-size: .8rem;
 }
 
+.total-transaction {
+    opacity: .8;
+}
+
 
 
 @media (max-width: 1280px) {
