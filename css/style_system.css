@@ -30,7 +30,7 @@ html, body {
     max-width: 2200px;
     margin: auto;
     margin-bottom: 100px;
-    background-color: var(--white-color);
+    background-color: #eeeeee;
 }
 
 ::-webkit-scrollbar {
@@ -50,9 +50,6 @@ html, body {
 ::-webkit-scrollbar-corner {
     background-color: transparent;
 } 
-  
-  
-  
 
 body {
     display: none;
@@ -401,7 +398,6 @@ a.active {
 
     main.main {
         padding: 0 3vw;
-        background-color: #fff;
     }
 
 }

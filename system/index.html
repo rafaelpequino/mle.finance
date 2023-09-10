@@ -14,6 +14,8 @@
     <script src="../js/script_home.js" defer></script>
     <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -45,7 +47,7 @@
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
             <div id="links-sidebar">
-                <a href="./index.html" class="active link-sidebar link-normal">
+                <a href="./index.html" class="active link-sidebar">
                     <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
                     <span class="name-sidebar">Home</span>
                 </a>
@@ -113,7 +115,7 @@
                     <div href="#" class="total-revenues">
                         <div class="info-total-revenues">
                             <h5 class="title-total-revenues">Receitas</h5>
-                            <div id="value-total-revenues">50000000</div>
+                            <div id="value-total-revenues">4000</div>
                         </div>
                         <button type="button" class="btn-new-revenue"><i class="fa-solid fa-plus"></i></button>
                     </div>
@@ -121,7 +123,7 @@
                     <div href="#" class="total-expenses">
                         <div class="info-total-expenses">
                             <h5 class="title-total-expenses">Despesas</h5>
-                            <div id="value-total-expenses">20000000</div>
+                            <div id="value-total-expenses">3000</div>
                         </div>
                         <button type="button" class="btn-new-expense"><i class="fa-solid fa-minus"></i></button>
                     </div>
@@ -129,7 +131,7 @@
                     <div href="#" class="total-transfers">
                         <div class="info-total-transfers">
                             <h5 class="title-total-transfers">Transferências</h5>
-                            <div id="value-total-transfers">15000000</div>
+                            <div id="value-total-transfers">500</div>
                         </div>
                         <button type="button" class="btn-new-transfer"><i class="fa-solid fa-right-left"></i></button>
                     </div>
@@ -137,7 +139,7 @@
                     <div href="#" class="total-investments">
                         <div class="info-total-investments">
                             <h5 class="title-total-investments">Investimentos</h5>
-                            <div id="value-total-investments">10000000</div>
+                            <div id="value-total-investments">500</div>
                         </div>
                         <button type="button" class="btn-new-investment"><i class="fa-solid fa-coins"></i></button>
                     </div>
@@ -164,9 +166,9 @@
 
                         <a href="#" class="account">
                             <div class="title-card">
-                                <i class="fa-solid fa-building-columns" style="color: rgb(40, 40, 40);"></i>
+                                <i class="fa-solid fa-building-columns" style="color: rgb(96, 6, 250);"></i>
                                 <div class="name-type-account">
-                                    <div class="name-account">C6 Bank</div>
+                                    <div class="name-account">Nubank</div>
                                     <div class="type-account">Conta corrente</div>
                                 </div>
                             </div>
@@ -338,7 +340,14 @@
         </div>
 
     </main>
-    
+    <div id="test"></div>
 
+    
+    <script>
+        let widthWindow = window.innerWidth;
+
+        document.getElementById('test').innerText = `A largura da sua tela é: ${widthWindow}px`;
+
+    </script>
 </body>
 </html>
