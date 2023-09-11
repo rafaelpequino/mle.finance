@@ -92,108 +92,81 @@
         </nav>
 
         <div class="container">
-            <div class="box">
-                <div class="month-reference">
-                    <i class="fa-solid fa-angles-left"></i>
-                    <h3>Setembro 2023</h3>
-                    <i class="fa-solid fa-angles-right"></i>
-                </div>
-
-                <div class="transactions">
-                    <div class="transaction">
-                        <div class="info-transaction">
-                            <div class="color-transaction" style="background-color: var(--first-color);"></div>
-                            <div class="title-transaction">
-                                <div class="name-transaction">Salário</div>
-                                <div class="category-transaction">Salário</div>
-                            </div>
-                        </div>
-                        <div class="account-transaction">Banco Inter</div>
-                        <div class="info-value-transaction">
-                            <div class="value-transaction" style="color: var(--second-color)">25000</div>
-                            <div class="status-transaction"><i class="fa-regular fa-square"></i></div>
-                        </div>
+            <div class="columns-transactions">
+                <div class="box" id="transactions-container">
+                    <div class="month-reference">
+                        <i class="fa-solid fa-angles-left"></i>
+                        <h5>Setembro 2023</h5>
+                        <i class="fa-solid fa-angles-right"></i>
                     </div>
 
-                    <div class="transaction">
-                        <div class="info-transaction">
-                            <div class="color-transaction" style="background-color: var(--first-color);"></div>
-                            <div class="title-transaction">
-                                <div class="name-transaction">FIIs</div>
-                                <div class="category-transaction">Dividendos</div>
-                            </div>
+                    <div id="transactions">
+                        <div class="date">
+                            <div class="day">10</div>
+                            <hr>
                         </div>
-                        <div class="account-transaction">Banco Inter</div>
-                        <div class="info-value-transaction">
-                            <div class="value-transaction" style="color: var(--second-color)">50000</div>
-                            <div class="status-transaction"><i class="fa-regular fa-square"></i></div>
-                        </div>
-                    </div>
 
-                    <div class="transaction">
-                        <div class="info-transaction">
-                            <div class="color-transaction" style="background-color: var(--expenses-color);"></div>
-                            <div class="title-transaction">
-                                <div class="name-transaction">Aluguel</div>
-                                <div class="category-transaction">Moradia</div>
+                        <a href="" class="transaction">
+                            <div class="info-transaction">
+                                <div class="color-category" style="background-color: #66d274;">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                </div>
+                                <div class="info-data">
+                                    <div class="name-transaction">Meu salário</div>
+                                    <div class="name-category">Salário</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="account-transaction">Banco Inter</div>
-                        <div class="info-value-transaction">
-                            <div class="value-transaction" style="color: var(--expenses-color)">2500</div>
-                            <div class="status-transaction"><i class="fa-solid fa-square-check"></i></div>
-                        </div>
-                    </div>
 
-                    <div class="transaction">
-                        <div class="info-transaction">
-                            <div class="color-transaction" style="background-color: var(--expenses-color);"></div>
-                            <div class="title-transaction">
-                                <div class="name-transaction">Faculdade</div>
-                                <div class="category-transaction">Estudos</div>
+                            <div class="value-transaction">
+                                <div class="value" style="color: var(--second-color);">10000</div>
+                                <div class="account-reference">de <span>Banco Inter</span></div>
                             </div>
-                        </div>
-                        <div class="account-transaction">Banco Inter</div>
-                        <div class="info-value-transaction">
-                            <div class="value-transaction" style="color: var(--expenses-color)">2500</div>
-                            <div class="status-transaction"><i class="fa-solid fa-square-check"></i></div>
-                        </div>
-                    </div>
+                        </a>
 
-                    <div class="transaction">
-                        <div class="info-transaction">
-                            <div class="color-transaction" style="background-color: var(--investments-color);"></div>
-                            <div class="title-transaction">
-                                <div class="name-transaction">HGLG11</div>
-                                <div class="category-transaction">FIIs</div>
+                        <a href="" class="transaction">
+                            <div class="info-transaction">
+                                <div class="color-category" style="background-color: #66b9d2;">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                </div>
+                                <div class="info-data">
+                                    <div class="name-transaction">Aluguel</div>
+                                    <div class="name-category">Moradia</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="account-transaction">Banco Inter</div>
-                        <div class="info-value-transaction">
-                            <div class="value-transaction" style="color: var(--investments-color)">50000</div>
-                            <div class="status-transaction"><i class="fa-solid fa-square-check"></i></div>
-                        </div>
-                    </div>
 
-                    <div class="transaction">
-                        <div class="info-transaction">
-                            <div class="color-transaction" style="background-color: var(--transfers-color);"></div>
-                            <div class="title-transaction">
-                                <div class="name-transaction">Completar pagamento</div>
-                                <div class="category-transaction">Transação</div>
+                            <div class="value-transaction">
+                                <div class="value" style="color: var(--expenses-color);">2000</div>
+                                <div class="account-reference">de <span>Banco Inter</span></div>
                             </div>
+                        </a>
+
+                        <div class="date">
+                            <div class="day">12</div>
+                            <hr>
                         </div>
-                        <div class="account-transaction">
-                            <div class="accounts-involved">
-                                C6 Bank
-                                <div class="transfer-to"><i class="fa-solid fa-chevron-down"></i></div>
-                                Banco Inter
+
+                        <a href="" class="transaction">
+                            <div class="info-transaction">
+                                <div class="color-category" style="background-color: #66d274;">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                </div>
+                                <div class="info-data">
+                                    <div class="name-transaction">Meu salário</div>
+                                    <div class="name-category">Salário</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="info-value-transaction">
-                            <div class="value-transaction" style="color: var(--transfers-color)">20000</div>
-                            <div class="status-transaction"><i class="fa-solid fa-square-check"></i></div>
-                        </div>
+
+                            <div class="second-info-transaction">
+                                <div class="value-transaction">
+                                    <div class="value" style="color: var(--second-color);">10000</div>
+                                    <div class="account-reference">de <span>Banco Inter</span></div>
+                                </div>
+                                <div class="status-transactions">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
 
                 </div>

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     //formatValues(document.getElementById('balance'))
     
-    const valuesTransactions = document.getElementsByClassName('value-transaction')
+    const valuesTransactions = document.getElementsByClassName('value')
     for (let i = 0; i < valuesTransactions.length; i++) {
         formatValues(valuesTransactions[i]);
     }
