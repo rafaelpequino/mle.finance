@@ -16,4 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         formatValues(valuesTransactions[i]);
     }
 
+    document.getElementById('teste').addEventListener('click', function() {
+        alert('Vencemo Familia')
+    })
+
 })
