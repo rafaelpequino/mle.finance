@@ -284,10 +284,10 @@ a.active {
         top: -20px;
         left: 0;
         background-color: #fff;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         z-index: 30;
-        padding: 30px 30vw;
+        padding: 100px 30vw;
         transition: .3s opacity;
         overflow-y: scroll;
     }
@@ -369,7 +369,7 @@ a.active {
     }
 
     nav#sidebar {
-        padding: 10vh 20vw;
+        padding: 100px 20vw;
     }
 }
 
@@ -393,7 +393,7 @@ a.active {
     }
 
     nav#sidebar {
-        padding: 70px 5vw;
+        padding: 100px 5vw;
     }
 
     main.main {

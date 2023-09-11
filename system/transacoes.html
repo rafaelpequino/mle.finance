@@ -14,6 +14,8 @@
     <script src="../js/script_transacoes.js" defer></script>
     <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -108,7 +110,7 @@
 
                         <div href="" class="transaction">
                             <div class="info-transaction">
-                                <div class="color-category" style="background-color: #66d274;">
+                                <div class="color-category" style="background-color: var(--first-color);">
                                     <i class="fa-solid fa-dollar-sign"></i>
                                 </div>
                                 <div class="info-data">
@@ -131,7 +133,7 @@
                         <div href="" class="transaction">
                             <div class="info-transaction">
                                 <div class="color-category" style="background-color: #66b9d2;">
-                                    <i class="fa-solid fa-dollar-sign"></i>
+                                    <i class="fa-solid fa-house"></i>
                                 </div>
                                 <div class="info-data">
                                     <div class="name-transaction">Aluguel</div>
@@ -157,7 +159,7 @@
 
                         <div href="" class="transaction">
                             <div class="info-transaction">
-                                <div class="color-category" style="background-color: #66d274;">
+                                <div class="color-category" style="background-color: var(--first-color);">
                                     <i class="fa-solid fa-dollar-sign"></i>
                                 </div>
                                 <div class="info-data">
@@ -177,8 +179,81 @@
                             </div>
                         </div>
 
+                        <div href="" class="transaction">
+                            <div class="info-transaction">
+                                <div class="color-category" style="background-color: var(--transfers-color);">
+                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                </div>
+                                <div class="info-data">
+                                    <div class="name-transaction">Complemento aluguel</div>
+                                    <div class="name-category">Transferência</div>
+                                </div>
+                            </div>
+
+                            <div class="second-info-transaction">
+                                <div class="value-transaction">
+                                    <div class="value" style="color: var(--transfers-color);">10000</div>
+                                    <div class="account-reference">de <span>Nubank</span></div>
+                                    <div class="account-reference">para <span>Banco Inter</span></div>
+                                </div>
+                                <div class="status-transactions">
+                                    <i class="fa-regular fa-square"></i>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
+                </div>
+
+                <div class="month-balance">
+                    <div class="box" id="month-revenues">
+                        <h5>Receitas</h5>
+                        <div class="topic-total total-revenues">
+                            <div class="efetivadas">
+                                Efetivadas: <span>10000</span>
+                            </div>
+                            <div class="programadas">
+                                Programadas: <span>10000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box" id="month-expenses">
+                        <h5>Despesas</h5>
+                        <div class="topic-total total-expenses">
+                            <div class="efetivadas">
+                                Efetivadas: <span>10000</span>
+                            </div>
+                            <div class="programadas">
+                                Programadas: <span>10000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box" id="month-transfers">
+                        <h5>Transferências</h5>
+                        <div class="topic-total total-transfers">
+                            <div class="efetivadas">
+                                Efetivadas: <span>10000</span>
+                            </div>
+                            <div class="programadas">
+                                Programadas: <span>10000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box" id="month-investments">
+                        <h5>Investimentos</h5>
+                        <div class="topic-total total-investments">
+                            <div class="efetivadas">
+                                Efetivados: <span>10000</span>
+                            </div>
+                            <div class="programadas">
+                                Programados: <span>10000</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
