@@ -3,11 +3,14 @@
 div.first-data {
     width: 100%;
     padding: 20px 7px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
 #total-balance {
-    width: 100%;
+    width: max-content;
     height: 50px;
     display: flex;
     text-decoration: none;
@@ -21,6 +24,7 @@ div.first-data {
     display: flex;
     align-items: center;
     width: 100%;
+    max-width: max-content;
     height: 100%;
 }
 
@@ -33,22 +37,94 @@ div.first-data {
 }
 
 .info-balance {
-    width: max-content;
+    max-width: 80vw;
     display: flex;
     align-items: center;
     justify-content: start;
+    flex-wrap: wrap;
 }
 
 #title-balance {
     opacity: .7;
     font-size: 1.1rem;
+    margin-right: 15px;
 }
 
 #balance {
     font-size: 1.7rem;
-    font-weight: 600;
-    margin-left: 15px;
+    font-weight: 550;
 }
+
+#balance > span {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: .8;
+}
+
+
+.options {
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 10px;
+    margin-right: 15px;
+    padding: 0 10px;
+}
+
+.btn-new {
+    text-align: center;
+    padding: 12px 10px 8px;
+    font-size: .8rem;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 80px;
+    transition: .3s;
+    font-weight: 350;
+}
+
+.btn-new > i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+#new-revenue {
+    border: 3px solid var(--first-color);
+}
+
+#new-revenue:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+#new-expense {
+    border: 3px solid var(--expenses-color);
+}
+
+#new-expense:hover {
+    background-color: var(--expenses-color);
+    color: #fff;
+}
+
+#new-transfer {
+    border: 3px solid var(--transfers-color);
+}
+
+#new-transfer:hover {
+    background-color: var(--transfers-color);
+    color: #fff;
+}
+
+#new-investment {
+    border: 3px solid var(--investments-color);
+}
+
+#new-investment:hover {
+    background-color: var(--investments-color);
+    color: #fff;
+}
+
+
 
 /*--------------------------FIM FIRST DATA--------------------------*/
 
@@ -184,7 +260,7 @@ button.btn-new {
 .color-invoices {
     background-color: var(--second-color);
     width: 4px;
-    height: 40px;
+    height: 48px;
     border-radius: 5px;
     margin-right: 10px;
 }
@@ -193,6 +269,17 @@ button.btn-new {
     opacity: .6;
     font-size: .9rem;
 }
+
+.total-invoices {
+    font-size: 1.2rem;
+    font-weight: 500;
+} 
+
+.total-invoices > span {
+    font-size: .9rem;
+    opacity: .8;
+    font-weight: 400;
+} 
 
 .hr-cards {
     margin: 20px 0;
@@ -238,8 +325,17 @@ button.btn-new {
 
 .total-account {
     font-weight: 450;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.total-account > span {
+    font-size: .9rem;
+    opacity: .8;
+    font-weight: 400;
 }
 
 .card {
@@ -281,6 +377,18 @@ button.btn-new {
     font-size: .8rem;
 }
 
+.invoice-card {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--expenses-color);
+}
+
+.invoice-card > span {
+    font-size: .8rem;
+    opacity: .8;
+    font-weight: 400;
+}
+
 .info-limit-card {
     margin: 10px 0;
 }
@@ -296,6 +404,12 @@ button.btn-new {
 
 .limit-card > div {
     max-width: max-content;
+}
+
+.limit-card > div > span > span {
+    font-size: .8rem;
+    opacity: .8;
+    font-weight: 400;
 }
 
 .limit-card > div:first-child {
@@ -326,57 +440,34 @@ button.btn-new {
 
 .total-transaction {
     opacity: .8;
+    font-size: 1.1rem;
+}
+
+.total-transaction > span{
+    font-size: .8rem;
+    opacity: .8;
+    font-weight: 400;
 }
 
 
 
-@media (max-width: 1280px) {
-    .total-transactions {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 30px;
+@media (max-width: 1150px) {
+    div.first-data {
+        width: 100%;
+        padding: 20px 7px;
+        width: 100%;
+        display: block;
     }
 
-    .total-transactions > div:not(:last-child) {
-        border: none;
+    #total-balance {
+        margin: 0 auto 20px;
     }
 
-    .total-transactions > div:nth-child(1), .total-transactions > div:nth-child(3) {
-        border-right: 1px solid;
-        border-image: linear-gradient(0deg, #0000003c, #00000080, #0000003c);
-        border-image-slice: 1;
+    .options {
+        margin: auto;
     }
-}
-
-@media (max-width: 1200px) {
-    .total-transactions {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .total-transactions > div:nth-child(1), .total-transactions > div:nth-child(3) {
-        border: none;
-    }
-
-    .total-transactions > div:not(:last-child) {
-        border-right: 1px solid;
-        border-image: linear-gradient(0deg, #0000003c, #00000080, #0000003c);
-        border-image-slice: 1;
-    }
-}
-
-@media (max-width: 1000px) {
-    .total-transactions {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .total-transactions > div:not(:last-child) {
-        border: none;
-    }
-
-    .total-transactions > div:nth-child(1), .total-transactions > div:nth-child(3) {
-        border-right: 1px solid;
-        border-image: linear-gradient(0deg, #0000003c, #00000080, #0000003c);
-        border-image-slice: 1;
-    }
+    
+    
 }
 
 
@@ -408,11 +499,6 @@ button.btn-new {
     
     #balance {
         font-size: 1.5rem;
-        font-weight: 550;
-    }
-
-    .total-transactions > div > div {
-        font-size: 1rem;
     }
 
     .transactions {
@@ -429,48 +515,16 @@ button.btn-new {
 
 @media (max-width: 500px) {
 
-    .total-transactions {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .total-transactions > div {
-        width: 100%;
-        max-width: 280px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: auto;
-    }
-
-    .total-transactions > div:not(:last-child) {
-        border: none;
-    }
-
-    .total-transactions > div > button {
-        margin: 0;
-    }
-
-    .total-transactions > div > div {
-        font-size: 1rem;
-    }
-
-    .circle-color {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        margin-right: 10px;
-        min-width: 35px;
-    }
-
     .fa-building-columns, .fa-money-bill {
-        margin-right: 12px;
-        font-size: 1.6rem;
+        margin-right: 4px;
+        font-size: 1.4rem;
         width: 40px;
     }
     
 
     #total-balance {
-        height: 80px;
+        width: 100%;
+        margin: 0 0 20px;
     }
 
     .info-balance {
@@ -488,8 +542,31 @@ button.btn-new {
         margin: 0;
     }
 
+    .options {
+        padding: 0;
+        gap: 0 5px;
+    }
+    
+    .btn-new {
+        text-align: center;
+        padding: 12px 5px 8px;
+        font-size: .6rem;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 60px;
+        transition: .3s;
+        font-weight: 350;
+    }
+    
+    .btn-new > i {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+
     .name-account, .name-card {
-        font-size: .85rem;
+        font-size: .8rem;
         overflow: hidden;
     }
 
@@ -556,4 +633,13 @@ button.btn-new {
     .total-transaction {
         font-size: .8rem;
     }
+}
+
+
+@media (max-width: 400px) {
+    #title-balance {
+        font-size: .8rem;
+        margin-right: 8px;
+    }
+    
 }

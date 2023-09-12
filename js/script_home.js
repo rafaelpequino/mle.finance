@@ -8,7 +8,13 @@ function formatValues (element) {
         style: 'currency',
         currency: 'BRL'
     });
-    element.innerHTML = `<span>R$</span>${formattedValue.slice(3)}`;
+    
+    if (originalValue >= 0) {
+        element.innerHTML = `<span>R$ </span>${formattedValue.slice(3)}`;
+    } else {
+        element.innerHTML = `<span>R$ -</span>${formattedValue.slice(4)}`;
+        element.style.color = "var(--expenses-color)"
+    }
 }
 formatValues(document.getElementById('balance'))
 formatValues(document.getElementById('total-invoices'))
