@@ -56,131 +56,83 @@ div.first-data {
 
 .transactions {
     width: 100%;
-    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 20px;
 }
 
-.title-total-transactions {
-    width: 100%;
+.topic-total {
     text-align: center;
 }
 
-.total-transactions {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 25px 0;
-    overflow: hidden;
+.topic-total > div {
+    margin-bottom: 8px;
 }
 
-.total-transactions > div {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 0;
+.topic-total > div > div:first-child {
+    opacity: .9;
+    font-size: .9rem;
 }
 
-.total-transactions > div:not(:last-child) {
-    border-right: 1px solid;
-    border-image: linear-gradient(0deg, #0000003c, #00000080, #0000003c);
-    border-image-slice: 1;
+.topic-total > div > div:last-child {
+    font-size: 1.3rem;
 }
 
-.total-transactions > div > div > h5 {
-    font-weight: 400;
+.total-receives > div  > div:last-child {
+    color: var(--second-color);
 }
 
-.total-transactions > div > div {
-    font-weight: 500;
-    font-size: 1.2rem;
+.total-expenses > div  > div:last-child {
+    color: var(--expenses-color);
 }
 
-.total-transactions > div > button {
+.total-investments > div  > div:last-child {
+    color: var(--investments-color);
+}
+
+.programadas {
+    opacity: .7;
+}
+
+button.btn-new {
     display: block;
-    margin: 10px auto 0;
-    background-color: transparent;
-    border: none;
-    width: max-content;
-    padding: 2px 15px;
+    width: 100%;
+    max-width: 160px;
+    padding: 4px;
     border-radius: 10px;
+    background-color: transparent;
+    margin: 12px auto 0;
+    text-align: center;
     font-size: .8rem;
     cursor: pointer;
     transition: .3s;
 }
 
-.total-transactions > div > button > i {
-    font-size: 1.2rem;
-}
-
-.total-transactions > div > button.btn-new-revenue {
+.btn-new-receive {
     border: 2px solid var(--first-color);
-    color: var(--first-color);
 }
 
-.total-transactions > div > button.btn-new-revenue:hover {
+.btn-new-receive:hover {
     background-color: var(--first-color);
     color: #fff;
 }
 
-.total-transactions > div > button.btn-new-expense {
+.btn-new-expense {
     border: 2px solid var(--expenses-color);
-    color: var(--expenses-color);
 }
 
-.total-transactions > div > button.btn-new-expense:hover {
+.btn-new-expense:hover {
     background-color: var(--expenses-color);
     color: #fff;
 }
 
-.total-transactions > div > button.btn-new-transfer {
-    border: 2px solid var(--transfers-color);
-    color: var(--transfers-color);
-}
-
-.total-transactions > div > button.btn-new-transfer:hover {
-    background-color: var(--transfers-color);
-    color: #fff;
-}
-
-.total-transactions > div > button.btn-new-investment {
+.btn-new-investment {
     border: 2px solid var(--investments-color);
-    color: var(--investments-color);
 }
 
-.total-transactions > div > button.btn-new-investment:hover {
+.btn-new-investment:hover {
     background-color: var(--investments-color);
     color: #fff;
-}
-
-.total-revenues, .total-expenses, .total-transfers, .total-investments {
-    text-align: center;
-    border-radius: 15px;
-    text-decoration: none;
-    color: #000;
-}
-
-.total-revenues > div > div {
-    color: var(--second-color);
-}
-
-.total-expenses > div > div {
-    color: var(--expenses-color);
-}
-
-.total-transfers > div > div {
-    color: var(--transfers-color);
-}
-
-.total-investments > div > div {
-    color: var(--investments-color);
-}
-
-.see-transactions {
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: var(--black-color);
-    text-decoration: none;
-    opacity: .9;
-    font-size: .9rem;
 }
 
 /*-----------------------FIM OPTIONS DATA------------------------*/
@@ -356,14 +308,14 @@ div.first-data {
 
 .limit-bar {
     width: 100%;
-    height: 10px;
+    height: 12px;
     background-color: #00000052;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .used-limit-bar {
-    height: 10px;
+    height: 12px;
     border-radius: 10px;
 }
 
@@ -430,6 +382,18 @@ div.first-data {
 
 @media (max-width: 900px) {
 
+    .transactions {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .box-month-balance {
+        max-width: 48%;
+    }
+
     .columns-data {
         grid-template-columns: repeat(1, 1fr);
         gap: 0px;
@@ -449,6 +413,16 @@ div.first-data {
 
     .total-transactions > div > div {
         font-size: 1rem;
+    }
+
+    .transactions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .box-month-balance {
+        max-width: none;
     }
 }
 

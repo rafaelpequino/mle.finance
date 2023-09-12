@@ -1,7 +1,7 @@
 .columns-transactions {
     width: 100%;
     display: grid;
-    grid-template-columns: auto 300px;
+    grid-template-columns: auto 350px;
     gap: 0 20px;
 }
 
@@ -71,6 +71,7 @@
 
 .color-category {
     width: 45px;
+    min-width: 45px;
     height: 45px;
     margin-right: 20px;
     border-radius: 50%;
@@ -110,11 +111,106 @@
     cursor: pointer;
 }
 
-.month-balance > div > h5 {
-    text-align: center;
-    font-weight: 500;
+/*-----------------------INÍCIO OPTIONS DATA------------------------*/
+
+.transactions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 20px;
 }
 
 .topic-total {
-    margin: auto;
+    text-align: center;
+}
+
+.topic-total > div {
+    margin-bottom: 8px;
+}
+
+.topic-total > div > div:first-child {
+    opacity: .9;
+    font-size: .9rem;
+}
+
+.topic-total > div > div:last-child {
+    font-size: 1.3rem;
+}
+
+.total-receives > div  > div:last-child {
+    color: var(--second-color);
+}
+
+.total-expenses > div  > div:last-child {
+    color: var(--expenses-color);
+}
+
+.total-investments > div  > div:last-child {
+    color: var(--investments-color);
+}
+
+.programadas {
+    opacity: .7;
+}
+
+button.btn-new {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: transparent;
+    margin: 12px auto 0;
+    text-align: center;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-new-receive {
+    border: 2px solid var(--first-color);
+}
+
+.btn-new-receive:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.btn-new-expense {
+    border: 2px solid var(--expenses-color);
+}
+
+.btn-new-expense:hover {
+    background-color: var(--expenses-color);
+    color: #fff;
+}
+
+.btn-new-investment {
+    border: 2px solid var(--investments-color);
+}
+
+.btn-new-investment:hover {
+    background-color: var(--investments-color);
+    color: #fff;
+}
+
+/*-----------------------FIM OPTIONS DATA------------------------*/
+
+
+@media (max-width: 1300px) {
+    .columns-transactions {
+        grid-template-columns: auto 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .columns-transactions {
+        grid-template-columns: auto 250px;
+    }
+}
+
+@media (max-width: 850px) {
+    .columns-transactions {
+        grid-template-columns: 1fr;
+    }
 }
