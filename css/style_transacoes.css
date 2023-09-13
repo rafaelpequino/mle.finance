@@ -67,6 +67,9 @@
     width: max-content;
     display: flex;
     align-items: center;
+    margin-right: 10px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .color-category {
@@ -89,6 +92,7 @@
 .second-info-transaction {
     display: flex;
     align-items: center;
+    min-width: max-content;
 }
 
 .value-transaction {
@@ -213,4 +217,58 @@ button.btn-new {
     .columns-transactions {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 500px) {
+    .transaction {
+        margin: 0;
+        padding: 12px 4px;
+    }
+
+    .color-category {
+        width: 35px;
+        min-width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+
+    .name-transaction {
+        font-size: .9rem;
+    }
+
+    .name-category {
+        font-size: .7rem;
+    }
+
+    .account-reference {
+        font-size: .7rem;
+    }
+    
+    .status-transactions {
+        margin-left: 10px;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .name-transaction {
+        font-size: .8rem;
+    }
+
+    .name-category {
+        font-size: .6rem;
+    }
+
+    .value-transaction {
+        font-size: .9rem;
+    }    
+
+    .account-reference {
+        font-size: .6rem;
+    }
+    
+    .status-transactions {
+        margin-left: 8px;
+    }
+    
 }
