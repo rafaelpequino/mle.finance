@@ -1,0 +1,18 @@
+#metas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.meta {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.meta > img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
