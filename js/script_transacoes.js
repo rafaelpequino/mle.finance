@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         element.innerHTML = `<span>R$</span>${formattedValue.slice(3)}`;
     }
+
+    formatValues(document.getElementById('total-balance'))
+    formatValues(document.getElementById('total-revenues'))
+    formatValues(document.getElementById('total-expenses'))
+    formatValues(document.getElementById('total-investments'))
     
     const valuesTransactions = document.getElementsByClassName('value')
     for (let i = 0; i < valuesTransactions.length; i++) {

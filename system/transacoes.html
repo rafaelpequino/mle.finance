@@ -126,6 +126,7 @@
                                 </div>
                                 <div class="status-transactions">
                                     <i class="fa-regular fa-square"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
                                 </div>
                             </div>
                         </div>
@@ -207,44 +208,32 @@
                 </div>
 
                 <div class="month-balance">
-                    <div class="box box-month-balance" id="box-total-receives">
-                        <h5>Receitas do mês</h5>
-                        <div class="topic-total total-receives">
-                            <div class="efetivadas">
-                                <div>Efetivadas:</div> <div>1000000000</div>
-                            </div>
-                            <div class="programadas">
-                                <div>Programadas:</div> <div>1000000000</div>
-                            </div>
+                    <div class="box box-month-total" id="box-total-balance">
+                        <h4>Saldo atual</h4>
+                        <div id="total-balance">750000</div>
+                    </div>
+                    <div class="box box-month-total box-total" id="box-total-revenues">
+                        <div class="info-total">
+                            <h4>Receitas</h4>
+                            <div id="total-revenues" class="value-total">1000000</div>
                         </div>
-                        <button type="button" class="btn-new btn-new-receive">Nova receita</button>
+                        <div class="btn-new" id="new-revenue"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                    <div class="box box-month-total box-total" id="box-total-expenses">
+                        <div class="info-total">
+                            <h4>Despesas</h4>
+                            <div id="total-expenses" class="value-total">200000</div>
+                        </div>
+                        <div class="btn-new" id="new-expense"><i class="fa-solid fa-minus"></i></div>
+                    </div>
+                    <div class="box box-month-total box-total" id="box-total-investments">
+                        <div class="info-total">
+                            <h4>Investimentos</h4>
+                            <div id="total-investments" class="value-total">50000</div>
+                        </div>
+                        <div class="btn-new" id="new-investment"><i class="fa-solid fa-chart-simple"></i></div>
                     </div>
     
-                    <div class="box box-month-balance" id="box-total-expenses">
-                        <h5>Despesas do mês</h5>
-                        <div class="topic-total total-expenses">
-                            <div class="efetivadas">
-                                <div>Efetivadas:</div> <div>1000000000</div>
-                            </div>
-                            <div class="programadas">
-                                <div>Programadas:</div> <div>1000000000</div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn-new btn-new-expense">Nova despesa</button>
-                    </div>
-    
-                    <div class="box box-month-balance" id="box-total-investments">
-                        <h5>Investimentos do mês</h5>
-                        <div class="topic-total total-investments">
-                            <div class="efetivadas">
-                                <div>Efetivadas:</div> <div>1000000000</div>
-                            </div>
-                            <div class="programadas">
-                                <div>Programadas:</div> <div>1000000000</div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn-new btn-new-investment">Novo investimento</button>
-                    </div>
                 </div>
             </div>
 

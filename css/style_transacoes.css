@@ -109,10 +109,18 @@
 
 .status-transactions {
     margin-left: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .fa-square {
     cursor: pointer;
+}
+
+.fa-triangle-exclamation {
+    color: var(--transfers-color);
+    margin-top: 5px;
+    display: block;
 }
 
 /*-----------------------INÍCIO OPTIONS DATA------------------------*/
@@ -124,78 +132,89 @@
     gap: 0 20px;
 }
 
-.topic-total {
-    text-align: center;
+.box-month-total > h4 {
+    opacity: .8;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
-.topic-total > div {
+#total-balance {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn-new {
+    text-align: center;
+    padding: 12px 10px 8px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 60px;
+    min-width: 60px;
+    transition: .3s;
+    font-weight: 350;
+}
+
+.btn-new > i {
+    display: block;
+    font-size: 1.5rem;
     margin-bottom: 8px;
 }
 
-.topic-total > div > div:first-child {
-    opacity: .9;
-    font-size: .9rem;
+#new-revenue {
+    border: 3px solid var(--first-color);
 }
 
-.topic-total > div > div:last-child {
-    font-size: 1.3rem;
-}
-
-.total-receives > div  > div:last-child {
-    color: var(--second-color);
-}
-
-.total-expenses > div  > div:last-child {
-    color: var(--expenses-color);
-}
-
-.total-investments > div  > div:last-child {
-    color: var(--investments-color);
-}
-
-.programadas {
-    opacity: .7;
-}
-
-button.btn-new {
-    display: block;
-    width: 100%;
-    max-width: 160px;
-    padding: 4px;
-    border-radius: 10px;
-    background-color: transparent;
-    margin: 12px auto 0;
-    text-align: center;
-    font-size: .8rem;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.btn-new-receive {
-    border: 2px solid var(--first-color);
-}
-
-.btn-new-receive:hover {
+#new-revenue:hover {
     background-color: var(--first-color);
     color: #fff;
 }
 
-.btn-new-expense {
-    border: 2px solid var(--expenses-color);
+#new-expense {
+    border: 3px solid var(--expenses-color);
 }
 
-.btn-new-expense:hover {
+#new-expense:hover {
     background-color: var(--expenses-color);
     color: #fff;
 }
 
-.btn-new-investment {
-    border: 2px solid var(--investments-color);
+#new-transfer {
+    border: 3px solid var(--transfers-color);
 }
 
-.btn-new-investment:hover {
+#new-transfer:hover {
+    background-color: var(--transfers-color);
+    color: #fff;
+}
+
+#new-investment {
+    border: 3px solid var(--investments-color);
+}
+
+#new-investment:hover {
     background-color: var(--investments-color);
     color: #fff;
+}
+
+.box-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-total > h4 {
+    opacity: .8;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.value-total {
+    font-size: 1.4rem;
+    margin-right: 10px;
 }
 
 /*-----------------------FIM OPTIONS DATA------------------------*/
@@ -211,11 +230,39 @@ button.btn-new {
     .columns-transactions {
         grid-template-columns: auto 250px;
     }
+
+    .btn-new {
+        text-align: center;
+        padding: 10px 8px 6px;
+        width: 40px;
+        min-width: 40px;
+    }
+    
+    .btn-new > i {
+        font-size: 1.2rem;
+    }
+
+    .value-total {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 850px) {
     .columns-transactions {
         grid-template-columns: 1fr;
+    }
+
+    .btn-new {
+        width: 60px;
+        min-width: 60px;
+    }
+    
+    .btn-new > i {
+        font-size: 1.5rem;
+    }
+
+    .value-total {
+        font-size: 1.4rem;
     }
 }
 
@@ -246,6 +293,19 @@ button.btn-new {
     
     .status-transactions {
         margin-left: 10px;
+    }
+
+    .btn-new {
+        width: 40px;
+        min-width: 40px;
+    }
+    
+    .btn-new > i {
+        font-size: 1.2rem;
+    }
+
+    .value-total {
+        font-size: 1.2rem;
     }
     
 }
