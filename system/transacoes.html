@@ -18,6 +18,7 @@
     <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div id="blackout"></div>
     <header class="header">
         <a href="../system/index.html" class="first-logo">
             <img src="../img/logo_MLEfinance.png" alt="Logo MLE finance">
@@ -100,6 +101,51 @@
                         <i class="fa-solid fa-angles-left"></i>
                         <h5>Setembro 2023</h5>
                         <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                    
+
+                    <div class="filter-transactions">
+                        <i class="fa-solid fa-filter" id="btn-filter"></i>
+                        <div id="display-filter" data-status="closed">
+                            <h5>Filtrar por:</h5>
+                            <form action="" method="post" id="form-filter">
+
+                                <div class="category-filter">
+                                    <label for="">Tipo de transação</label>
+                                    <select name="" id="">
+                                        <option value="" selected disabled>Todos</option>
+                                        <option value="">Receitas</option>
+                                        <option value="">Despesas</option>
+                                        <option value="">Transações</option>
+                                        <option value="">Investimentos</option>
+                                    </select>
+                                </div>
+
+                                <div class="category-filter">
+                                    <label for="">Categoria</label>
+                                    <select name="" id="">
+                                        <option value="" selected disabled>Todas</option>
+                                    </select>
+                                </div>
+
+                                <div class="category-filter">
+                                    <label for="">Conta</label>
+                                    <select name="" id="">
+                                        <option value="" selected disabled>Todas</option>
+                                    </select>
+                                </div>
+
+                                <div class="category-filter">
+                                    <label for="">Status</label>
+                                    <select name="" id="">
+                                        <option value="" selected disabled>Todas</option>
+                                        <option value="">Efetivadas</option>
+                                        <option value="">Programadas</option>
+                                    </select>
+                                </div>
+                                <button type="submit" id="btn-apply">aplicar</button>
+                            </form>
+                        </div>
                     </div>
 
                     <div id="transactions">
@@ -240,16 +286,5 @@
         </div>
 
     </main>
-    
-    Adicionar div de filtros: <br>
-    -> Categoria (despesas, receitas ou transações) <br>
-    -> Subcategoria (tipo de desdepsas ou de receitas) (abrir com js após selecionar categoria) <br>
-
-    -> Conta <br>
-
-    -> Pagas / Não pagas <br>
-
-    -> Valores
-
 </body>
 </html>

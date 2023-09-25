@@ -20,6 +20,13 @@ hr.hr-subtitle {
     opacity: .9;
 }
 
+.responsive-meta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .title-metas, .meta {
     width: 100%;
     display: grid;
@@ -103,6 +110,14 @@ hr.hr-subtitle {
     opacity: .8;
 }
 
+.little-prazo {
+    display: none;
+}
+
+.big-prazo {
+    display: block;
+}
+
 
 @media (max-width: 1000px) {
     
@@ -128,11 +143,19 @@ hr.hr-subtitle {
         text-align: center;
     }
 
-    .prazo {
+    .big-prazo {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
+    }
+
+    .little-prazo {
+        display: block;
+    }
+    
+    .big-prazo {
+        display: none;
     }
 
     .meta > div {
