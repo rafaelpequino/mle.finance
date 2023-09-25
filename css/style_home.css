@@ -236,16 +236,6 @@ button.btn-new {
     color: #fff;
 }
 
-.add {
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: var(--black-color);
-    text-decoration: none;
-    opacity: .8;
-    font-size: .8rem;
-}
-
 .total {
     width: max-content;
 }

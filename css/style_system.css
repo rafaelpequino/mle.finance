@@ -112,7 +112,7 @@ i#dropdown-icon {
 #dropdown-menu {
     position: absolute;
     top: 80%;
-    right: 3vw;
+    right: 20px;
     padding: 15px 0;
     width: max-content;
     min-width: 220px;
@@ -261,6 +261,15 @@ a.active {
     margin-bottom: 20px;
 }
 
+.add {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--black-color);
+    text-decoration: none;
+    opacity: .8;
+    font-size: .8rem;
+}
 
 @media (max-width: 1400px) {
 

@@ -32,7 +32,7 @@
 
 .date {
     position: relative;
-    margin: 60px 0 25px;
+    margin: 30px 0 20px;
     opacity: .5;
 }
 
@@ -49,7 +49,6 @@
 .transaction {
     color: #000;
     text-decoration: none;
-    margin: 5px 0;
     padding: 12px;
     width: 100%;
     display: flex;
@@ -73,10 +72,10 @@
 }
 
 .color-category {
-    width: 45px;
-    min-width: 45px;
-    height: 45px;
-    margin-right: 20px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    margin-right: 10px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -84,9 +83,13 @@
     color: var(--white-color);
 }
 
+.name-transaction {
+    font-size: .9rem;
+}
+
 .name-category {
     opacity: .8;
-    font-size: .8rem;
+    font-size: .7rem;
 }
 
 .second-info-transaction {
@@ -104,7 +107,7 @@
 
 .account-reference {
     opacity: .8;
-    font-size: .8rem;
+    font-size: .7rem;
 }
 
 .status-transactions {
@@ -277,10 +280,11 @@
         min-width: 35px;
         height: 35px;
         margin-right: 10px;
+        font-size: .9rem;
     }
 
     .name-transaction {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .name-category {
@@ -311,9 +315,6 @@
 }
 
 @media (max-width: 400px) {
-    .name-transaction {
-        font-size: .8rem;
-    }
 
     .name-category {
         font-size: .6rem;

@@ -18,9 +18,6 @@ function formatValues (element) {
 }
 formatValues(document.getElementById('balance'))
 formatValues(document.getElementById('total-invoices'))
-/*formatValues(document.getElementById('value-total-revenues'))
-formatValues(document.getElementById('value-total-expenses'))
-formatValues(document.getElementById('value-total-investments'))*/
 
 const valuesAccounts = document.getElementsByClassName('total-account')
 for (let i = 0; i < valuesAccounts.length; i++) {
