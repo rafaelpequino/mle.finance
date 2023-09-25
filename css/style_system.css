@@ -160,7 +160,7 @@ i#dropdown-icon {
 main.main {
     display: flex;
     justify-content: space-between;
-    padding: 15px 50px;
+    padding: 0 50px 15px;
     margin: auto;
 }
 
