@@ -1,0 +1,81 @@
+.divida {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 26% 30% 24% 20%;
+}
+
+.info-divida {
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.title-divida {
+    font-size: .9rem;
+}
+
+.subtitle-divida {
+    font-size: .7rem;
+    opacity: .8;
+}
+
+.description-divida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    opacity: .9;
+}
+
+.value-divida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--expenses-color);
+}
+
+.simulation-divida {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.simulation-divida > button {
+    padding: 6px 25px;
+    background-color: none;
+    border: 2px solid rgb(89, 89, 89);
+    border-radius: 20px;
+    font-size: .9rem;
+}
+
+
+@media (max-width: 900px) {
+    .divida {
+        grid-template-columns: 50% 50%;
+        gap: 20px 0;
+        overflow: hidden;
+    }
+
+    .description-divida {
+        display: flex;
+        justify-content: left;
+        order: 2;
+        font-size: .9rem;
+        opacity: .9;
+        overflow: hidden;
+    }
+    
+    .value-divida {
+        order: 1;
+        justify-content: right;
+        color: var(--expenses-color);
+        overflow: hidden;
+    }
+    
+    .simulation-divida {
+        order: 3;
+        justify-content: end;
+        overflow: hidden;
+    }
+}
