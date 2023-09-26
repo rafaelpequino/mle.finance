@@ -1,12 +1,12 @@
 .columns-transactions {
     width: 100%;
-    display: grid;
-    grid-template-columns: auto 350px;
-    gap: 0 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #transactions-container {
-    width: 100%;
+    width: calc(100% - 370px);
+    max-width: 700px;
     height: auto;
     position: relative;
 }
@@ -108,18 +108,13 @@ form#form-filter {
 
 .date {
     position: relative;
-    margin: 30px 0 20px;
-    opacity: .5;
+    margin: 30px 0 0;
+    opacity: .7;
+    text-align: center;
 }
 
 .date > .day {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translate(-50%,-50%);
-    font-size: 1.5rem;
-    background-color: #fff;
-    padding: 0 15px 0 30px;
+    font-size: .8rem;
 }
 
 .transaction {
@@ -131,7 +126,7 @@ form#form-filter {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    border-radius: 15px;
+    border-bottom: 1px solid rgb(205, 205, 205);
 }
 
 .transaction:hover {
@@ -148,15 +143,16 @@ form#form-filter {
 }
 
 .color-category {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
     margin-right: 10px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white-color);
+    font-size: .8rem;
 }
 
 .name-transaction {
@@ -202,106 +198,85 @@ form#form-filter {
     display: block;
 }
 
-/*-----------------------INÍCIO OPTIONS DATA------------------------*/
+.month-balance {
+    width: 350px;
+}
 
-.transactions {
+.see-all > div {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 400px;
 }
 
-.box-month-total > h4 {
-    opacity: .8;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-#total-balance {
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: 600;
-}
-
-.btn-new {
-    text-align: center;
-    padding: 12px 10px 8px;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: #fff;
-    width: 60px;
-    min-width: 60px;
-    transition: .3s;
-    font-weight: 350;
-}
-
-.btn-new > i {
-    display: block;
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-}
-
-#new-revenue {
-    border: 3px solid var(--first-color);
-}
-
-#new-revenue:hover {
-    background-color: var(--first-color);
-    color: #fff;
-}
-
-#new-expense {
-    border: 3px solid var(--expenses-color);
-}
-
-#new-expense:hover {
-    background-color: var(--expenses-color);
-    color: #fff;
-}
-
-#new-transfer {
-    border: 3px solid var(--transfers-color);
-}
-
-#new-transfer:hover {
-    background-color: var(--transfers-color);
-    color: #fff;
-}
-
-#new-investment {
-    border: 3px solid var(--investments-color);
-}
-
-#new-investment:hover {
-    background-color: var(--investments-color);
-    color: #fff;
-}
-
-.box-total {
+.inside-see-all {
+    width: max-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.info-total > h4 {
-    opacity: .8;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-.value-total {
-    font-size: 1.4rem;
+.color-see-all {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     margin-right: 10px;
 }
 
-/*-----------------------FIM OPTIONS DATA------------------------*/
+.color-revenue {
+    background-color: var(--first-color);
+}
+.color-expense {
+    background-color: var(--expenses-color);
+}
+.color-transfer {
+    background-color: var(--transfers-color);
+}
+.color-investment {
+    background-color: var(--investments-color);
+}
+
+.info-see-all {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.name-see-all {
+    width: auto; 
+    white-space: nowrap;
+    overflow: hidden; 
+
+}
+
+.title-name, .title-balance {
+    font-size: .9rem;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap; 
+}
+
+.subtitle-name, .subtitle-balance {
+    font-size: .8rem;
+    opacity: .7;
+}
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
     .columns-transactions {
-        grid-template-columns: auto 300px;
+        flex-direction: column;
+    }
+
+    #transactions-container {
+        width: 100%;
+        max-width: none;
+        order: 2;
+    }
+
+    .month-balance {
+        width: 100%;
     }
 }
 
@@ -352,11 +327,11 @@ form#form-filter {
     }
 
     .color-category {
-        width: 35px;
-        min-width: 35px;
-        height: 35px;
+        width: 25px;
+        min-width: 25px;
+        height: 25px;
         margin-right: 10px;
-        font-size: .9rem;
+        font-size: .7rem;
     }
 
     .name-transaction {
@@ -387,6 +362,25 @@ form#form-filter {
     .value-total {
         font-size: 1.2rem;
     }
+
+    .title-name, .title-balance {
+        font-size: .75rem;
+    }
+    
+    .subtitle-name, .subtitle-balance {
+        font-size: .65rem;
+    }
+
+    .color-see-all {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .fa-triangle-exclamation {
+        font-size: .8rem;
+    }
     
 }
 
@@ -397,7 +391,7 @@ form#form-filter {
     }
 
     .value-transaction {
-        font-size: .9rem;
+        font-size: .8rem;
     }    
 
     .account-reference {

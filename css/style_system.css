@@ -259,6 +259,9 @@ a.active {
 .box > h3, .box > h4,.box > h5,.box > h6 {
     text-align: center;
     margin-bottom: 20px;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap; 
 }
 
 .add {
@@ -404,7 +407,14 @@ a.active {
     }
 
     main.main {
-        padding: 0 3vw;
+        padding: 0 5px;
+    }
+
+
+    .box {
+        padding: 20px 10px;
+        border-radius: 10px;
+        margin-bottom: 15px;
     }
 
 }
