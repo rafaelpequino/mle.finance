@@ -27,16 +27,14 @@ hr.hr-subtitle {
     justify-content: space-between;
 }
 
-.list-metas {
-    overflow-x: scroll;
+.container-list-metas {
+    width: 100%;
     overflow-x: auto; 
 }
 
-.list-metas > div {
-    padding: 10px; /* Adicione preenchimento para espaçamento interno */
-    display: inline-block; /* Faz com que a div se comporte como um elemento em linha */
-    /* Adicione outros estilos necessários ao conteúdo */
-  
+.list-metas {
+    width: 100%;
+    display: inline-block; 
 }
 
 .title-metas, .meta {
@@ -146,6 +144,11 @@ hr.hr-subtitle {
 
     .metas-box {
         padding: 20px ;
+    }
+
+    .list-metas {
+        width: auto;
+        display: inline-block; 
     }
     
     .title-metas, .meta {
