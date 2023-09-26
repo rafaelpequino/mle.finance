@@ -224,18 +224,6 @@ button.btn-new {
     gap: 20px;
 } 
 
-.circle-color {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: #fff;
-}
-
 .total {
     width: max-content;
 }

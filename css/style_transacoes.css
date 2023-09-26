@@ -9,6 +9,7 @@
     max-width: 700px;
     height: auto;
     position: relative;
+    overflow: visible;
 }
 
 .month-reference {
@@ -54,7 +55,7 @@ i#btn-filter {
     top: 50px;
     right: 20px;
     background-color: white;
-    width: 300px;
+    width: 250px;
     z-index: 150;
     box-shadow: 0 0 10px rgb(195, 195, 195);
     border-radius: 10px;
@@ -142,19 +143,6 @@ form#form-filter {
     overflow: hidden;
 }
 
-.color-category {
-    width: 30px;
-    min-width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white-color);
-    font-size: .8rem;
-}
-
 .name-transaction {
     font-size: .9rem;
 }
@@ -200,6 +188,19 @@ form#form-filter {
 
 .month-balance {
     width: 350px;
+}
+
+.name-see-all {
+    text-overflow: ellipsis; /* Adiciona reticências ao texto que estiver oculto */
+    overflow: hidden; /* Garante que o texto oculto seja escondido */
+    white-space: nowrap; /* Impede a quebra de texto */
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+.info-see-all {
+    min-width: max-content;
+    margin-right: 1px;
 }
 
 .see-all > div {
@@ -326,14 +327,6 @@ form#form-filter {
         padding: 12px 4px;
     }
 
-    .color-category {
-        width: 25px;
-        min-width: 25px;
-        height: 25px;
-        margin-right: 10px;
-        font-size: .7rem;
-    }
-
     .name-transaction {
         font-size: .8rem;
     }
@@ -364,18 +357,11 @@ form#form-filter {
     }
 
     .title-name, .title-balance {
-        font-size: .75rem;
+        font-size: .85rem;
     }
     
     .subtitle-name, .subtitle-balance {
-        font-size: .65rem;
-    }
-
-    .color-see-all {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        margin-right: 10px;
+        font-size: .75rem;
     }
 
     .fa-triangle-exclamation {

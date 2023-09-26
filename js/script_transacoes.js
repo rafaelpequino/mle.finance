@@ -9,12 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         element.innerHTML = `<span>R$</span>${formattedValue.slice(3)}`;
     }
-/*
-    formatValues(document.getElementById('total-balance'))
-    formatValues(document.getElementById('total-revenues'))
-    formatValues(document.getElementById('total-expenses'))
-    formatValues(document.getElementById('total-investments'))
-    */
+
     const valuesTransactions = document.getElementsByClassName('value')
     for (let i = 0; i < valuesTransactions.length; i++) {
         formatValues(valuesTransactions[i]);
@@ -56,11 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (displayStatus === "closed") {
             displayFilter.style.transform = "scale(1)";
-            blackout.style.display = "block";
             displayFilter.setAttribute("data-status", "opened");
         } else {
             displayFilter.style.transform = "scale(0)";
-            blackout.style.display = "none";
             displayFilter.setAttribute("data-status", "closed");
         }
     }
