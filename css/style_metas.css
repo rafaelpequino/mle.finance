@@ -29,12 +29,20 @@ hr.hr-subtitle {
 
 .list-metas {
     overflow-x: scroll;
+    overflow-x: auto; 
+}
+
+.list-metas > div {
+    padding: 10px; /* Adicione preenchimento para espaçamento interno */
+    display: inline-block; /* Faz com que a div se comporte como um elemento em linha */
+    /* Adicione outros estilos necessários ao conteúdo */
+  
 }
 
 .title-metas, .meta {
     width: 100%;
     display: grid;
-    grid-template-columns: auto 300px 120px;
+    grid-template-columns: 50% 35% 15%;
 }
 
 .title-metas > div:nth-child(2), .meta > div:nth-child(2) {
@@ -69,6 +77,10 @@ hr.hr-subtitle {
     flex-direction: column;
     justify-content: center;
     padding: 10px;
+}
+
+.meta > div:first-child {
+    overflow: hidden;
 }
 
 .status-info {
