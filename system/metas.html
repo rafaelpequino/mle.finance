@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transações - MLE finance</title>
+    <title>Metas - MLE finance</title>
     <!--ESTILO PRINCIPAL SISTEMA-->
     <link rel="stylesheet" href="../css/style_system.css">
     <!--ESTILO TRANSAÇÕES DO SISTEMA-->
@@ -67,10 +67,6 @@
                     <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
                     <span class="name-sidebar">Investimentos</span>
                 </a>
-                <a href="./limites.html" class="link-sidebar link-normal">
-                    <div class="icon"><i class="fa-solid fa-sliders"></i></div>
-                    <span class="name-sidebar">Meus limites</span>
-                </a>
                 <a href="./categorias.html" class="link-sidebar link-normal">
                     <div class="icon"><i class="fa-solid fa-pencil"></i></i></div>
                     <span class="name-sidebar">Categorias</span>
@@ -95,114 +91,138 @@
 
         <div class="container">
             <div id="metas">
-                <div id="short" class="metas-box">
-                    <h4>Curto prazo</h4>
-                    <hr class="hr-subtitle">
-                    <div class="container-list-metas">
-                        <div class="list-metas">
-                            <div class="meta">
-                                <div>Montar reserva de emergência</div>
-                                <div class="status">
-                                    <div class="status-info">
-                                        <div class="have">
-                                            Tenho: <br>
-                                            <span>8000</span>
+                <div class="box" id="short-time">
+                    <h5>Curto prazo</h5>
+                    <div class="div-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Meta</th>
+                                    <th>Montante</th>
+                                    <th>Progresso</th>
+                                    <th>Objetivo</th>
+                                    <th>Prazo</th>
+                                    <th>Restam</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Montar uma reserva de emergência</td>
+                                    <td class="value">8000</td>
+                                    <td>
+                                        <div class="status-bar">
+                                            <div style="background-color: var(--first-color); width: 80%;"></div>
                                         </div>
-                                        <div class="need">
-                                            Preciso: <br>
-                                            <span>10000</span>
-                                        </div>
-                                    </div>
-                                    <div class="status-bar">
-                                        <div style="background-color: var(--first-color); width: 80%;"></div>
-                                    </div>
-                                </div>
-                                <div class="prazo">
-                                    <div class="date-prazo">
-                                        31/12/2023
-                                    </div>
-                                    <div class="faltam-prazo">
-                                        3 meses
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    </td>
+                                    <td class="value">10000</td>
+                                    <td>31/12/2023</td>
+                                    <td>90 dias</td>
+                                </tr>
+                        
+                            </tbody>
+                        </table>
                     </div>
-                    <br>
                     <a href="" class="add">+ adicionar</a>
                 </div>
 
-                <div id="medium" class="metas-box">
-                    <h4>Médio prazo</h4>
-                    <hr class="hr-subtitle">
-                    <div class="container-list-metas">
-                        <div class="list-metas">
-                            <div class="meta">
-                                <div>Conquistar casa própria</div>
-                                <div class="status">
-                                    <div class="status-info">
-                                        <div class="have">
-                                            Tenho: <br>
-                                            <span>150000</span>
+                <div class="box" id="medium-time">
+                    <h5>Médio prazo</h5>
+                    <!--
+                    <div class="div-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Meta</th>
+                                    <th>Montante</th>
+                                    <th>Progresso</th>
+                                    <th>Objetivo</th>
+                                    <th>Prazo</th>
+                                    <th>Restam</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Montar uma reserva de emergência</td>
+                                    <td class="value">5000</td>
+                                    <td>
+                                        <div class="status-bar">
+                                            <div style="background-color: var(--yellow-color); width: 50%;"></div>
                                         </div>
-                                        <div class="need">
-                                            Preciso: <br>
-                                            <span>300000</span>
-                                        </div>
-                                    </div>
-                                    <div class="status-bar">
-                                        <div style="background-color: var(--yellow-color); width: 50%;"></div>
-                                    </div>
-                                </div>
-                                <div class="prazo">
-                                    <div class="date-prazo">
-                                        31/12/2031
-                                    </div>
-                                    <div class="faltam-prazo">
-                                        8 anos
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    </td>
+                                    <td class="value">10000</td>
+                                    <td>31/12/2023</td>
+                                    <td>90 dias</td>
+                                </tr>
+                        
+                            </tbody>
+                        </table>
                     </div>
-                    <br>
+                    -->
+                    <div class="no-have">
+                        Você não possui metas de médio prazo
+                    </div>
                     <a href="" class="add">+ adicionar</a>
                 </div>
 
-                <div id="long" class="metas-box">
-                    <h4>Longo prazo</h4>
-                    <hr class="hr-subtitle">
-                    <div class="container-list-metas">
-                        <div class="list-metas">
-                            <div class="meta">
-                                <div>Aposentadoria</div>
-                                <div class="status">
-                                    <div class="status-info">
-                                        <div class="have">
-                                            Tenho: <br>
-                                            <span>10000</span>
+                <div class="box" id="long-time">
+                    <h5>Longo prazo</h5>
+                    <div class="div-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Meta</th>
+                                    <th>Montante</th>
+                                    <th>Progresso</th>
+                                    <th>Objetivo</th>
+                                    <th>Prazo</th>
+                                    <th>Restam</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Conquistar casa própria</td>
+                                    <td class="value">30000</td>
+                                    <td>
+                                        <div class="status-bar">
+                                            <div style="background-color: var(--expenses-color); width: 10%;"></div>
                                         </div>
-                                        <div class="need">
-                                            Preciso: <br>
-                                            <span>1000000</span>
-                                        </div>
-                                    </div>
-                                    <div class="status-bar">
-                                        <div style="background-color: var(--expenses-color); width: 1%;"></div>
-                                    </div>
-                                </div>
-                                <div class="prazo">
-                                    <div class="date-prazo">
-                                        31/12/2050
-                                    </div>
-                                    <div class="faltam-prazo">
-                                        27 anos
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    </td>
+                                    <td class="value">300000</td>
+                                    <td>31/12/2023</td>
+                                    <td>90 dias</td>
+                                </tr>
+                        
+                            </tbody>
+                        </table>
                     </div>
-                    <br>
+                    <a href="" class="add">+ adicionar</a>
+                </div>
+
+                <hr id="hr-carried">
+
+                <div class="box" id="met">
+                    <h5>Metas cumpridas</h5>
+                    <div class="div-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Meta</th>
+                                    <th>Montante</th>
+                                    <th>Prazo</th>
+                                    <th>Realizado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Montar uma reserva de emergência</td>
+                                    <td class="value">500000000</td>
+                                    <td>31/12/2023</td>
+                                    <td>90 dias</td>
+                                </tr>
+                        
+                            </tbody>
+                        </table>
+                    </div>
                     <a href="" class="add">+ adicionar</a>
                 </div>
             </div>

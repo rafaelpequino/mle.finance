@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimentos - MLE finance</title>
+    <!--ESTILO PRINCIPAL SISTEMA-->
+    <link rel="stylesheet" href="../css/style_system.css">
+    <!--ESTILO TRANSAÇÕES DO SISTEMA-->
+    <link rel="stylesheet" href="../css/style_investimentos.css">
+    <!--SCRIPT PRINCIPAL SISTEMA-->
+    <script src="../js/script_sytem.js" defer></script>
+    <!--SCRIPT TRANSAÇÕES DO SISTEMA-->
+    <script src="../js/script_investimentos.js" defer></script>
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <a href="../system/index.html" class="first-logo">
+            <img src="../img/logo_MLEfinance.png" alt="Logo MLE finance">
+        </a>
+
+        <div class="user-space">
+            <div id="user-info">
+                <i class="fa-solid fa-circle-user" id="icon-user-photo"></i> 
+                <h5 id="user-name">Rafael Freire</h5>
+                <i class="fa-solid fa-chevron-down" id="dropdown-icon"></i> 
+            </div>
+            <div id="open-close-sidebar" class="btn-sidebar-close">
+                <div class="feature"></div>
+                <div class="feature"></div>
+                <div class="feature"></div>
+            </div>
+            <div id="dropdown-menu" class="hide-dropdown" data-status="close">
+                <a href="#"><i class="fa-solid fa-user"></i>Meu perfil</a>
+                <a href="#"><i class="fa-solid fa-gear"></i>Configurações</a>
+                <a href="#"><i class="fa-solid fa-plus"></i>Convidar</a>
+                <a href="#"><i class="fa-solid fa-question"></i>Ajuda</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main">
+        <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
+            <div id="links-sidebar">
+                <a href="./index.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <span class="name-sidebar">Home</span>
+                </a>
+                <a href="./transacoes.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-right-left"></i></div>
+                    <span class="name-sidebar">Transações</span>
+                </a>
+                <a href="./metas.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <span class="name-sidebar">Metas</span>
+                </a>
+                <a href="./dividas.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                    <span class="name-sidebar">Dívidas</span>
+                </a>
+                <a href="./investimentos.html" class="active link-sidebar">
+                    <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
+                    <span class="name-sidebar">Investimentos</span>
+                </a>
+                <a href="./categorias.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-pencil"></i></i></div>
+                    <span class="name-sidebar">Categorias</span>
+                </a>
+
+                <hr class="hr-sidebar">
+
+                <a href="./relatorios.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-square-poll-horizontal"></i></div>
+                    <span class="name-sidebar">Relatórios</span>
+                </a>
+
+                <hr class="hr-sidebar">
+
+                <a href="#" class="link-sidebar link-logout">
+                    <div class="icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+                    <span class="name-sidebar">Sair</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="container">
+            <div id="indice">
+                <div id="taxas">
+                    <div class="taxa">
+                        <div class="title-taxa">Ibovespa</div>
+                        <div class="info-taxa">116.565,19 pts</div>
+                    </div>
+
+                    <div class="taxa">
+                        <div class="title-taxa">Selic</div>
+                        <div class="info-taxa">12.75%</div>
+                    </div>
+
+                    <div class="taxa">
+                        <div class="title-taxa">CDI</div>
+                        <div class="info-taxa">13.44%</div>
+                    </div>
+
+                    <div class="taxa">
+                        <div class="title-taxa">IPCA</div>
+                        <div class="info-taxa">4.61%</div>
+                    </div>
+                </div>
+
+                <div id="acoes">
+                    <div class="acao">
+                        <div class="title-acao">AMER3</div>
+                        <div class="name-acao">Americanas</div>
+                        <div class="value-acao">0.95</div>
+                        <div class="percent-acao" style="color: var(--expenses-color);">-10%</div>
+                    </div>
+                    <div class="acao">
+                        <div class="title-acao">MGLU3</div>
+                        <div class="name-acao">Magazine Luiza</div>
+                        <div class="value-acao">2.01</div>
+                        <div class="percent-acao" style="color: var(--expenses-color);">-5.19%</div>
+                    </div>
+                    <div class="acao">
+                        <div class="title-acao">BHIA3</div>
+                        <div class="name-acao">Casas Bahia</div>
+                        <div class="value-acao">0.63</div>
+                        <div class="percent-acao">0%</div>
+                    </div>
+                    <div class="acao">
+                        <div class="title-acao">PETR4</div>
+                        <div class="name-acao">Petrobras</div>
+                        <div class="value-acao">34,12</div>
+                        <div class="percent-acao" style="color: var(--expenses-color);">-1.51%</div>
+                    </div>
+                    <div class="acao">
+                        <div class="title-acao">CIEL3</div>
+                        <div class="name-acao">Cielo</div>
+                        <div class="value-acao">3.55</div>
+                        <div class="percent-acao" style="color: var(--first-color);">-1.13%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wallet">
+                <div class="box" id="renda-fixa">
+                    <h5>Renda fixa</h5>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Data de compra</th>
+                                <th>Valor investido</th>
+                                <th>Rendimento/ano</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody>
+                            <tr>
+                                <td>Tesouro Selic 2026</td>
+                                <td>10/09/2023</td>
+                                <td class="value-invest">50</td>
+                                <td>12.75%</td>
+                            </tr>
+                            <tr>
+                                <td>Tesouro prefixado 2026</td>
+                                <td>10/09/2023</td>
+                                <td class="value-invest">50</td>
+                                <td>12.75%</td>
+                            </tr>
+                            <tr>
+                                <td>CDB Liquidez Diária Banco Inter</td>
+                                <td>10/09/2023</td>
+                                <td class="value-invest">50</td>
+                                <td>12.75%</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <a href="" class="add">+ adicionar</a>
+                </div>
+
+                <div class="box" id="renda-variavel">
+                    <h5>Renda variável</h5>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Tipo</th>
+                                <th>Data de compra</th>
+                                <th>Cotas</th>
+                                <th>Valor investido</th>
+                                <th>Patrimônio</th>
+                                <th>Rendimento</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody>
+                            <tr>
+                                <td>AMER3</td>
+                                <td>Ação</td>
+                                <td>10/09/2023</td>
+                                <td>100</td>
+                                <td class="value-invest">1000</td>
+                                <td class="value-invest">950</td>
+                                <td style="color: var(--expenses-color);">-5%</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <a href="" class="add">+ adicionar</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    
+
+</body>
+</html>

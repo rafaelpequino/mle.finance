@@ -1,185 +1,124 @@
-#short {
+#short-time {
     border: 1px solid var(--first-color);
 }
 
-#medium {
+#medium-time {
     border: 1px solid var(--yellow-color);
 }
 
-#long {
+#long-time {
     border: 1px solid var(--expenses-color);
 }
 
-.metas-box {
+.div-table {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-bottom: 10px;
+}
+
+table {
     width: 100%;
-    padding: 20px 30px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    overflow: hidden;
+    border-collapse: collapse;
+    margin-bottom: 15px;
 }
 
-.metas-box > h4 {
-    font-weight: 400;
-    text-align: left;
-    font-size: 1rem;
-}
-
-hr.hr-subtitle {
-    display: block;
-    margin: 10px 0 15px;
-    opacity: .9;
-}
-
-.responsive-meta {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.container-list-metas {
-    width: 100%;
-    overflow-x: auto; 
-}
-
-.list-metas {
-    width: 100%;
-    display: inline-block; 
-}
-
-.meta {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 35% 15%;
-}
-
-.meta > div:nth-child(2) {
-    text-align: center;
-}
-
-.meta > div:nth-child(3) {
-    text-align: right;
-}
-
-.meta {
-    font-weight: 400;
+thead > tr {
     border-bottom: 1px solid rgb(230, 230, 230);
-    transition: .3s;
-    cursor: pointer;
-    font-size: .9rem;
+    border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-.meta:hover {
+thead > tr > th {
+    font-weight: 400;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    border-bottom: none; 
+}
+
+tbody > tr {
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    border-bottom: 1px solid rgb(220, 220, 220);
+    overflow-x: scroll;
+}
+
+tbody > tr:hover {
     background-color: rgb(245, 245, 245);
 }
 
-.meta > div {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-}
-
-.meta > div:first-child {
+tbody > tr > td {
+    padding: 10px 0;
+    text-align: center;
+    font-size: .9rem;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.status-info {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: .8rem;
-    opacity: .8;
+tbody > tr > td:not(:last-child), thead > tr > th:not(:last-child) {
+    padding-right: 20px;
 }
 
-.have {
-    text-align: left;
+tbody > tr > td:first-child {
+    max-width: 280px;
+    min-width: 280px;
 }
 
-.need {
-    text-align: right;
+tbody > tr > td:nth-child(2) {
+    max-width: 130px;
+    min-width: 130px;
+}
+
+tbody > tr > td:nth-child(4) {
+    max-width: 150px;
+    min-width: 150px;
 }
 
 .status-bar {
-    width: 100%;
-    height: 12px;
+    width: 150px;
+    height: 10px;
     background-color: #00000052;
     border-radius: 10px;
     overflow: hidden;
+    margin: auto;
 }
 
 .status-bar > div {
-    height: 12px;
+    height: 10px;
     border-radius: 10px;
 }
 
-.prazo {
-    width: 100%;
+.value {
+    white-space: nowrap;
 }
 
-.date-prazo {
+hr#hr-carried {
+    margin: 20px 0;
+}
+
+.no-have {
     font-size: .9rem;
-}
-
-.faltam-prazo {
-    font-size: .8rem;
-    opacity: .8;
-}
-
-.little-prazo {
-    display: none;
-}
-
-.big-prazo {
-    display: block;
+    opacity: .9;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 
-@media (max-width: 1000px) {
-    
-    .meta {
-        grid-template-columns: auto 250px 120px;
+@media (max-width: 1400px) {
+
+    tbody > tr > td {
+        font-size: .85rem;
+    }
+
+    tbody > tr > td:first-child {
+        max-width: 200px;
+        min-width: 200px;
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1300px) {
 
-    .metas-box {
-        padding: 20px ;
-    }
-
-    .list-metas {
-        width: auto;
-        display: inline-block; 
-    }
-    
-    .meta {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 150px 250px 120px;
-    }
-
-    .meta > div {
-        font-size: .8rem;
-    }
-
-    .status-info {
-        font-size: .7rem;
-    }
-
-    .status-bar {
-        height: 10px;
-    }
-
-    .date-prazo {
-        font-size: .8rem;
-    }
-    
-    .faltam-prazo {
-        font-size: .7rem;
+    tbody > tr > td:first-child {
+        max-width: 180px;
+        min-width: 180px;
     }
 }

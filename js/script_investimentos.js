@@ -18,9 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     //formatValues(document.getElementById('balance'))
     
-    const value = document.querySelectorAll('.value')
-    for (let i = 0; i < value.length; i++) {
-        formatValues(value[i]);
+    const valueAcao = document.querySelectorAll('.value-acao')
+    for (let i = 0; i < valueAcao.length; i++) {
+        formatValues(valueAcao[i]);
+    }
+
+    const valueInvest = document.querySelectorAll('.value-invest')
+    for (let i = 0; i < valueInvest.length; i++) {
+        formatValues(valueInvest[i]);
     }
     
 });
