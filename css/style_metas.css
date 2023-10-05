@@ -1,13 +1,33 @@
 #short-time {
-    border: 1px solid var(--first-color);
+    border: 1px solid var(--investments-color);
+}
+
+#short-time > .div-table > table > thead > tr > th:first-child {
+    color: var(--investments-color);
 }
 
 #medium-time {
     border: 1px solid var(--yellow-color);
 }
 
+#medium-time > .div-table > table > thead > tr > th:first-child {
+    color: var(--yellow-color);
+}
+
 #long-time {
     border: 1px solid var(--expenses-color);
+}
+
+#long-time > .div-table > table > thead > tr > th:first-child {
+    color: var(--expenses-color);
+}
+
+#met {
+    border: 1px solid var(--second-color);
+}
+
+#met > .div-table > table > thead > tr > th:first-child {
+    color: var(--second-color);
 }
 
 .div-table {
@@ -32,6 +52,17 @@ thead > tr > th {
     font-size: 0.8rem;
     opacity: 0.8;
     border-bottom: none; 
+}
+
+thead > tr > th:first-child {
+    font-weight: 600;
+    opacity: 1;
+    font-size: .9rem; 
+    text-align: left;
+}
+
+thead > tr > th:last-child {
+    text-align: right;
 }
 
 tbody > tr {
@@ -61,6 +92,7 @@ tbody > tr > td:not(:last-child), thead > tr > th:not(:last-child) {
 tbody > tr > td:first-child {
     max-width: 280px;
     min-width: 280px;
+    text-align: left;
 }
 
 tbody > tr > td:nth-child(2) {
@@ -71,6 +103,10 @@ tbody > tr > td:nth-child(2) {
 tbody > tr > td:nth-child(4) {
     max-width: 150px;
     min-width: 150px;
+}
+
+tbody > tr > td:last-child {
+    text-align: right;
 }
 
 .status-bar {

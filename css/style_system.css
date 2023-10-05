@@ -29,7 +29,7 @@ html, body {
     height: 100%;
     max-width: 1500px;
     margin: auto;
-    background-color: #eeeeee;
+    background-color: #eee;
 }
 
 ::-webkit-scrollbar {
@@ -249,12 +249,12 @@ a.active {
 .box {
     width: 100%;
     padding: 20px;
-    background-color: #fff;
+    background-color: #eee;
     border-radius: 15px;
     box-sizing: border-box;
     margin-bottom: 20px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.067);
+    border: 1px solid #00000058;
 }
 
 .box > h3, .box > h4,.box > h5,.box > h6 {
