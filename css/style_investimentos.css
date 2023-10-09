@@ -4,21 +4,22 @@
 
 #taxas {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
     padding: 20px;
     border-radius: 15px;
     background-color: #fff;
 }
 
 .taxa {
-    width: 100%;
-    text-align: center;
+    width: max-content;
+    margin: auto;
 }
 
 .title-taxa {
-    font-size: .9rem;
     opacity: .9;
     margin-bottom: 5px;
 }
@@ -28,16 +29,20 @@
     font-weight: 600;
 }
 
-.info-green {
-    color: var(--first-color);
+.info-taxa > span {
+    font-size: .7rem;
+    opacity: .7;
+    color: #000;
+    font-weight: 400;
 }
 
 #acoes {
     display: flex;
     overflow-x: auto;
     margin-top: 20px;
-    padding-bottom: 8px;
+    padding: 8px 0;
     height: 100%;
+    border-top: 1px solid rgb(199, 199, 199);
 }
 
 .acao {
@@ -73,6 +78,12 @@
     margin-top: 30px;
 }
 
+.div-table {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-bottom: 10px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -91,10 +102,22 @@ thead > tr > th {
     border-bottom: none; 
 }
 
+thead > tr > th:first-child {
+    font-weight: 600;
+    opacity: 1;
+    font-size: .9rem; 
+    text-align: left;
+}
+
+thead > tr > th:last-child {
+    text-align: right;
+}
+
 tbody > tr {
     cursor: pointer;
     transition: background-color 0.3s; 
     border-bottom: 1px solid rgb(220, 220, 220);
+    overflow-x: scroll;
 }
 
 tbody > tr:hover {
@@ -105,4 +128,57 @@ tbody > tr > td {
     padding: 10px 0;
     text-align: center;
     font-size: .9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tbody > tr > td:not(:last-child), thead > tr > th:not(:last-child) {
+    padding-right: 20px;
+}
+
+tbody > tr > td:first-child {
+    max-width: 280px;
+    min-width: 280px;
+    text-align: left;
+}
+
+tbody > tr > td:nth-child(2) {
+    max-width: 130px;
+    min-width: 130px;
+}
+
+tbody > tr > td:nth-child(4) {
+    max-width: 150px;
+    min-width: 150px;
+}
+
+tbody > tr > td:last-child {
+    text-align: right;
+}
+
+#renda-fixa {
+    border: 1px solid var(--first-color);
+}
+
+#renda-fixa > .div-table > table > thead > tr > th:first-child {
+    color: var(--first-color);
+}
+
+#renda-variavel {
+    border: 1px solid var(--expenses-color);
+}
+
+#renda-variavel > .div-table > table > thead > tr > th:first-child {
+    color: var(--expenses-color);
+}
+
+
+
+
+@media (max-width: 750px) {
+    
+    .info-taxa {
+        font-size: 1.1rem;
+    }
 }

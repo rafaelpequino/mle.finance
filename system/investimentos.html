@@ -93,23 +93,28 @@
             <div id="indice" >
                 <div id="taxas">
                     <div class="taxa">
-                        <div class="title-taxa">Ibovespa</div>
-                        <div class="info-taxa">116.565,19 pts</div>
+                        <div class="title-taxa"><i class="fa-solid fa-chart-line"></i> Ibovespa</div>
+                        <div class="info-taxa" style="color: var(--second-color);">116.565,19 pts</div>
                     </div>
 
                     <div class="taxa">
-                        <div class="title-taxa">Selic</div>
-                        <div class="info-taxa info-green">12.75%</div>
+                        <div class="title-taxa"><i class="fa-solid fa-chart-column"></i> Selic</div>
+                        <div class="info-taxa" style="color: rgb(49, 134, 224);">11.75% <span>/ano</span></div>
                     </div>
 
                     <div class="taxa">
-                        <div class="title-taxa">CDI</div>
-                        <div class="info-taxa info-green">13.44%</div>
+                        <div class="title-taxa"><i class="fa-regular fa-clock"></i> CDI</div>
+                        <div class="info-taxa" style="color: var(--transfers-color);">13.44% <span>/ano</span></div>
                     </div>
 
                     <div class="taxa">
-                        <div class="title-taxa">IPCA</div>
-                        <div class="info-taxa info-green">4.61%</div>
+                        <div class="title-taxa"><i class="fa-solid fa-temperature-three-quarters"></i> IPCA</div>
+                        <div class="info-taxa" style="color: var(--expenses-color);">4.61% <span>/ano</span></div>
+                    </div>
+
+                    <div class="taxa">
+                        <div class="title-taxa"><i class="fa-solid fa-dollar-sign"></i> Dólar</div>
+                        <div class="info-taxa" style="color: var(--investments-color);">R$5.31</div>
                     </div>
                 </div>
 
@@ -161,68 +166,70 @@
 
             <div id="wallet">
                 <div class="box" id="renda-fixa">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Renda fixa</th>
-                                <th>Data de compra</th>
-                                <th>Valor investido</th>
-                                <th>Rendimento/ano</th>
-                            </tr>
-                        </thead>
-                
-                        <tbody>
-                            <tr>
-                                <td>Tesouro Selic 2026</td>
-                                <td>10/09/2023</td>
-                                <td class="value-invest">50</td>
-                                <td>12.75%</td>
-                            </tr>
-                            <tr>
-                                <td>Tesouro prefixado 2026</td>
-                                <td>10/09/2023</td>
-                                <td class="value-invest">50</td>
-                                <td>12.75%</td>
-                            </tr>
-                            <tr>
-                                <td>CDB Liquidez Diária Banco Inter</td>
-                                <td>10/09/2023</td>
-                                <td class="value-invest">50</td>
-                                <td>12.75%</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                    <div class="div-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Renda fixa</th>
+                                    <th>Data de compra</th>
+                                    <th>Valor investido</th>
+                                    <th>Rendimento/ano</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tesouro Selic 2026</td>
+                                    <td>10/09/2023</td>
+                                    <td class="value-invest">50</td>
+                                    <td>12.75%</td>
+                                </tr>
+                                <tr>
+                                    <td>Tesouro prefixado 2026</td>
+                                    <td>10/09/2023</td>
+                                    <td class="value-invest">50</td>
+                                    <td>12.75%</td>
+                                </tr>
+                                <tr>
+                                    <td>CDB Liquidez Diária Banco Inter</td>
+                                    <td>10/09/2023</td>
+                                    <td class="value-invest">50</td>
+                                    <td>12.75%</td>
+                                </tr>
+                        
+                            </tbody>
+                        </table>
+                    </div>
                     <a href="" class="add">+ adicionar</a>
                 </div>
 
                 <div class="box" id="renda-variavel">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Renda variável</th>
-                                <th>Tipo</th>
-                                <th>Data de compra</th>
-                                <th>Cotas</th>
-                                <th>Valor investido</th>
-                                <th>Patrimônio</th>
-                                <th>Rendimento</th>
-                            </tr>
-                        </thead>
-                
-                        <tbody>
-                            <tr>
-                                <td>AMER3</td>
-                                <td>Ação</td>
-                                <td>10/09/2023</td>
-                                <td>100</td>
-                                <td class="value-invest">1000</td>
-                                <td class="value-invest">950</td>
-                                <td style="color: var(--expenses-color);">-5%</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                    <div class="div-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Renda variável</th>
+                                    <th>Tipo</th>
+                                    <th>Data de compra</th>
+                                    <th>Cotas</th>
+                                    <th>Valor investido</th>
+                                    <th>Patrimônio</th>
+                                    <th>Rendimento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AMER3</td>
+                                    <td>Ação</td>
+                                    <td>10/09/2023</td>
+                                    <td>100</td>
+                                    <td class="value-invest">1000</td>
+                                    <td class="value-invest">950</td>
+                                    <td style="color: var(--expenses-color);">-5%</td>
+                                </tr>
+                        
+                            </tbody>
+                        </table>
+                    </div>
                     <a href="" class="add">+ adicionar</a>
                 </div>
             </div>
