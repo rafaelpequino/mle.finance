@@ -31,79 +31,10 @@
     opacity: .9;
 }
 
-i#btn-filter {
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    opacity: .7;
-    cursor: pointer;
-    z-index: 110;
-}
-
-#blackout {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.150);
-    z-index: 100;
-    display: none;
-}
-
-#display-filter {
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    background-color: white;
-    width: 250px;
-    z-index: 150;
-    box-shadow: 0 0 10px rgb(195, 195, 195);
-    border-radius: 10px;
-    padding: 20px 30px;
-    transform: scale(0);
-    transition: .1s;
-}
-
-.display-filter > h5 {
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-form#form-filter {
-    width: 100%;
-}
-
-.category-filter {
-    width: 100%;
-    margin: 10px 0;
-}
-
-.category-filter > label {
-    width: 100%;
-    display: block;
+#list-filter {
+    margin-bottom: 20px;
     font-size: .9rem;
     opacity: .9;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.category-filter > select {
-    width: 100%;
-    display: block;
-    font-size: .8rem;
-    opacity: .9;
-    width: 100%;
-    padding: 5px 10px;
-}
-
-#btn-apply {
-    display: block;
-    background-color: transparent;
-    border: none;
-    text-align: center;
-    padding-top: 10px;
-    margin: 10px auto 0;
-    font-size: .9rem;
-    cursor: pointer;
 }
 
 .date {
@@ -217,11 +148,8 @@ form#form-filter {
     justify-content: space-between;
 }
 
-.color-see-all {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: 10px;
+.inside-see-all > .color {
+    cursor: pointer;
 }
 
 .color-revenue {
@@ -364,6 +292,15 @@ form#form-filter {
 
     .fa-triangle-exclamation {
         font-size: .8rem;
+    }
+
+    label {
+        display: block;
+        font-size: .8rem;
+    }
+
+    select {
+        font-size: .7rem;
     }
     
 }

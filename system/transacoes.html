@@ -100,6 +100,34 @@
                 </div>
                 
             </div>
+
+            <div id="list-filter">
+                <form action="" method="get">
+                    <label>Filtrar por:</label>
+
+                    <select name="transacao" id="transacao">
+                        <option value="" disabled selected>Transação</option>
+                        <option value="receitas">Receitas</option>
+                        <option value="despesas">Despesas</option>
+                        <option value="transferencias">Transferências</option>
+                        <option value="investimentos">Investimentos</option>
+                    </select>
+
+                    <select name="categoria" id="categoria">
+                        <option value="" disabled selected>Categoria</option>
+                        <option value="moradia">Moradia</option>
+                        <option value="estudos">Estudos</option>
+                        <option value="mercado">Mercado</option>
+                    </select>
+
+                    <select name="status" id="status">
+                        <option value="" disabled selected>Status</option>
+                        <option value="pago">Efetivados</option>
+                        <option value="nao-pago">Não Efetivados</option>
+                    </select>
+                </form>
+            </div>
+
             <div class="columns-transactions">
                 <div class="box" id="transactions-container">
 

@@ -73,7 +73,7 @@ tbody > tr {
 }
 
 tbody > tr:hover {
-    background-color: rgb(245, 245, 245);
+    background-color: #00000010;
 }
 
 tbody > tr > td {
