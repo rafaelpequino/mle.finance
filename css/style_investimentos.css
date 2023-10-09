@@ -1,27 +1,43 @@
 #indice {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 #taxas {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(4, 1fr);
     gap: 45px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.taxa {
+    width: 100%;
+    text-align: center;
 }
 
 .title-taxa {
-    font-size: .8rem;
+    font-size: .9rem;
     opacity: .9;
     margin-bottom: 5px;
+}
+
+.info-taxa {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.info-green {
+    color: var(--first-color);
 }
 
 #acoes {
     display: flex;
     overflow-x: auto;
-    margin-left: 80px;
+    margin-top: 20px;
     padding-bottom: 8px;
+    height: 100%;
 }
 
 .acao {
