@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias - MLE finance</title>
+    <!--ESTILO PRINCIPAL SISTEMA-->
+    <link rel="stylesheet" href="../css/style_system.css">
+    <!--ESTILO TRANSAÇÕES DO SISTEMA-->
+    <link rel="stylesheet" href="../css/style_categorias.css">
+    <!--SCRIPT PRINCIPAL SISTEMA-->
+    <script src="../js/script_sytem.js" defer></script>
+    <!--SCRIPT TRANSAÇÕES DO SISTEMA-->
+    <script src="../js/script_categorias.js" defer></script>
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <a href="../system/index.html" class="first-logo">
+            <img src="../img/logo_MLEfinance.png" alt="Logo MLE finance">
+        </a>
+
+        <div class="user-space">
+            <div id="user-info">
+                <i class="fa-solid fa-circle-user" id="icon-user-photo"></i> 
+                <h5 id="user-name">Rafael Freire</h5>
+                <i class="fa-solid fa-chevron-down" id="dropdown-icon"></i> 
+            </div>
+            <div id="open-close-sidebar" class="btn-sidebar-close">
+                <div class="feature"></div>
+                <div class="feature"></div>
+                <div class="feature"></div>
+            </div>
+            <div id="dropdown-menu" class="hide-dropdown" data-status="close">
+                <a href="#"><i class="fa-solid fa-user"></i>Meu perfil</a>
+                <a href="#"><i class="fa-solid fa-gear"></i>Configurações</a>
+                <a href="#"><i class="fa-solid fa-plus"></i>Convidar</a>
+                <a href="#"><i class="fa-solid fa-question"></i>Ajuda</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main">
+        <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
+            <div id="links-sidebar">
+                <a href="./index.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <span class="name-sidebar">Home</span>
+                </a>
+                <a href="./transacoes.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-right-left"></i></div>
+                    <span class="name-sidebar">Transações</span>
+                </a>
+                <a href="./metas.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <span class="name-sidebar">Metas</span>
+                </a>
+                <a href="./dividas.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                    <span class="name-sidebar">Dívidas</span>
+                </a>
+                <a href="./investimentos.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
+                    <span class="name-sidebar">Investimentos</span>
+                </a>
+                <a href="./categorias.html" class="active link-sidebar">
+                    <div class="icon"><i class="fa-solid fa-pencil"></i></i></div>
+                    <span class="name-sidebar">Categorias</span>
+                </a>
+
+                <hr class="hr-sidebar">
+
+                <a href="./relatorios.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-square-poll-horizontal"></i></div>
+                    <span class="name-sidebar">Relatórios</span>
+                </a>
+
+                <hr class="hr-sidebar">
+
+                <a href="#" class="link-sidebar link-logout">
+                    <div class="icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+                    <span class="name-sidebar">Sair</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="container">
+            <div class="box" id="categorias">
+                <div class="category">
+                    <div class="info-category">
+                        <div class="color" style="background-color: #859be9;"><i class="fa-solid fa-house"></i></div>
+                        <div class="title-category">Moradia</div>
+                    </div>
+                    <div class="info-limit-category">
+                        <div class="limit-category">
+                            <div>Utilizado: <span>2000</span></div>
+                            <div>Limite: <span>4000</span></div>
+                        </div>
+                        <div class="limit-bar">
+                            <div class="used-limit-bar" style="width: 50%; background-color: var(--yellow-color);"></div>
+                        </div>
+                    </div>
+                    <div class="edit-limit">
+                        <button><i class="fa-solid fa-pen-to-square"></i> Editar limite</button>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="info-category">
+                        <div class="color" style="background-color: #dca347;"><i class="fa-solid fa-house"></i></div>
+                        <div class="title-category">Mercado</div>
+                    </div>
+                    <div class="info-limit-category">
+                        <div class="limit-category">
+                            <div>Utilizado: <span>2000</span></div>
+                            <div>Limite: <span>4000</span></div>
+                        </div>
+                        <div class="limit-bar">
+                            <div class="used-limit-bar" style="width: 50%; background-color: var(--yellow-color);"></div>
+                        </div>
+                    </div>
+                    <div class="edit-limit">
+                        <button><i class="fa-solid fa-pen-to-square"></i> Editar limite</button>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="info-category">
+                        <div class="color" style="background-color: #85C1E9;"><i class="fa-solid fa-house"></i></div>
+                        <div class="title-category">Estudos</div>
+                    </div>
+                    <div class="info-limit-category">
+                        <div class="limit-category">
+                            <div>Utilizado: <span>2000</span></div>
+                            <div>Limite: <span>4000</span></div>
+                        </div>
+                        <div class="limit-bar">
+                            <div class="used-limit-bar" style="width: 50%; background-color: var(--yellow-color);"></div>
+                        </div>
+                    </div>
+                    <div class="edit-limit">
+                        <button><i class="fa-solid fa-pen-to-square"></i> Editar limite</button>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="info-category">
+                        <div class="color" style="background-color: #cad349;"><i class="fa-solid fa-house"></i></div>
+                        <div class="title-category">Lazer</div>
+                    </div>
+                    <div class="info-limit-category">
+                        <div class="limit-category">
+                            <div>Utilizado: <span>2000</span></div>
+                            <div>Limite: <span>4000</span></div>
+                        </div>
+                        <div class="limit-bar">
+                            <div class="used-limit-bar" style="width: 50%; background-color: var(--yellow-color);"></div>
+                        </div>
+                    </div>
+                    <div class="edit-limit">
+                        <button><i class="fa-solid fa-pen-to-square"></i> Editar limite</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    
+
+</body>
+</html>
