@@ -7,7 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
             style: 'currency',
             currency: 'BRL'
         });
-        element.innerHTML = `<span>R$</span>${formattedValue.slice(3)}`;
+        
+        if (originalValue !== "" && originalValue >= 0) {
+            element.innerHTML = `<span>R$ </span>${formattedValue.slice(3)}`;
+        } else if (originalValue !== "" && originalValue < 0) {
+            element.innerHTML = `<span>R$ -</span>${formattedValue.slice(4)}`;
+            element.style.color = "var(--expenses-color)"
+        } else {
+            element.innerHTML = `---`;
+        }
     }
 
     const valuesTransactions = document.getElementsByClassName('value')

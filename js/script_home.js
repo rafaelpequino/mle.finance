@@ -9,11 +9,13 @@ function formatValues (element) {
         currency: 'BRL'
     });
     
-    if (originalValue >= 0) {
+    if (originalValue !== "" && originalValue >= 0) {
         element.innerHTML = `<span>R$ </span>${formattedValue.slice(3)}`;
-    } else {
+    } else if (originalValue !== "" && originalValue < 0) {
         element.innerHTML = `<span>R$ -</span>${formattedValue.slice(4)}`;
         element.style.color = "var(--expenses-color)"
+    } else {
+        element.innerHTML = `---`;
     }
 }
 formatValues(document.getElementById('balance'))

@@ -7,11 +7,11 @@
 }
 
 #medium-time {
-    border: 1px solid var(--yellow-color);
+    border: 1px solid var(--transfers-color);
 }
 
 #medium-time > .div-table > table > thead > tr > th:first-child {
-    color: var(--yellow-color);
+    color: var(--transfers-color);
 }
 
 #long-time {
@@ -33,7 +33,6 @@
 .div-table {
     max-width: 100%;
     overflow-x: auto;
-    margin-bottom: 10px;
 }
 
 table {
@@ -105,8 +104,15 @@ tbody > tr > td:nth-child(4) {
     min-width: 150px;
 }
 
+tbody > tr > td:nth-child(5) {
+    max-width: 100px;
+    min-width: 100px;
+}
+
 tbody > tr > td:last-child {
     text-align: right;
+    max-width: 50px;
+    min-width: 50px;
 }
 
 .status-bar {
@@ -131,13 +137,21 @@ hr#hr-carried {
     margin: 20px 0;
 }
 
-.no-have {
-    font-size: .9rem;
-    opacity: .9;
-    text-align: center;
-    margin-bottom: 20px;
+#form-title-new-meta {
+    width: 100%;
 }
 
+#form-title-new-meta > input {
+    width: 100%;
+    padding: 1px 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(166, 166, 166);
+    outline: none;
+}
+
+#form-title-new-meta > input:focus, #form-title-new-meta > input:active {
+    border: 1px solid rgb(62, 62, 62);
+}
 
 @media (max-width: 1400px) {
 
