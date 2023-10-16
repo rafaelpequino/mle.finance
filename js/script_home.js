@@ -51,4 +51,41 @@ for (let i = 0; i < programadas.length; i++) {
     formatValues(programadas[i]);
 }
 
+
+//CONTROLE DE MODAIS
+/*
+const btnsToOpen = [
+    "btnNovaReceita",
+    "btnNovaDespesa",
+    "btnNovaTransferência",
+    "btnNovoInvestimento"
+];
+
+const btnsToClose = [
+    "btnCloseNovaReceita",
+    "btnCloseNovaDespesa",
+    "btnCloseNovaTransferência",
+    "btnCloseNovoInvestimento"
+];
+*/
+function openModal(modalId) {
+    alert('foi')
+    let modalInQuestion = document.getElementById(modalId);
+
+    if (modalInQuestion) {
+        modalInQuestion.style.display = "flex";
+        setTimeout(() => {
+            modalInQuestion.style.opacity = 1;
+        }, 10);
+    }
+}
+/*
+function closeModal(modalToClose) {
+    let modalInQuestion = document.getElementById(modais[modalToClose]);
+    modalInQuestion.style.opacity = 0;
+    setTimeout(() => {
+        modalInQuestion.style.display = "none";
+    }, 300);
+}
+*/
 });

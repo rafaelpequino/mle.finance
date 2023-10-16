@@ -35,14 +35,33 @@
                 <div class="feature"></div>
             </div>
             <div id="dropdown-menu" class="hide-dropdown" data-status="close">
-                <a href="#"><i class="fa-regular fa-lightbulb"></i>Meu plano</a>
-                <a href="#"><i class="fa-solid fa-gear"></i>Configurações</a>
-                <a href="#"><i class="fa-solid fa-plus"></i>Convidar</a>
-                <a href="#"><i class="fa-solid fa-question"></i>Ajuda</a>
+                <a href="./profile/configuracoes.html"><i class="fa-solid fa-gear"></i>Configurações</a>
+                <a href="./profile/convidar.html"><i class="fa-solid fa-plus"></i>Convidar</a>
+                <a href="./profile/ajuda.html"><i class="fa-solid fa-question"></i>Ajuda</a>
             </div>
         </div>
 
     </header>
+
+    <div id="modalReceita" class="modal">
+        <div class="modal-content">
+            <span class="btn btn-danger close" id="btnCloseModalRoteiro">X</span>
+            <h2>Nova receita</h2>
+            <form action="./db/novoroteiro.php" method="post" class="modal-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="temaRoteiro" class="form-label">Tema do roteiro</label>
+                    <input type="text" class="form-control" id="temaRoteiro" name="temaRoteiro" placeholder="Ex.: IPCA" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="pdf" class="form-label">PDF</label>
+                    <input type="file" class="form-control" id="pdf" name="arquivo" required>
+                </div>
+
+                <div class="btn-send"><button type="submit" class="btn btn-primary">Enviar</button></div>
+            </form>
+        </div>
+    </div>
 
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
@@ -102,11 +121,20 @@
                     </div>
                 </div>
                 <div class="options">
-                    <div class="btn-new" id="new-revenue"><i class="fa-solid fa-plus"></i>receita</div>
-                    <div class="btn-new" id="new-expense"><i class="fa-solid fa-minus"></i>despesa</div>
-                    <div class="btn-new" id="new-transfer"><i class="fa-solid fa-right-left"></i>transf.</div>
-                    <div class="btn-new" id="new-investment"><i class="fa-solid fa-chart-simple"></i>invest.</div>
+                    <div class="btn-new" id="new-revenue" onclick="openModal('modalReceita')">
+                        <i class="fa-solid fa-plus"></i>receita
+                    </div>
+                    <div class="btn-new" id="new-expense" onclick="openModal('modalDespesa')">
+                        <i class="fa-solid fa-minus"></i>despesa
+                    </div>
+                    <div class="btn-new" id="new-transfer" onclick="openModal('modalTransf')">
+                        <i class="fa-solid fa-minus"></i>transf.
+                    </div>
+                    <div class="btn-new" id="new-investment" onclick="openModal('modalInvest')">
+                        <i class="fa-solid fa-minus"></i>invest.
+                    </div>
                 </div>
+                
 
             </div> <!--FIM FIRST DATA-->
 
