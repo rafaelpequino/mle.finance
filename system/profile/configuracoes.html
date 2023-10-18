@@ -6,12 +6,12 @@
     <title>Meu gerenciador - MLE finance</title>
     <!--ESTILO PRINCIPAL SISTEMA-->
     <link rel="stylesheet" href="../../css/style_system.css">
-    <!--ESTILO HOME DO SISTEMA-->
-    <link rel="stylesheet" href="../../css/style_home.css">
+    <!--ESTILO CONFIG DO SISTEMA-->
+    <link rel="stylesheet" href="../../css/style_config.css">
     <!--SCRIPT PRINCIPAL SISTEMA-->
     <script src="../../js/script_sytem.js" defer></script>
-    <!--SCRIPT HOME DO SISTEMA-->
-    <script src="../../js/script_home.js" defer></script>
+    <!--SCRIPT CONFIG DO SISTEMA-->
+    <script src="../../js/script_config.js" defer></script>
     <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
     <!--FAVICON-->
@@ -46,7 +46,7 @@
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
             <div id="links-sidebar">
-                <a href="../index.html" class="active link-sidebar">
+                <a href="../index.html" class="link-sidebar link-normal">
                     <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
                     <span class="name-sidebar">Home</span>
                 </a>
@@ -90,12 +90,39 @@
 
         <div class="container">
             <div class="box">
-                
+                <h3>Configurações</h3>
+                <div class="plan">Você está usando o plano free. <a href="#">Faça Upgrade</a></div>
+                <hr>
+                <h3 id="title-my-data">Meu perfil</h3>
+
+                <form action="" method="post" id="form-my-data">
+                    <div class="inputs-of-my-data">
+                        <div class="input-data">
+                            <label for="fullname">Nome Completo</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="input-data">
+                            <label for="apelido">Apelido</label>
+                            <input type="text" name="apelido" id="apelido" placeholder="Como deseja ser chamado?" required>
+                        </div>
+                        <div class="input-data">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Informe seu e-mail" required>
+                        </div>
+                        <div class="input-data">
+                            <label for="cellphone">Celular</label>
+                            <input type="tel" name="cellphone" id="cellphone" placeholder="(11) 98765-4321" required>
+                        </div>
+                    </div>
+                    <button type="submit" id="btn-save-changes">Salvar alterações</button>
+                </form>
             </div>
 
 
         </div>
 
     </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 </body>
 </html>

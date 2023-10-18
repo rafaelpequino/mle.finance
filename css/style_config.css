@@ -1,0 +1,85 @@
+.box > h3 {
+    font-weight: 500;
+}
+
+.plan {
+    text-align: center;
+    font-size: .8rem;
+    opacity: .8;
+    margin: -15px 0 20px 0;
+}
+
+.plan > a {
+    color: var(--second-color);
+}
+
+#title-my-data {
+    margin-top: 15px;
+}
+
+.inputs-of-my-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    padding: 0 30px;
+}
+
+.input-data {
+    width: 47.5%;
+}
+
+.input-data > label {
+    width: 100%;
+    display: block;
+    padding: 5px 20px;
+}
+
+.input-data > input {
+    width: 100%;
+    display: block;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 10px;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 1rem;
+}
+
+.input-data > input:focus {
+    border: 1px solid var(--first-color);
+}
+
+#btn-save-changes {
+    display: block;
+    margin: 40px auto 20px;
+    border: none;
+    background-color: transparent;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+@media (max-width: 900px) {
+
+    .inputs-of-my-data {
+        padding: 0 10px;
+    }
+
+    .input-data {
+        width: 100%;
+    }
+
+    .input-data > input {
+        font-size: .9rem;
+    }
+    
+    #btn-save-changes {
+        width: calc(100% - 20px);
+    }
+}
