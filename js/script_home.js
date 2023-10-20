@@ -1,9 +1,28 @@
-
-
 //MÁSCARA
 $(document).ready(function(){
+    // Define um valor inicial
+    $('#value').val('0,00');
+
+    // Aplica a máscara e mantém a estrutura mínima
     $('#value').mask('000.000.000.000.000,00', {reverse: true});
-})
+
+    // Atualiza o valor conforme o usuário digita
+    $('#value').keyup(function() {
+        var val = $(this).val();
+        if (val === '') {
+            $(this).val('0,00');
+        } else {
+            val = val.replace(/^[0]+/, '');
+            if (val === '0,0') {
+                $(this).val('0,00');
+            } else {
+                $(this).val(val);
+            }
+        }
+    });
+});
+
+
 
 
 //FORMATAR VALORES

@@ -45,40 +45,88 @@
 
     <div id="modalReceita" class="modal">
         <div class="modal-content modalNewTransaction">
-            <div class="header-modal">
-                <h3>Nova receita</h3>
-                <div class="close" onclick="closeModal('modalReceita')"><i class="fa-solid fa-x"></i></div>
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalReceita">Nova receita</h3>
+                    <div class="close" onclick="closeModal('modalReceita')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Ex.: Salário">
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Valor</label>
+                        <input type="text" name="value" id="value" placeholder="0,00">
+                    </div>
+                    <div class="input-modal">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div class="input-modal">
+                        <label for="exit">Destino</label>
+                        <select name="exit" id="exit">
+                            <option value="" selected disabled>Selecione o destino</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category">
+                            <option value="" selected disabled>Selecione o destino</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal" id="submitNewRevenue">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
             </div>
-            <form action="" method="post">
-                <div class="input-modal">
-                    <label for="description">Descrição</label>
-                    <input type="text" name="description" id="description" placeholder="Ex.: Salário">
-                </div>
-                <div class="input-modal">
-                    <label for="value">Valor</label>
-                    <input type="text" name="value" id="value" placeholder="0,00">
-                </div>
-                <div class="input-modal">
-                    <label for="date">Data</label>
-                    <input type="date" name="date" id="date">
-                </div>
-                <div class="input-modal">
-                    <label for="exit">Saída</label>
-                    <select name="exit" id="exit">
-                        <option value="" selected disabled>Selecione o destino</option>
-                        <option value=""></option>
-                    </select>
-                </div>
-                <div class="input-modal">
-                    <label for="category">Categoria</label>
-                    <select name="category" id="category">
-                        <option value="" selected disabled>Selecione o destino</option>
-                        <option value=""></option>
-                    </select>
-                </div>
-            </form>
         </div>
     </div>
+
+    <div id="modalDespesa" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalDespesa">Nova despesa</h3>
+                    <div class="close" onclick="closeModal('modalDespesa')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel">
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Valor</label>
+                        <input type="text" name="value" id="value" placeholder="0,00">
+                    </div>
+                    <div class="input-modal">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div class="input-modal">
+                        <label for="exit">Saída</label>
+                        <select name="exit" id="exit">
+                            <option value="" selected disabled>Selecione o destino</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category">
+                            <option value="" selected disabled>Selecione o destino</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal" id="submitNewExpense">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
@@ -145,10 +193,10 @@
                         <i class="fa-solid fa-minus"></i>despesa
                     </div>
                     <div class="btn-new" id="new-transfer" onclick="openModal('modalTransf')">
-                        <i class="fa-solid fa-minus"></i>transf.
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>transf.
                     </div>
                     <div class="btn-new" id="new-investment" onclick="openModal('modalInvest')">
-                        <i class="fa-solid fa-minus"></i>invest.
+                        <i class="fa-solid fa-chart-simple"></i>invest.
                     </div>
                 </div>
                 

@@ -328,11 +328,11 @@ a.active {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .header-modal > h3 {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .close {
@@ -352,7 +352,31 @@ a.active {
 }
 
 .input-modal {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.input-modal > input[type='submit'] {
+    margin-top: 30px;
+}
+
+#submitNewRevenue > input[type='submit'] {
+    background-color: var(--first-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+#submitNewExpense > input[type='submit'] {
+    background-color: var(--expenses-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+#titleModalReceita {
+    color: var(--first-color);
+}
+
+#titleModalDespesa {
+    color: var(--expenses-color);
 }
 
 .input-modal > label {
