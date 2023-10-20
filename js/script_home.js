@@ -1,5 +1,10 @@
 
-document.addEventListener('DOMContentLoaded', () => {
+
+//MÁSCARA
+$(document).ready(function(){
+    $('#value').mask('000.000.000.000.000,00', {reverse: true});
+})
+
 
 //FORMATAR VALORES
 function formatValues (element) {
@@ -51,25 +56,30 @@ for (let i = 0; i < programadas.length; i++) {
     formatValues(programadas[i]);
 }
 
+const modais = [
+    'modalReceita',
+    'modalDespesa',
+    'modalTransf',
+    'modalInvest'
+]
 
-//CONTROLE DE MODAIS
-/*
-const btnsToOpen = [
-    "btnNovaReceita",
-    "btnNovaDespesa",
-    "btnNovaTransferência",
-    "btnNovoInvestimento"
-];
+document.getElementById('new-revenue').addEventListener('click', function() {
+    openModal('modalReceita')
+});
 
-const btnsToClose = [
-    "btnCloseNovaReceita",
-    "btnCloseNovaDespesa",
-    "btnCloseNovaTransferência",
-    "btnCloseNovoInvestimento"
-];
-*/
+document.getElementById('modalDespesa').addEventListener('click', function() {
+    openModal('modalDespesa')
+});
+
+document.getElementById('modalTransf').addEventListener('click', function() {
+    openModal('modalTransf')
+});
+
+document.getElementById('modalInvest').addEventListener('click', function() {
+    openModal('modalInvest')
+});
+
 function openModal(modalId) {
-    alert('foi')
     let modalInQuestion = document.getElementById(modalId);
 
     if (modalInQuestion) {
@@ -78,14 +88,18 @@ function openModal(modalId) {
             modalInQuestion.style.opacity = 1;
         }, 10);
     }
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeModal(modalId)
+        }
+    });
 }
-/*
+
 function closeModal(modalToClose) {
-    let modalInQuestion = document.getElementById(modais[modalToClose]);
+    let modalInQuestion = document.getElementById(modalToClose);
     modalInQuestion.style.opacity = 0;
     setTimeout(() => {
         modalInQuestion.style.display = "none";
     }, 300);
 }
-*/
-});

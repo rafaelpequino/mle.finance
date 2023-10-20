@@ -44,21 +44,38 @@
     </header>
 
     <div id="modalReceita" class="modal">
-        <div class="modal-content">
-            <span class="btn btn-danger close" id="btnCloseModalRoteiro">X</span>
-            <h2>Nova receita</h2>
-            <form action="./db/novoroteiro.php" method="post" class="modal-form" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="temaRoteiro" class="form-label">Tema do roteiro</label>
-                    <input type="text" class="form-control" id="temaRoteiro" name="temaRoteiro" placeholder="Ex.: IPCA" required>
+        <div class="modal-content modalNewTransaction">
+            <div class="header-modal">
+                <h3>Nova receita</h3>
+                <div class="close" onclick="closeModal('modalReceita')"><i class="fa-solid fa-x"></i></div>
+            </div>
+            <form action="" method="post">
+                <div class="input-modal">
+                    <label for="description">Descrição</label>
+                    <input type="text" name="description" id="description" placeholder="Ex.: Salário">
                 </div>
-                
-                <div class="mb-3">
-                    <label for="pdf" class="form-label">PDF</label>
-                    <input type="file" class="form-control" id="pdf" name="arquivo" required>
+                <div class="input-modal">
+                    <label for="value">Valor</label>
+                    <input type="text" name="value" id="value" placeholder="0,00">
                 </div>
-
-                <div class="btn-send"><button type="submit" class="btn btn-primary">Enviar</button></div>
+                <div class="input-modal">
+                    <label for="date">Data</label>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div class="input-modal">
+                    <label for="exit">Saída</label>
+                    <select name="exit" id="exit">
+                        <option value="" selected disabled>Selecione o destino</option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="input-modal">
+                    <label for="category">Categoria</label>
+                    <select name="category" id="category">
+                        <option value="" selected disabled>Selecione o destino</option>
+                        <option value=""></option>
+                    </select>
+                </div>
             </form>
         </div>
     </div>
@@ -123,7 +140,7 @@
                 <div class="options">
                     <div class="btn-new" id="new-revenue" onclick="openModal('modalReceita')">
                         <i class="fa-solid fa-plus"></i>receita
-                    </div>
+                    </div>                    
                     <div class="btn-new" id="new-expense" onclick="openModal('modalDespesa')">
                         <i class="fa-solid fa-minus"></i>despesa
                     </div>
@@ -333,5 +350,8 @@
         </div>
 
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 </body>
 </html>
