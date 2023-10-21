@@ -30,7 +30,7 @@ $(document).ready(function(){
             }
         }
     });
-});
+}); 
 
 
 //FORMATAR VALORES
@@ -84,27 +84,3 @@ for (let i = 0; i < programadas.length; i++) {
 }
 
 
-function openModal(modalId) {
-    let modalInQuestion = document.getElementById(modalId);
-
-    if (modalInQuestion) {
-        modalInQuestion.style.display = "flex";
-        setTimeout(() => {
-            modalInQuestion.style.opacity = 1;
-        }, 10);
-    }
-
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            closeModal(modalId)
-        }
-    });
-}
-
-function closeModal(modalToClose) {
-    let modalInQuestion = document.getElementById(modalToClose);
-    modalInQuestion.style.opacity = 0;
-    setTimeout(() => {
-        modalInQuestion.style.display = "none";
-    }, 300);
-}

@@ -40,27 +40,18 @@ document.addEventListener('click', function (e) {
 });
 
 
-function bloquearRolagem() {
-    // Armazena a posição atual da rolagem para que possamos restaurá-la posteriormente
-    const scrollPos = window.scrollY;
 
-    // Adiciona estilos para desativar a rolagem
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPos}px`;
+function bloquearRolagem() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  
+    document.body.style.overflow = "hidden";
 }
 
 function liberarRolagem() {
-    // Obtém a posição original da rolagem armazenada na função de bloqueio
-    const scrollPos = parseInt(document.body.style.top || '0', 10);
-
-    // Remove os estilos de desativação da rolagem
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.top = '';
-
-    // Restaura a posição original da rolagem
-    window.scrollTo(0, Math.abs(scrollPos));
+    document.body.style.overflow = "auto";
 }
 
 
@@ -69,10 +60,6 @@ const sidebar = document.getElementById('sidebar');
 const btnOpenSidebar = document.getElementById('open-close-sidebar');
 
 btnOpenSidebar.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
 
     if (sidebar.getAttribute('data-sidebarStatus') === 'close') {
         bloquearRolagem();
@@ -86,3 +73,32 @@ btnOpenSidebar.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-close');
     btnOpenSidebar.classList.toggle('btn-sidebar-open');
 });
+
+
+//CONTROLE DE MODAIS
+function openModal(modalId) {
+    bloquearRolagem();
+    let modalInQuestion = document.getElementById(modalId);
+
+    if (modalInQuestion) {
+        modalInQuestion.style.display = "flex";
+        setTimeout(() => {
+            modalInQuestion.style.opacity = 1;
+        }, 10);
+    }
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeModal(modalId)
+        }
+    });
+}
+
+function closeModal(modalToClose) {
+    let modalInQuestion = document.getElementById(modalToClose);
+    modalInQuestion.style.opacity = 0;
+    setTimeout(() => {
+        modalInQuestion.style.display = "none";
+    }, 300);
+    liberarRolagem()
+}

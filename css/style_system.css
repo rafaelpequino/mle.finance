@@ -431,6 +431,9 @@ a.active {
     margin-top: 20px;
 }
 
+#info-fixa, #info-variavel {
+    display: none;
+}
 
 
 @media (max-width: 1500px) {

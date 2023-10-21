@@ -178,36 +178,83 @@
                 </div>
                 <form action="" method="post">
                     <div class="input-modal">
-                        <label for="description">Descrição</label>
-                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel">
-                    </div>
-                    <div class="input-modal">
-                        <label for="value">Valor</label>
-                        <input type="text" name="value" id="value" class="valueNew" placeholder="0,00">
-                    </div>
-                    <div class="input-modal">
-                        <label for="date">Data</label>
-                        <input type="date" name="date" id="date">
-                    </div>
-                    <div class="input-modal">
-                        <label for="exit">Conta de saída</label>
-                        <select name="exit" id="exit">
-                            <option value="" selected disabled>Selecione a saída</option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                    <div class="input-modal">
-                        <label for="category">Conta de destino</label>
+                        <label for="category">Tipo de investimento</label>
                         <select name="category" id="category">
                             <option value="" selected disabled>Selecione o destino</option>
-                            <option value=""></option>
+                            <option value="fixa">Renda fixa</option>
+                            <option value="variavel">Renda variável</option>
                         </select>
+                    </div>
+                    <div id="info-fixa">
+                        <div class="input-modal">
+                            <label for="description">Título</label>
+                            <input type="text" name="description" id="description" placeholder="Ex.: CDB">
+                        </div>
+                        <div class="input-modal">
+                            <label for="date">Data de compra</label>
+                            <input type="date" name="date" id="date">
+                        </div>
+                        <div class="input-modal">
+                            <label for="value">Valor</label>
+                            <input type="text" name="value" id="value" class="valueNew" placeholder="0,00">
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Rendimento</label>
+                            <select name="exit" id="exit">
+                                <option value="" selected disabled>Selecione o rendimento</option>
+                                <option value="cdi">CDI</option>
+                                <option value="ipca">IPCA</option>
+                                <option value="ipca+">IPCA+</option>
+                                <option value="selic">Selic</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Conta de saída</label>
+                            <select name="exit" id="exit">
+                                <option value="" selected disabled>Selecione a saída</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="info-variavel">
+                        <div class="input-modal">
+                            <label for="description">Título</label>
+                            <input type="text" name="description" id="description" placeholder="Ex.: CDB">
+                        </div>
+                        <div class="input-modal">
+                            <label for="date">Data de compra</label>
+                            <input type="date" name="date" id="date">
+                        </div>
+                        <div class="input-modal">
+                            <label for="value">Valor</label>
+                            <input type="text" name="value" id="value" class="valueNew" placeholder="0,00">
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Rendimento</label>
+                            <select name="exit" id="exit">
+                                <option value="" selected disabled>Selecione o rendimento</option>
+                                <option value="cdi">CDI</option>
+                                <option value="ipca">IPCA</option>
+                                <option value="ipca+">IPCA+</option>
+                                <option value="selic">Selic</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Conta de saída</label>
+                            <select name="exit" id="exit">
+                                <option value="" selected disabled>Selecione a saída</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
                     </div>
                     <div class="input-modal" id="submitNewInvest">
                         <input type="submit" name="submit" id="submit" value="Registrar">
                     </div>
                 </form>
             </div>
+            
         </div>
     </div>
 

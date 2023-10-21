@@ -102,17 +102,54 @@
 .status-transactions {
     margin-left: 20px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
 }
 
-.fa-square {
+.status-transactions > div > form > button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 5px;
     cursor: pointer;
+}
+
+.icons-options {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-square-check, .fa-square {
+    color: var(--second-color);
+}
+
+.fa-pencil:hover {
+    transition: .1s;
+    color: var(--investments-color);
+}
+
+.fa-trash-can:hover {
+    transition: .1s;
+    color: var(--expenses-color);
+}
+
+.fa-square:hover {
+    transition: .1s;
+    color: var(--first-color);
 }
 
 .fa-triangle-exclamation {
     color: var(--transfers-color);
     margin-top: 5px;
     display: block;
+    font-size: .8rem;
 }
 
 .month-balance {
@@ -163,6 +200,13 @@
 }
 .color-investment {
     background-color: var(--investments-color);
+}
+
+.alert-new-transaction {
+    margin-top: 10px;
+    opacity: .8;
+    font-size: .7rem;
+    text-align: center;
 }
 
 .info-see-all {
