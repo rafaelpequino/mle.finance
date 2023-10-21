@@ -1,28 +1,36 @@
 //MÁSCARA
 $(document).ready(function(){
     // Define um valor inicial
-    $('#value').val('0,00');
+    $('.valueNew').val('0,00');
 
     // Aplica a máscara e mantém a estrutura mínima
-    $('#value').mask('000.000.000.000.000,00', {reverse: true});
+    $('.valueNew').mask('000.000.000.000.000,00', {reverse: true});
 
     // Atualiza o valor conforme o usuário digita
-    $('#value').keyup(function() {
+    $('.valueNew').keyup(function(event) {
         var val = $(this).val();
         if (val === '') {
             $(this).val('0,00');
         } else {
-            val = val.replace(/^[0]+/, '');
-            if (val === '0,0') {
+            val = val.replace(/^0+/, ''); // Remove os zeros iniciais
+            if (val === '') {
                 $(this).val('0,00');
             } else {
+                var parts = val.split(',');
+                if (parts[0] === '') {
+                    parts[0] = '0';
+                }
+                if (parts.length === 1) {
+                    parts[1] = '00';
+                } else if (parts[1].length === 1) {
+                    parts[1] = '0' + parts[1];
+                }
+                val = parts.join(',');
                 $(this).val(val);
             }
         }
     });
 });
-
-
 
 
 //FORMATAR VALORES
@@ -75,28 +83,6 @@ for (let i = 0; i < programadas.length; i++) {
     formatValues(programadas[i]);
 }
 
-const modais = [
-    'modalReceita',
-    'modalDespesa',
-    'modalTransf',
-    'modalInvest'
-]
-
-document.getElementById('new-revenue').addEventListener('click', function() {
-    openModal('modalReceita')
-});
-
-document.getElementById('modalDespesa').addEventListener('click', function() {
-    openModal('modalDespesa')
-});
-
-document.getElementById('modalTransf').addEventListener('click', function() {
-    openModal('modalTransf')
-});
-
-document.getElementById('modalInvest').addEventListener('click', function() {
-    openModal('modalInvest')
-});
 
 function openModal(modalId) {
     let modalInQuestion = document.getElementById(modalId);

@@ -361,14 +361,30 @@ a.active {
 
 #submitNewRevenue > input[type='submit'] {
     background-color: var(--first-color);
+    border-color: var(--first-color);
     color: #fff;
     cursor: pointer;
 }
 
 #submitNewExpense > input[type='submit'] {
     background-color: var(--expenses-color);
+    border-color: var(--expenses-color);
     color: #fff;
     cursor: pointer;
+}
+
+#submitNewTransfer > input[type='submit'] {
+    background-color: var(--transfers-color);
+    border-color: var(--transfers-color);
+    color: #fff;
+    cursor: pointer;    
+}
+
+#submitNewInvest > input[type='submit'] {
+    background-color: var(--investments-color);
+    border-color: var(--investments-color);
+    color: #fff;
+    cursor: pointer;    
 }
 
 #titleModalReceita {
@@ -377,6 +393,14 @@ a.active {
 
 #titleModalDespesa {
     color: var(--expenses-color);
+}
+
+#titleModalTransfer {
+    color: var(--transfers-color);
+}
+
+#titleModalInvest {
+    color: var(--investments-color);
 }
 
 .input-modal > label {
