@@ -353,6 +353,7 @@ a.active {
 
 .input-modal {
     margin-bottom: 15px;
+    position: relative;
 }
 
 .input-modal > input[type='submit'] {
@@ -385,6 +386,10 @@ a.active {
     border-color: var(--investments-color);
     color: #fff;
     cursor: pointer;    
+}
+
+#submitNewInvest {
+    display: none;
 }
 
 #titleModalReceita {

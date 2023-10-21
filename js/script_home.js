@@ -1,18 +1,15 @@
-//MÁSCARA
+//MÁSCARA DE INPUTS MONETÁRIOS
 $(document).ready(function(){
-    // Define um valor inicial
     $('.valueNew').val('0,00');
 
-    // Aplica a máscara e mantém a estrutura mínima
     $('.valueNew').mask('000.000.000.000.000,00', {reverse: true});
 
-    // Atualiza o valor conforme o usuário digita
     $('.valueNew').keyup(function(event) {
         var val = $(this).val();
         if (val === '') {
             $(this).val('0,00');
         } else {
-            val = val.replace(/^0+/, ''); // Remove os zeros iniciais
+            val = val.replace(/^0+/, '');
             if (val === '') {
                 $(this).val('0,00');
             } else {
@@ -82,5 +79,30 @@ const programadas = document.querySelectorAll('.programadas>div:last-child')
 for (let i = 0; i < programadas.length; i++) {
     formatValues(programadas[i]);
 }
+
+
+//CONFIG MODAL NOVO INVESTIMENTO
+const investmentType = document.getElementById('investment_type')
+
+const infoFixa = document.getElementById('info-fixa')
+const infoVariavel = document.getElementById('info-variavel')
+
+const btnSubmitNewInvest = document.getElementById('submitNewInvest')
+
+investmentType.addEventListener('change', () => {
+    let investmentInputValue = investmentType.value
+
+    if (investmentInputValue == "fixa") {
+        infoFixa.style.display = "block";
+        infoVariavel.style.display = "none";
+        btnSubmitNewInvest.style.display = "block";
+    } else if (investmentInputValue == "variavel") {
+        infoFixa.style.display = "none";
+        infoVariavel.style.display = "block";
+        btnSubmitNewInvest.style.display = "block";
+    }
+})
+
+
 
 

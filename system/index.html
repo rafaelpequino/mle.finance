@@ -16,6 +16,9 @@
     <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
     <!--FAVICON-->
     <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 </head>
 <body>
     <header class="header">
@@ -53,27 +56,27 @@
                 <form action="" method="post">
                     <div class="input-modal">
                         <label for="description">Descrição</label>
-                        <input type="text" name="description" id="description" placeholder="Ex.: Salário">
+                        <input type="text" name="description" id="description" placeholder="Ex.: Salário" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
                         <label for="value">Valor</label>
-                        <input type="text" name="value" id="value" class="valueNew" placeholder="0,00">
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
                         <label for="date">Data</label>
-                        <input type="date" name="date" id="date">
+                        <input type="date" name="date" id="date" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
-                        <label for="exit">Destino</label>
-                        <select name="exit" id="exit">
+                        <label for="destiny">Destino</label>
+                        <select name="destiny" id="destiny" required>
                             <option value="" selected disabled>Selecione o destino</option>
                             <option value=""></option>
                         </select>
                     </div>
                     <div class="input-modal">
                         <label for="category">Categoria</label>
-                        <select name="category" id="category">
-                            <option value="" selected disabled>Selecione o destino</option>
+                        <select name="category" id="category" required>
+                            <option value="" selected disabled>Selecione a categoria</option>
                             <option value=""></option>
                         </select>
                     </div>
@@ -95,27 +98,27 @@
                 <form action="" method="post">
                     <div class="input-modal">
                         <label for="description">Descrição</label>
-                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel">
+                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
                         <label for="value">Valor</label>
-                        <input type="text" name="value" id="value" class="valueNew" placeholder="0,00">
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
                         <label for="date">Data</label>
-                        <input type="date" name="date" id="date">
+                        <input type="date" name="date" id="date" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
-                        <label for="exit">Saída</label>
-                        <select name="exit" id="exit">
-                            <option value="" selected disabled>Selecione o destino</option>
+                        <label for="exit">Destino</label>
+                        <select name="exit" id="exit" required>
+                            <option value="" selected disabled>Selecione a saída</option>
                             <option value=""></option>
                         </select>
                     </div>
                     <div class="input-modal">
                         <label for="category">Categoria</label>
-                        <select name="category" id="category">
-                            <option value="" selected disabled>Selecione o destino</option>
+                        <select name="category" id="category" required>
+                            <option value="" selected disabled>Selecione a categoria</option>
                             <option value=""></option>
                         </select>
                     </div>
@@ -137,26 +140,26 @@
                 <form action="" method="post">
                     <div class="input-modal">
                         <label for="description">Descrição</label>
-                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel">
+                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
                         <label for="value">Valor</label>
-                        <input type="text" name="value" id="value" class="valueNew" placeholder="0,00">
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
                         <label for="date">Data</label>
-                        <input type="date" name="date" id="date">
+                        <input type="date" name="date" id="date" autocomplete="off" required>
                     </div>
                     <div class="input-modal">
                         <label for="exit">Conta de saída</label>
-                        <select name="exit" id="exit">
+                        <select name="exit" id="exit" required>
                             <option value="" selected disabled>Selecione a saída</option>
                             <option value=""></option>
                         </select>
                     </div>
                     <div class="input-modal">
-                        <label for="category">Conta de destino</label>
-                        <select name="category" id="category">
+                        <label for="destiny">Conta de destino</label>
+                        <select name="destiny" id="destiny" required>
                             <option value="" selected disabled>Selecione o destino</option>
                             <option value=""></option>
                         </select>
@@ -178,9 +181,9 @@
                 </div>
                 <form action="" method="post">
                     <div class="input-modal">
-                        <label for="category">Tipo de investimento</label>
-                        <select name="category" id="category">
-                            <option value="" selected disabled>Selecione o destino</option>
+                        <label for="investment_type">Tipo de investimento</label>
+                        <select name="investment_type" id="investment_type" required>
+                            <option value="" selected disabled>Selecione o tipo</option>
                             <option value="fixa">Renda fixa</option>
                             <option value="variavel">Renda variável</option>
                         </select>
@@ -188,19 +191,19 @@
                     <div id="info-fixa">
                         <div class="input-modal">
                             <label for="description">Título</label>
-                            <input type="text" name="description" id="description" placeholder="Ex.: CDB">
+                            <input type="text" name="description" id="description" placeholder="Ex.: CDB" required>
                         </div>
                         <div class="input-modal">
                             <label for="date">Data de compra</label>
-                            <input type="date" name="date" id="date">
+                            <input type="date" name="date" id="date" required>
                         </div>
                         <div class="input-modal">
                             <label for="value">Valor</label>
-                            <input type="text" name="value" id="value" class="valueNew" placeholder="0,00">
+                            <input type="text" name="value" class="valueNew" placeholder="0,00" required>
                         </div>
                         <div class="input-modal">
                             <label for="exit">Rendimento</label>
-                            <select name="exit" id="exit">
+                            <select name="exit" id="exit" required>
                                 <option value="" selected disabled>Selecione o rendimento</option>
                                 <option value="cdi">CDI</option>
                                 <option value="ipca">IPCA</option>
@@ -211,7 +214,7 @@
                         </div>
                         <div class="input-modal">
                             <label for="exit">Conta de saída</label>
-                            <select name="exit" id="exit">
+                            <select name="exit" id="exit" required>
                                 <option value="" selected disabled>Selecione a saída</option>
                                 <option value=""></option>
                             </select>
@@ -220,30 +223,28 @@
                     <div id="info-variavel">
                         <div class="input-modal">
                             <label for="description">Título</label>
-                            <input type="text" name="description" id="description" placeholder="Ex.: CDB">
-                        </div>
-                        <div class="input-modal">
-                            <label for="date">Data de compra</label>
-                            <input type="date" name="date" id="date">
-                        </div>
-                        <div class="input-modal">
-                            <label for="value">Valor</label>
-                            <input type="text" name="value" id="value" class="valueNew" placeholder="0,00">
-                        </div>
-                        <div class="input-modal">
-                            <label for="exit">Rendimento</label>
-                            <select name="exit" id="exit">
-                                <option value="" selected disabled>Selecione o rendimento</option>
-                                <option value="cdi">CDI</option>
-                                <option value="ipca">IPCA</option>
-                                <option value="ipca+">IPCA+</option>
-                                <option value="selic">Selic</option>
-                                <option value="other">Outro</option>
+                            <select id="actions-list">
+                                <option value="" selected disabled>Selecione o título</option>
+                                <option value="B3SA3">B3SA3</option>
+                                <option value="AMER3">AMER3</option>
+                                <option value="MGLZ3">MGLZ3</option>
                             </select>
                         </div>
                         <div class="input-modal">
+                            <label for="date">Data de compra</label>
+                            <input type="date" name="date" id="date" autocomplete="off" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="value">Valor por cota</label>
+                            <input type="text" name="value" class="valueNew" placeholder="0,00"  autocomplete="off" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="cotas">Quantidade de cotas</label>
+                            <input type="number" name="cotas" placeholder="100" autocomplete="off" required>
+                        </div>
+                        <div class="input-modal">
                             <label for="exit">Conta de saída</label>
-                            <select name="exit" id="exit">
+                            <select name="exit" id="exit" required>
                                 <option value="" selected disabled>Selecione a saída</option>
                                 <option value=""></option>
                             </select>
@@ -530,7 +531,6 @@
 
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    
 </body>
 </html>
