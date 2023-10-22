@@ -289,10 +289,6 @@ a.active {
 }
 
 
-.modalNewTransaction {
-  width: 100%;
-  max-width: 500px;  
-} 
 
 .modal {
     display: none;
@@ -319,7 +315,6 @@ a.active {
     border-radius: 25px;
     max-height: 80%;
     overflow-y: auto;
-    min-width: 300px;
     z-index: 1000000;
 }
 
@@ -360,58 +355,11 @@ a.active {
     margin-top: 30px;
 }
 
-#submitNewRevenue > input[type='submit'] {
-    background-color: var(--first-color);
-    border-color: var(--first-color);
-    color: #fff;
-    cursor: pointer;
-}
-
-#submitNewExpense > input[type='submit'] {
-    background-color: var(--expenses-color);
-    border-color: var(--expenses-color);
-    color: #fff;
-    cursor: pointer;
-}
-
-#submitNewTransfer > input[type='submit'] {
-    background-color: var(--transfers-color);
-    border-color: var(--transfers-color);
-    color: #fff;
-    cursor: pointer;    
-}
-
-#submitNewInvest > input[type='submit'] {
-    background-color: var(--investments-color);
-    border-color: var(--investments-color);
-    color: #fff;
-    cursor: pointer;    
-}
-
-#submitNewInvest {
-    display: none;
-}
-
-#titleModalReceita {
-    color: var(--first-color);
-}
-
-#titleModalDespesa {
-    color: var(--expenses-color);
-}
-
-#titleModalTransfer {
-    color: var(--transfers-color);
-}
-
-#titleModalInvest {
-    color: var(--investments-color);
-}
-
 .input-modal > label {
     width: 100%;
     display: block;
-    padding: 5px 20px;
+    font-size: .9rem;
+    padding: 4px 10px;
 }
 
 .input-modal > input, .input-modal > select {
@@ -420,8 +368,8 @@ a.active {
     border: 1px solid rgb(180, 180, 180);
     border-radius: 10px;
     outline: none;
-    padding: 8px 20px;
-    font-size: 1rem;
+    font-size: .9rem;
+    padding: 6px 10px;
 }
 
 .modal-form {
@@ -590,6 +538,15 @@ a.active {
         min-width: 30px;
         margin-right: 10px;
         font-size: .8rem;
+    }
+
+    .input-modal > label, .input-modal > input, .input-modal > select {
+        font-size: .8rem;
+    }
+
+    .modal-content {
+        padding: 15px 25px;
+        margin: 0 15px;
     }
 
 }

@@ -37,6 +37,15 @@
     opacity: .9;
 }
 
+#form-filter > select {
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 10px;
+    outline: none;
+    font-size: .8rem;
+    padding: 6px 10px;
+
+}
+
 .date {
     position: relative;
     opacity: .7;
