@@ -16,6 +16,10 @@
     <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
     <!--FAVICON-->
     <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
 </head>
 <body>
     <div id="blackout"></div>
@@ -43,6 +47,219 @@
         </div>
 
     </header>
+
+    <div id="modalReceita" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalReceita">Nova receita</h3>
+                    <div class="close" onclick="closeModal('modalReceita')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Ex.: Salário" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Valor</label>
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="destiny">Destino</label>
+                        <select name="destiny" id="destiny" required>
+                            <option value="" selected disabled>Selecione o destino</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category" required>
+                            <option value="" selected disabled>Selecione a categoria</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal" id="submitNewRevenue">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalDespesa" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalDespesa">Nova despesa</h3>
+                    <div class="close" onclick="closeModal('modalDespesa')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Valor</label>
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="exit">Destino</label>
+                        <select name="exit" id="exit" required>
+                            <option value="" selected disabled>Selecione a saída</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category" required>
+                            <option value="" selected disabled>Selecione a categoria</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal" id="submitNewExpense">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalTransfer" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalTransfer">Nova transferência</h3>
+                    <div class="close" onclick="closeModal('modalTransfer')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Valor</label>
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="exit">Conta de saída</label>
+                        <select name="exit" id="exit" required>
+                            <option value="" selected disabled>Selecione a saída</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal">
+                        <label for="destiny">Conta de destino</label>
+                        <select name="destiny" id="destiny" required>
+                            <option value="" selected disabled>Selecione o destino</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal" id="submitNewTransfer">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalInvest" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalInvest">Novo investimento</h3>
+                    <div class="close" onclick="closeModal('modalInvest')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="investment_type">Tipo de investimento</label>
+                        <select name="investment_type" id="investment_type" required>
+                            <option value="" selected disabled>Selecione o tipo</option>
+                            <option value="fixa">Renda fixa</option>
+                            <option value="variavel">Renda variável</option>
+                        </select>
+                    </div>
+                    <div id="info-fixa">
+                        <div class="input-modal">
+                            <label for="description">Título</label>
+                            <input type="text" name="description" id="description" placeholder="Ex.: CDB" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="date">Data de compra</label>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="value">Valor</label>
+                            <input type="text" name="value" class="valueNew" placeholder="0,00" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Rendimento</label>
+                            <select name="exit" id="exit" required>
+                                <option value="" selected disabled>Selecione o rendimento</option>
+                                <option value="cdi">CDI</option>
+                                <option value="ipca">IPCA</option>
+                                <option value="ipca+">IPCA+</option>
+                                <option value="selic">Selic</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Conta de saída</label>
+                            <select name="exit" id="exit" required>
+                                <option value="" selected disabled>Selecione a saída</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="info-variavel">
+                        <div class="input-modal">
+                            <label for="description">Título</label>
+                            <select id="actions-list">
+                                <option value="" selected disabled>Selecione o título</option>
+                                <option value="B3SA3">B3SA3</option>
+                                <option value="AMER3">AMER3</option>
+                                <option value="MGLZ3">MGLZ3</option>
+                            </select>
+                        </div>
+                        <div class="input-modal">
+                            <label for="date">Data de compra</label>
+                            <input type="date" name="date" id="date" autocomplete="off" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="value">Valor por cota</label>
+                            <input type="text" name="value" class="valueNew" placeholder="0,00"  autocomplete="off" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="cotas">Quantidade de cotas</label>
+                            <input type="number" name="cotas" placeholder="100" autocomplete="off" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Conta de saída</label>
+                            <select name="exit" id="exit" required>
+                                <option value="" selected disabled>Selecione a saída</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-modal" id="submitNewInvest">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
 
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
@@ -301,7 +518,7 @@
                         <div class="see-all">
                             <div id="revenues">
                                 <div class="inside-see-all">
-                                    <div class="color color-revenue"><i class="fa-solid fa-plus"></i></div>
+                                    <div class="color color-revenue" onclick="openModal('modalReceita')"><i class="fa-solid fa-plus"></i></div>
                                     <div class="name-see-all name-revenue">
                                         <div class="title-name">Receitas</div>
                                         <div class="subtitle-name">Previsto</div>
@@ -315,7 +532,7 @@
 
                             <div id="expenses">
                                 <div class="inside-see-all">
-                                    <div class="color color-expense"><i class="fa-solid fa-minus"></i></div>
+                                    <div class="color color-expense" onclick="openModal('modalDespesa')"><i class="fa-solid fa-minus"></i></div>
                                     <div class="name-see-all name-expense">
                                         <div class="title-name">Despesas</div>
                                         <div class="subtitle-name">Previsto</div>
@@ -329,7 +546,7 @@
 
                             <div id="transfers">
                                 <div class="inside-see-all">
-                                    <div class="color color-transfer"><i class="fa-solid fa-right-left"></i></div>
+                                    <div class="color color-transfer" onclick="openModal('modalTransfer')"><i class="fa-solid fa-right-left"></i></div>
                                     <div class="name-see-all name-transfer">
                                         <div class="title-name">Transferências</div>
                                         <div class="subtitle-name">Previsto</div>
@@ -343,7 +560,7 @@
 
                             <div id="investments">
                                 <div class="inside-see-all">
-                                    <div class="color color-investment"><i class="fa-solid fa-chart-simple"></i></div>
+                                    <div class="color color-investment" onclick="openModal('modalInvest')"><i class="fa-solid fa-chart-simple"></i></div>
                                     <div class="name-see-all name-investment">
                                         <div class="title-name">Investimentos</div>
                                         <div class="subtitle-name">Previsto</div>

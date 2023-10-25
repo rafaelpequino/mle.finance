@@ -273,6 +273,7 @@ a.active {
     text-decoration: none;
     opacity: .8;
     font-size: .8rem;
+    cursor: pointer;
 }
 
 .color {

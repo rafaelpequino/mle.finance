@@ -260,6 +260,166 @@
     </div>
 
 
+    <div id="modalGerenciarContas" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalGerenciarContas">Gerenciar Contas</h3>
+                    <div class="close" onclick="closeModal('modalGerenciarContas')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <div class="accounts">
+                    <div class="account">
+                        <div class="title-card">
+                            <i class="fa-solid fa-building-columns" style="color: rgb(96, 6, 250);"></i>
+                            <div class="name-type-account">
+                                <div class="name-account">Nubank</div>
+                                <div class="type-account">Conta corrente</div>
+                            </div>
+                        </div>
+                        <div class="options-account">
+                            <form action="" method="post">
+                                <input type="hidden" name="idAccount">
+                                <button type="button"><i class="fa-solid fa-pencil"></i></button>
+                            </form>
+                            <form action="" method="post">
+                                <input type="hidden" name="idAccount">
+                                <button type="button"><i class="fa-regular fa-trash-can"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="account">
+                        <div class="title-card">
+                            <i class="fa-solid fa-money-bill" style="color: rgb(53, 53, 53);"></i>
+                            <div class="name-account">Dinheiro</div>
+                        </div>
+                        <div class="options-account">
+                            <form action="" method="post">
+                                <input type="hidden" name="idAccount">
+                                <button type="button"><i class="fa-solid fa-pencil"></i></button>
+                            </form>
+                            <form action="" method="post">
+                                <input type="hidden" name="idAccount">
+                                <button type="button"><i class="fa-regular fa-trash-can"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="add" onclick="openModal('modalNewAccount')">+ adicionar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalNewAccount" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalNewAccount">Nova conta</h3>
+                    <div class="close" onclick="closeModal('modalNewAccount')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="account-name">Nome</label>
+                        <input type="text" name="account-name" id="account-name" placeholder="Ex.: Minha conta" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Valor inicial</label>
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="exit">Tipo de conta</label>
+                        <select name="exit" id="exit" required>
+                            <option value="" selected disabled>Selecione o tipo de conta</option>
+                            <option value="corrente">Conta corrente</option>
+                            <option value="poupança">Conta poupança</option>
+                            <option value="salário">Conta salário</option>
+                            <option value="pagamentos">Conta de pagamentos</option>
+                            <option value="corretora">Corretora de valores</option>
+                        </select>
+                    </div>
+                    <div class="input-modal">
+                        <label for="account-color">Cor</label>
+                        <input type="color" name="account-color" id="account-color" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal" id="submitNewAccount">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modalGerenciarCartoes" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalGerenciarCartoes">Gerenciar Cartões</h3>
+                    <div class="close" onclick="closeModal('modalGerenciarCartoes')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <div class="cards">
+
+                    <div class="account">
+                        <div class="title-card">
+                            <i class="fa-solid fa-money-bill" style="color: rgb(216, 137, 10);"></i>
+                            <div class="name-account">Banco Inter</div>
+                        </div>
+                        <div class="options-account">
+                            <form action="" method="post">
+                                <input type="hidden" name="idAccount">
+                                <button type="button"><i class="fa-solid fa-pencil"></i></button>
+                            </form>
+                            <form action="" method="post">
+                                <input type="hidden" name="idAccount">
+                                <button type="button"><i class="fa-regular fa-trash-can"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="add" onclick="openModal('modalNewCard')">+ adicionar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalNewCard" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalNewCard">Nova conta</h3>
+                    <div class="close" onclick="closeModal('modalNewCard')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="card-name">Nome</label>
+                        <input type="text" name="card-name" id="card-name" placeholder="Ex.: Minha conta" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Limite</label>
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="close-date">Data de fechamento</label>
+                        <input type="date" name="close-date" id="close-date" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="close-date">Data de vencimento</label>
+                        <input type="date" name="close-date" id="close-date" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="card-color">Cor</label>
+                        <input type="color" name="card-color" id="card-color" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal" id="submitNewCard">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
             <div id="links-sidebar">
@@ -373,7 +533,7 @@
                             <div class="total-account">0</div>
                         </a>
 
-                        <a href="" class="add">gerenciar contas</a>
+                        <div class="add" onclick="openModal('modalGerenciarContas')">gerenciar contas</div>
 
                     </div>
 
@@ -438,7 +598,7 @@
                             </div>
                         </a>
 
-                        <a href="" class="add">gerenciar cartões</a>
+                        <div class="add" onclick="openModal('modalGerenciarCartoes')">gerenciar cartões</div>
 
 
                     </div>

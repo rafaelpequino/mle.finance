@@ -243,6 +243,63 @@
 }
 
 
+/*MODAIS*/
+
+
+.modalNewTransaction {
+    width: 100%;
+    max-width: 500px;  
+} 
+
+#submitNewRevenue > input[type='submit'] {
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+#submitNewExpense > input[type='submit'] {
+    background-color: var(--expenses-color);
+    border-color: var(--expenses-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+#submitNewTransfer > input[type='submit'] {
+    background-color: var(--transfers-color);
+    border-color: var(--transfers-color);
+    color: #fff;
+    cursor: pointer;    
+}
+
+#submitNewInvest > input[type='submit'] {
+    background-color: var(--investments-color);
+    border-color: var(--investments-color);
+    color: #fff;
+    cursor: pointer;    
+}
+
+#submitNewInvest {
+    display: none;
+}
+
+#titleModalReceita {
+    color: var(--first-color);
+}
+
+#titleModalDespesa {
+    color: var(--expenses-color);
+}
+
+#titleModalTransfer {
+    color: var(--transfers-color);
+}
+
+#titleModalInvest {
+    color: var(--investments-color);
+}
+
+
 @media (max-width: 1000px) {
     .columns-transactions {
         flex-direction: column;
