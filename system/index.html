@@ -387,7 +387,7 @@
         <div class="modal-content modalNewTransaction">
             <div class="rounded-container">
                 <div class="header-modal">
-                    <h3 id="titleModalNewCard">Nova conta</h3>
+                    <h3 id="titleModalNewCard">Novo cartão</h3>
                     <div class="close" onclick="closeModal('modalNewCard')"><i class="fa-solid fa-x"></i></div>
                 </div>
                 <form action="" method="post">
@@ -401,11 +401,11 @@
                     </div>
                     <div class="input-modal">
                         <label for="close-date">Data de fechamento</label>
-                        <input type="date" name="close-date" id="close-date" autocomplete="off" required>
+                        <input type="number" name="close-date" id="close-date" autocomplete="off" required max="31">
                     </div>
                     <div class="input-modal">
-                        <label for="close-date">Data de vencimento</label>
-                        <input type="date" name="close-date" id="close-date" autocomplete="off" required>
+                        <label for="maturity-date">Data de vencimento</label>
+                        <input type="number" name="maturity-date" id="maturity-date" autocomplete="off" required max="31">
                     </div>
                     <div class="input-modal">
                         <label for="card-color">Cor</label>
