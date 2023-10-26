@@ -70,15 +70,31 @@
     background-color: var(--expenses-color);
 }
 
-#btn-simular {
+#btn-editar {
     border: 1px solid #7a7a7a;
     color: #000000;
 }
 
-#btn-simular:hover {
+#btn-editar:hover {
     background-color: #7a7a7a;
     color: #ffffff;
 }
+
+
+/*MODAIS*/
+
+#submitNewAccount > input[type='submit'] {
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+#titleModalNewDebit {
+    color: var(--first-color);
+}
+
+
 
 
 @media (max-width: 800px) {

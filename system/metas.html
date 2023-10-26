@@ -16,6 +16,9 @@
     <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
     <!--FAVICON-->
     <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 </head>
 <body>
     <header class="header">
@@ -42,6 +45,47 @@
         </div>
 
     </header>
+
+    <div id="modalNewGoal" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalNewGoal">Nova meta</h3>
+                    <div class="close" onclick="closeModal('modalNewGoal')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="goalType">Tipo de meta</label>
+                        <select name="goalType" id="goalType" required>
+                            <option value="" selected disabled>Selecione o tipo de conta</option>
+                            <option value="short">Curto prazo</option>
+                            <option value="medium">Médio prazo</option>
+                            <option value="long">Longo prazo</option>
+                        </select>
+                    </div>
+                    <div class="input-modal">
+                        <label for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Ex.: Montar reserva de emergência" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="montante">Quanto você tem?</label>
+                        <input type="text" name="montante" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="objetivo">E quanto você precisar ter?</label>
+                        <input type="text" name="objetivo" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="prazo">Qual o prazo?</label>
+                        <input type="date" name="prazo" id="prazo" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal" id="submitNewGoal">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
@@ -85,9 +129,7 @@
                     <span class="name-sidebar">Sair</span>
                 </a>
             </div>
-
         </nav>
-
         <div class="container">
             <div id="metas">
                 <div class="box" id="short-time">
@@ -101,6 +143,7 @@
                                     <th>Objetivo</th>
                                     <th>Prazo</th>
                                     <th>Restam</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -115,25 +158,19 @@
                                     <td class="value">10000</td>
                                     <td>31/12/2023</td>
                                     <td>90 dias</td>
-                                </tr>
-
-                                <tr>
                                     <td>
-                                        <form action="" method="post" id="form-title-new-meta">
-                                            <input type="text" name="title-meta" id="title-meta" placeholder="Crie uma nova meta de curto prazo">
-                                        </form>
-                                    </td>
-                                    <td class="value"></td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div style="background-color: var(--expenses-color); width: 0%;"></div>
+                                        <div class="actions icons-options">
+                                            <form action="" method="post">
+                                                <input type="hidden" name="idMeta">
+                                                <button type="button"><i class="fa-solid fa-pencil"></i></button>
+                                            </form>
+                                            <form action="" method="post">
+                                                <input type="hidden" name="idMeta">
+                                                <button type="button"><i class="fa-regular fa-trash-can"></i></button>
+                                            </form>
                                         </div>
                                     </td>
-                                    <td class="value"></td>
-                                    <td>---</td>
-                                    <td>---</td>
                                 </tr>
-                        
                             </tbody>
                         </table>
                     </div>
@@ -150,25 +187,10 @@
                                     <th>Objetivo</th>
                                     <th>Prazo</th>
                                     <th>Restam</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <form action="" method="post" id="form-title-new-meta">
-                                            <input type="text" name="title-meta" id="title-meta" placeholder="Crie sua primeira meta de médio prazo">
-                                        </form>
-                                    </td>
-                                    <td class="value"></td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div style="background-color: var(--expenses-color); width: 0%;"></div>
-                                        </div>
-                                    </td>
-                                    <td class="value"></td>
-                                    <td>---</td>
-                                    <td>---</td>
-                                </tr>
                         
                             </tbody>
                         </table>
@@ -186,6 +208,7 @@
                                     <th>Objetivo</th>
                                     <th>Prazo</th>
                                     <th>Restam</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -200,55 +223,29 @@
                                     <td class="value">300000</td>
                                     <td>31/12/2023</td>
                                     <td>90 dias</td>
-                                </tr>
-
-                                <tr>
+                                    
                                     <td>
-                                        <form action="" method="post" id="form-title-new-meta">
-                                            <input type="text" name="title-meta" id="title-meta" placeholder="Crie uma nova meta de longo prazo">
-                                        </form>
-                                    </td>
-                                    <td class="value"></td>
-                                    <td>
-                                        <div class="status-bar">
-                                            <div style="background-color: var(--expenses-color); width: 0%;"></div>
+                                        <div class="actions icons-options">
+                                            <form action="" method="post">
+                                                <input type="hidden" name="idMeta">
+                                                <button type="button"><i class="fa-solid fa-pencil"></i></button>
+                                            </form>
+                                            <form action="" method="post">
+                                                <input type="hidden" name="idMeta">
+                                                <button type="button"><i class="fa-regular fa-trash-can"></i></button>
+                                            </form>
                                         </div>
                                     </td>
-                                    <td class="value"></td>
-                                    <td>---</td>
-                                    <td>---</td>
                                 </tr>
                         
                             </tbody>
                         </table>
                     </div>
+            
                 </div>
+                <div class="add" onclick="openModal('modalNewGoal')">+ nova meta</div>
 
-                <hr id="hr-carried">
-
-                <div class="box" id="met">
-                    <div class="div-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Metas conquistadas</th>
-                                    <th>Montante</th>
-                                    <th>Prazo</th>
-                                    <th>Realizado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Montar uma reserva de emergência</td>
-                                    <td class="value">500000000</td>
-                                    <td>31/12/2023</td>
-                                    <td>90 dias</td>
-                                </tr>
-                        
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                
             </div>
 
         </div>

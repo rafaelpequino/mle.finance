@@ -102,6 +102,20 @@
 }
 
 
+/*MODAIS*/
+
+#submitNewCategory > input[type='submit'] {
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+#titleModalNewCategory {
+    color: var(--first-color);
+}
+
+
 @media (max-width: 900px) {
     .category {
         display: flex;

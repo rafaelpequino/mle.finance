@@ -16,6 +16,9 @@
     <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
     <!--FAVICON-->
     <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 </head>
 <body>
     <header class="header">
@@ -42,6 +45,34 @@
         </div>
 
     </header>
+
+    <div id="modalNewDebit" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalNewDebit">Nova dívida</h3>
+                    <div class="close" onclick="closeModal('modalNewDebit')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Ex.: Fatura de cartão de crédito" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="institution">Instituição</label>
+                        <input type="text" name="institution" id="institution" placeholder="Ex.: Caixa Econômica Federal" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Valor</label>
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal" id="submitNewAccount">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
@@ -102,7 +133,7 @@
                     <div class="value-divida">1500</div>
                     <div class="simulation-divida">
                         <button id="btn-excluir">Excluir</button>
-                        <button id="btn-simular">Simular</button>
+                        <button id="btn-editar">Editar</button>
                     </div>
                 </div>
                 <div class="box divida">
@@ -117,11 +148,11 @@
                     <div class="value-divida">750</div>
                     <div class="simulation-divida">
                         <button id="btn-excluir">Excluir</button>
-                        <button id="btn-simular">Simular</button>
+                        <button id="btn-editar">Editar</button>
                     </div>
                 </div>
             </div>
-            <a href="" class="add">+ adicionar</a>
+            <div class="add"  onclick="openModal('modalNewDebit')">+ adicionar</div>
 
         </div>
 

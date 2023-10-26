@@ -317,6 +317,8 @@ a.active {
     max-height: 80%;
     overflow-y: auto;
     z-index: 101;
+    width: 100%;
+    max-width: 500px;  
 }
 
 .header-modal {

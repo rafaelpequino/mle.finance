@@ -245,12 +245,6 @@
 
 /*MODAIS*/
 
-
-.modalNewTransaction {
-    width: 100%;
-    max-width: 500px;  
-} 
-
 #submitNewRevenue > input[type='submit'] {
     background-color: var(--first-color);
     border-color: var(--first-color);

@@ -65,7 +65,6 @@ thead > tr > th:last-child {
 }
 
 tbody > tr {
-    cursor: pointer;
     transition: background-color 0.3s; 
     border-bottom: 1px solid rgb(220, 220, 220);
     overflow-x: scroll;
@@ -115,6 +114,35 @@ tbody > tr > td:last-child {
     min-width: 50px;
 }
 
+.icons-options {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+}
+
+.icons-options > form > button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.fa-pencil:hover {
+    transition: .1s;
+    color: var(--investments-color);
+}
+
+.fa-trash-can:hover {
+    transition: .1s;
+    color: var(--expenses-color);
+}
+
 .status-bar {
     width: 150px;
     height: 10px;
@@ -133,25 +161,20 @@ tbody > tr > td:last-child {
     white-space: nowrap;
 }
 
-hr#hr-carried {
-    margin: 20px 0;
+
+/*MODAIS*/
+
+#submitNewGoal > input[type='submit'] {
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    color: #fff;
+    cursor: pointer;
 }
 
-#form-title-new-meta {
-    width: 100%;
+#titleModalNewGoal {
+    color: var(--first-color);
 }
 
-#form-title-new-meta > input {
-    width: 100%;
-    padding: 1px 5px;
-    border-radius: 5px;
-    border: 1px solid rgb(166, 166, 166);
-    outline: none;
-}
-
-#form-title-new-meta > input:focus, #form-title-new-meta > input:active {
-    border: 1px solid rgb(62, 62, 62);
-}
 
 @media (max-width: 1400px) {
 
