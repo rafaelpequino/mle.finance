@@ -150,7 +150,6 @@
     align-items: center;
     justify-content: space-between;
     margin: 20px auto;
-    max-width: 400px;
 }
 
 .inside-see-all {
@@ -260,11 +259,12 @@
     color: var(--investments-color);
 }
 
+.status-transactions {
+    display: block;
+}
+
 
 @media (max-width: 1000px) {
-    .columns-transactions {
-        flex-direction: column;
-    }
 
     #transactions-container {
         width: 100%;
@@ -275,11 +275,15 @@
     .month-balance {
         width: 100%;
     }
-}
 
-@media (max-width: 1000px) {
+    .see-all {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 100px;
+    }
+
     .columns-transactions {
-        grid-template-columns: auto 250px;
+        flex-direction: column;
     }
 
     .btn-new {
@@ -315,7 +319,19 @@
     .value-total {
         font-size: 1.4rem;
     }
+
+    .see-all {
+        gap: 0 50px;
+    }
 }
+
+@media (max-width: 800px) {
+
+    .see-all {
+        display: block;
+    }
+}
+
 
 @media (max-width: 500px) {
     .transaction {

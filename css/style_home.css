@@ -539,11 +539,18 @@ button.btn-new {
     }
 
     #total-balance {
-        margin: 0 auto 20px;
+        margin: 0 0 20px;
     }
 
     .options {
+        width: 100%;
         margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .btn-new {
+        width: 100%;
     }
     
     
@@ -627,11 +634,6 @@ button.btn-new {
         font-weight: 700;
         margin: 0;
     }
-
-    .options {
-        padding: 0;
-        gap: 0 5px;
-    }
     
     .btn-new {
         text-align: center;
@@ -639,7 +641,6 @@ button.btn-new {
         font-size: .6rem;
         cursor: pointer;
         border-radius: 10px;
-        width: 60px;
         transition: .3s;
         font-weight: 350;
     }
