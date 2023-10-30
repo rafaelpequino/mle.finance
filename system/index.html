@@ -202,17 +202,6 @@
                             <input type="text" name="value" class="valueNew" placeholder="0,00" required>
                         </div>
                         <div class="input-modal">
-                            <label for="exit">Rendimento</label>
-                            <select name="exit" id="exit" required>
-                                <option value="" selected disabled>Selecione o rendimento</option>
-                                <option value="cdi">CDI</option>
-                                <option value="ipca">IPCA</option>
-                                <option value="ipca+">IPCA+</option>
-                                <option value="selic">Selic</option>
-                                <option value="other">Outro</option>
-                            </select>
-                        </div>
-                        <div class="input-modal">
                             <label for="exit">Conta de saída</label>
                             <select name="exit" id="exit" required>
                                 <option value="" selected disabled>Selecione a saída</option>
@@ -223,24 +212,21 @@
                     <div id="info-variavel">
                         <div class="input-modal">
                             <label for="description">Título</label>
-                            <select id="actions-list">
-                                <option value="" selected disabled>Selecione o título</option>
-                                <option value="B3SA3">B3SA3</option>
-                                <option value="AMER3">AMER3</option>
-                                <option value="MGLZ3">MGLZ3</option>
+                            <input type="text" name="description" id="description" placeholder="Ex.: B3SA3" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="description">Tipo</label>
+                            <select id="actions-list" required>
+                                <option value="" selected disabled>Selecione o tipo</option>
+                                <option value="Ação">Ação</option>
+                                <option value="Fundo Imobiliário">Fundo Imobiliário</option>
+                                <option value="Criptomoeda">Criptomoeda</option>
+                                <option value="Outro">Outro</option>
                             </select>
                         </div>
                         <div class="input-modal">
                             <label for="date">Data de compra</label>
                             <input type="date" name="date" id="date" autocomplete="off" required>
-                        </div>
-                        <div class="input-modal">
-                            <label for="value">Valor por cota</label>
-                            <input type="text" name="value" class="valueNew" placeholder="0,00"  autocomplete="off" required>
-                        </div>
-                        <div class="input-modal">
-                            <label for="cotas">Quantidade de cotas</label>
-                            <input type="number" name="cotas" placeholder="100" autocomplete="off" required>
                         </div>
                         <div class="input-modal">
                             <label for="exit">Conta de saída</label>

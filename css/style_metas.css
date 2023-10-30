@@ -114,35 +114,6 @@ tbody > tr > td:last-child {
     min-width: 50px;
 }
 
-.icons-options {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: right;
-    gap: 5px;
-}
-
-.icons-options > form > button {
-    border: none;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding-top: 5px;
-    cursor: pointer;
-}
-
-.fa-pencil:hover {
-    transition: .1s;
-    color: var(--investments-color);
-}
-
-.fa-trash-can:hover {
-    transition: .1s;
-    color: var(--expenses-color);
-}
-
 .status-bar {
     width: 150px;
     height: 10px;

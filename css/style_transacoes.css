@@ -126,39 +126,6 @@
     cursor: pointer;
 }
 
-.icons-options {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.fa-square-check, .fa-square {
-    color: var(--second-color);
-}
-
-.fa-pencil:hover {
-    transition: .1s;
-    color: var(--investments-color);
-}
-
-.fa-trash-can:hover {
-    transition: .1s;
-    color: var(--expenses-color);
-}
-
-.fa-square:hover {
-    transition: .1s;
-    color: var(--first-color);
-}
-
-.fa-triangle-exclamation {
-    color: var(--transfers-color);
-    margin-top: 5px;
-    display: block;
-    font-size: .8rem;
-}
 
 .month-balance {
     width: 350px;

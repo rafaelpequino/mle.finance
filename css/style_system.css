@@ -392,6 +392,51 @@ a.active {
     display: none;
 }
 
+.icons-options {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+}
+
+.icons-options > form > button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.fa-pencil:hover {
+    transition: .1s;
+    color: var(--investments-color);
+}
+
+.fa-trash-can:hover {
+    transition: .1s;
+    color: var(--expenses-color);
+}
+
+.fa-square-check, .fa-square {
+    color: var(--second-color);
+}
+
+.fa-square:hover {
+    transition: .1s;
+    color: var(--first-color);
+}
+
+.fa-triangle-exclamation {
+    color: var(--transfers-color);
+    margin-top: 5px;
+    display: block;
+    font-size: .8rem;
+}
+
 
 @media (max-width: 1500px) {
 
