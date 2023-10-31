@@ -46,6 +46,79 @@
 
     </header>
 
+    <div id="modalInvest" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalInvest">Novo investimento</h3>
+                    <div class="close" onclick="closeModal('modalInvest')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="investment_type">Tipo de investimento</label>
+                        <select name="investment_type" id="investment_type" required>
+                            <option value="" selected disabled>Selecione o tipo</option>
+                            <option value="fixa">Renda fixa</option>
+                            <option value="variavel">Renda variável</option>
+                        </select>
+                    </div>
+                    <div id="info-fixa">
+                        <div class="input-modal">
+                            <label for="description">Título</label>
+                            <input type="text" name="description" id="description" placeholder="Ex.: CDB" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="date">Data de compra</label>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="value">Valor</label>
+                            <input type="text" name="value" class="valueNew" placeholder="0,00" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Conta de saída</label>
+                            <select name="exit" id="exit" required>
+                                <option value="" selected disabled>Selecione a saída</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="info-variavel">
+                        <div class="input-modal">
+                            <label for="description">Título</label>
+                            <input type="text" name="description" id="description" placeholder="Ex.: B3SA3" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="description">Tipo</label>
+                            <select id="actions-list" required>
+                                <option value="" selected disabled>Selecione o tipo</option>
+                                <option value="Ação">Ação</option>
+                                <option value="Fundo Imobiliário">Fundo Imobiliário</option>
+                                <option value="Criptomoeda">Criptomoeda</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="input-modal">
+                            <label for="date">Data de compra</label>
+                            <input type="date" name="date" id="date" autocomplete="off" required>
+                        </div>
+                        <div class="input-modal">
+                            <label for="exit">Conta de saída</label>
+                            <select name="exit" id="exit" required>
+                                <option value="" selected disabled>Selecione a saída</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-modal" id="submitNewInvest">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
             <div id="links-sidebar">
@@ -273,7 +346,7 @@
                     </div>  
                 </div>
                 
-                <div class="add" onclick="openModal('modalNewCategory')">+ adicionar</div>
+                <div class="add" onclick="openModal('modalInvest')">+ adicionar</div>
             </div>
 
         </div>

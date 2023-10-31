@@ -32,3 +32,25 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
     
+
+//CONFIG MODAL NOVO INVESTIMENTO
+const investmentType = document.getElementById('investment_type')
+
+const infoFixa = document.getElementById('info-fixa')
+const infoVariavel = document.getElementById('info-variavel')
+
+const btnSubmitNewInvest = document.getElementById('submitNewInvest')
+
+investmentType.addEventListener('change', () => {
+    let investmentInputValue = investmentType.value
+
+    if (investmentInputValue == "fixa") {
+        infoFixa.style.display = "block";
+        infoVariavel.style.display = "none";
+        btnSubmitNewInvest.style.display = "block";
+    } else if (investmentInputValue == "variavel") {
+        infoFixa.style.display = "none";
+        infoVariavel.style.display = "block";
+        btnSubmitNewInvest.style.display = "block";
+    }
+})

@@ -169,6 +169,16 @@ tbody > tr > td:last-child {
     color: var(--expenses-color);
 }
 
+#submitNewInvest > input[type='submit'] {
+    background-color: var(--investments-color);
+    border-color: var(--investments-color);
+    color: #fff;
+    cursor: pointer;    
+}
+#titleModalInvest {
+    color: var(--investments-color);
+}
+
 
 
 
