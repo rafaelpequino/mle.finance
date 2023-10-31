@@ -121,7 +121,9 @@
         </nav>
 
         <div class="container">
-            <div class="box" id="categorias">
+            <div class="box" id="categorias-default">
+                
+                <h5>Categorias padrão</h5>
                 <a href="#" class="category">
                     <div class="info-category">
                         <div class="color" style="background-color: #859be9;"><i class="fa-solid fa-house"></i></div>
@@ -139,6 +141,7 @@
                     <div class="edit-limit">
                         <button><i class="fa-solid fa-pen-to-square"></i> Editar limite</button>
                     </div>
+                    
                 </a>
                 <a href="#" class="category">
                     <div class="info-category">
@@ -193,6 +196,37 @@
                     <div class="edit-limit">
                         <button><i class="fa-solid fa-pen-to-square"></i> Editar limite</button>
                     </div>
+                </a>
+            </div>
+
+            <div class="box" id="categorias-user">
+                
+                <h5>Minhas categorias</h5>
+                <a href="#" class="category">
+                    <div class="info-category">
+                        <div class="color" style="background-color: #d4d4d4;"></div>
+                        <div class="title-category">Moradia</div>
+                    </div>
+                    <div class="info-limit-category">
+                        <div class="limit-category">
+                            <div>Utilizado: <span>2000</span></div>
+                            <div>Limite: <span>0</span></div>
+                        </div>
+                        <div class="limit-bar">
+                            <div class="used-limit-bar" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="actions icons-options">
+                        <form action="" method="post">
+                            <input type="hidden" name="idMeta">
+                            <button type="button"><i class="fa-solid fa-pencil"></i></button>
+                        </form>
+                        <form action="" method="post">
+                            <input type="hidden" name="idMeta">
+                            <button type="button"><i class="fa-regular fa-trash-can"></i></button>
+                        </form>
+                    </div>
+                    
                 </a>
                 <div class="add" onclick="openModal('modalNewCategory')">+ adicionar</div>
             </div>

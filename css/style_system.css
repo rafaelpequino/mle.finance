@@ -396,7 +396,7 @@ a.active {
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     gap: 5px;
 }
 

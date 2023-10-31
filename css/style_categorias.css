@@ -80,6 +80,7 @@
 .edit-limit {
     display: flex;
     align-items: center;
+    width: max-content;
 }
 
 .edit-limit > button {
@@ -99,6 +100,10 @@
 
 .edit-limit > button > i {
     margin-right: 10px;
+}
+
+.icons-options {
+    justify-content: right;
 }
 
 
