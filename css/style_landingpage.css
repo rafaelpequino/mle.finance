@@ -30,6 +30,11 @@ html, body {
     margin: auto;
 }
 
+body {
+    max-width: 2500px;
+    margin: auto;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 6px;
@@ -242,7 +247,6 @@ div#inside-resources {
     max-width: 1300px;
     margin: auto;
     padding: 0 50px;
-    gap: 90px;
 }
 
 #inside-resources > h2 {
@@ -269,7 +273,6 @@ div.resources-list {
     border-radius: 20px;
     padding: 35px 40px 80px;
     width: 30%;
-    min-width: 400px;
     margin: auto;
     height: 350px;
     overflow: hidden;
@@ -300,6 +303,65 @@ div.resources-list {
 
 .description-resource {
     opacity: .8;
+}
+
+
+article#article-login {
+    height: max-content;
+    min-height: 500px;
+    background-image: url(../img/bk-family.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+article#article-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(60deg, #257830b6 30%, transparent 70%);
+}
+
+
+div#inside-article {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 50px;
+    z-index: 10;
+}
+
+#inside-article > h2 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin: 15px 0 50px;
+    max-width: 500px;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+#inside-article > h2 > span {
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+#inside-article > a {
+    font-size: 1.1rem;
+    opacity: .9;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    display: block;
+    border-radius: 5px;
+    padding: 10px 30px;
+    width: max-content;
 }
 
 
@@ -420,6 +482,10 @@ div.resources-list {
     }
 
 
+    div#inside-resources {
+        padding: 0 20px;
+    }
+
     #inside-resources > h2 {
         text-align: center;
     }
@@ -433,6 +499,28 @@ div.resources-list {
     .center-resource {
         order: 0;
     }
+}
+
+
+@media (max-width: 800px) {
+    article#article-login {
+        background-image: url(../img/bk-family-mini.jpeg);
+        background-position: right;
+        height: 700px;
+    }
+
+    article#article-login::before {
+        background: linear-gradient(360deg, #257830b6 50%, transparent 70%);
+    }
+
+    div#inside-article {
+        position: absolute;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    
 }
 
 
@@ -480,4 +568,13 @@ div.resources-list {
     .first-title > h1 > span {
         font-weight: 600;
     } 
+}
+
+@media (max-width: 500px) {
+
+    #inside-article > h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin: 15px 0 2%;
+    }
 }
