@@ -531,6 +531,74 @@ div#inside-faq {
 } 
 
 
+footer {
+    width: 100%;
+    background-color: var(--white-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.331);
+}
+
+#inside-footer {
+    width: 100%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px;
+    margin: auto;
+}
+
+.left-footer > img {
+    display: block;
+    width: 150px;
+    margin: 0 auto 20px;
+}
+
+.left-footer > p {
+    opacity: .8;
+    text-align: center;
+}
+
+.footer-title {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--first-color);
+    margin-bottom: 20px;
+}
+
+.center-links > a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    opacity: .8;
+    text-align: center;
+    transition: .3s;
+}
+
+.center-links > a:hover {
+    color: var(--second-color);
+}
+
+.right-list {
+    display: block;
+    opacity: .8;
+    text-align: center;
+}
+
+.autorized {
+    text-align: center;
+    opacity: .8;
+    padding: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.100);
+}
+
+.autorized > span {
+    font-size: 1.1rem;
+    opacity: 1;
+    color: var(--second-color);
+    font-weight: 500;
+}
+
+
 @media (max-width: 1300px) {
 
     .resource {
@@ -717,6 +785,18 @@ div#inside-faq {
     .faq-list {
         display: block;
     }
+
+
+
+    #inside-footer {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 50px;
+    }
+
+    .autorized {
+        font-size: .9rem;
+    }
+    
 }
 
 
