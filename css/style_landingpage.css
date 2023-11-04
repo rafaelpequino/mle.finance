@@ -332,10 +332,9 @@ div.resources-list {
 
 .resource {
     border-radius: 20px;
-    padding: 35px 40px 80px;
+    padding: 80px 40px;
     width: 30%;
     margin: auto;
-    height: 350px;
     overflow: hidden;
 }
 
@@ -416,11 +415,21 @@ div#inside-depositions {
     margin: auto;
 }
 
+.center-deposition {
+    padding: 70px 50px;
+}
+
 .deposition > p {
     opacity: .8;
     text-align: center;
-    height: 120px;
+    height: 100px;
     overflow: hidden;
+}
+
+.stars {
+    color: var(--yellow-color);
+    max-width: max-content;
+    margin: auto;
 }
 
 .user-description {
@@ -640,6 +649,10 @@ footer {
 
     .depositions-list > .deposition:last-child {
         display: none;
+    }
+
+    .center-deposition {
+        padding: 50px;
     }
 }
 
