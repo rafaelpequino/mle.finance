@@ -429,7 +429,7 @@ div#inside-depositions {
 .stars {
     color: var(--yellow-color);
     max-width: max-content;
-    margin: auto;
+    margin: 20px auto;
 }
 
 .user-description {
@@ -654,6 +654,10 @@ footer {
     .center-deposition {
         padding: 50px;
     }
+
+    .deposition > p {
+        height: 60px;
+    }
 }
 
 
@@ -694,6 +698,13 @@ footer {
 
 
 
+}
+
+@media (max-width: 939px) {
+
+    .deposition > p {
+        height: 80px;
+    }
 }
 
 
