@@ -57,20 +57,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: max-content;
-    padding: 10px 50px;
+    min-height: 500px;
+    padding: 10px;
 }
 
 main {
-    width: max-content;
+    width: 100%;
+    max-width: 370px;
     height: max-content;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
+    padding: 70px 0;
 }
 
 .login-content {
-    width: 100vw;
-    max-width: 400px;
+    height: max-content;
+    width: 100%;
+    overflow: hidden;
 }
 
 .login-data {
@@ -78,39 +81,38 @@ main {
 }
 
 .login-data > img {
-    width: 150px;
+    width: 80vw;
+    max-width: 200px;
     display: block;
-    margin: 0 auto 30px;
+    margin: auto;
 }
 
 .login-data > h1 {
     font-weight: 500;
     text-align: center;
-    margin-bottom: 40px;
-}
-
-form#form-login {
-    width: 100%;
+    font-size: 1.1rem;
+    margin: 15px 0;
 }
 
 .div-input {
     position: relative;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .div-input > label {
     position: absolute;
-    padding: 0 15px;
+    padding: 0 10px;
     background-color: #fff;
     transition: .1s;
 }
 
 .disabled-label {
     top: 50%;
-    left: 25px;
+    left: 20px;
     transform: translate(0, -50%);
     font-size: 1.005rem;
+    color: rgb(120, 120, 120);
 }
 
 .non-disabled-label {
@@ -129,16 +131,17 @@ form#form-login {
     color: #000;
     font-weight: normal;
     font-size: 0.9rem;
+    color: rgb(120, 120, 120);
 }
 
 .div-input > input {
     display: block;
     width: 98%;
     margin: auto;
-    padding: 15px 25px;
+    padding: 15px 20px;
     border-radius: 5px;
     border: none;
-    outline: 1px solid rgb(180, 180, 180);
+    outline: 1px solid rgb(220, 220, 220);
     font-size: 1.005rem;
     transition: .1s;
 }
@@ -146,4 +149,59 @@ form#form-login {
 .div-input > input:focus {
     outline: none;
     outline: 2px solid var(--second-color);
+}
+
+#form-login > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    opacity: .8;
+    font-size: .8rem;
+}
+
+#form-login > button {
+    display: block;
+    margin: 10px auto;
+    width: 98%;
+    border: none;
+    padding: 10px;
+    background-color: var(--first-color);
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.not-register {
+    margin-top: 20px;
+    text-align: center;
+    font-size: .8rem;
+    opacity: .8;
+}
+
+.not-register > a {
+    text-decoration: none;
+    color: #000;
+    opacity: .8;
+    font-size: .8rem;
+}
+
+@media (max-width: 600px) {
+
+    .div-input > label,.div-input > input {
+        font-size: .9rem;
+    }
+
+    .disabled-label {
+        font-size: 0.9rem;
+    }
+    
+    .non-disabled-label, .filled-input {
+        font-size: 0.8rem;
+    }
+
+    .not-register > a {
+        display: block;
+    }
 }
