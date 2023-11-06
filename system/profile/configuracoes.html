@@ -96,24 +96,28 @@
                 <h3 id="title-my-data">Meu perfil</h3>
 
                 <form action="" method="post" id="form-my-data">
-                    <div class="inputs-of-my-data">
-                        <div class="input-data">
-                            <label for="fullname">Nome Completo</label>
-                            <input type="text" name="fullname" id="fullname" placeholder="Digite seu nome completo" required>
+                    <div class="responsive-inputs">
+                        <div class="div-input input-container">
+                            <label for="input-fullname" class="disabled-label" id="label-fullname">Nome completo</label>
+                            <input type="text" name="fullname" id="input-fullname" autocomplete="off" required>
                         </div>
-                        <div class="input-data">
-                            <label for="apelido">Apelido</label>
-                            <input type="text" name="apelido" id="apelido" placeholder="Como deseja ser chamado?" required>
-                        </div>
-                        <div class="input-data">
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" id="email" placeholder="Informe seu e-mail" required>
-                        </div>
-                        <div class="input-data">
-                            <label for="cellphone">Celular</label>
-                            <input type="tel" name="cellphone" id="cellphone" placeholder="(11) 98765-4321" required>
+                        <div class="div-input input-container">
+                            <label for="input-surname" class="disabled-label" id="label-surname">Apelido</label>
+                            <input type="text" name="surname" id="input-surname" autocomplete="off" required>
                         </div>
                     </div>
+
+                    <div class="responsive-inputs">
+                        <div class="div-input input-container">
+                            <label for="input-email" class="disabled-label" id="label-email">E-mail</label>
+                            <input type="text" name="email" id="input-email" autocomplete="off" required>
+                        </div>
+                        <div class="div-input input-container">
+                            <label for="input-cellphone" class="disabled-label" id="label-cellphone">Celular</label>
+                            <input type="text" name="cellphone" id="input-cellphone" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <a href="#">Alterar senha</a>
                     <button type="submit" id="btn-save-changes">Salvar alterações</button>
                 </form>
             </div>

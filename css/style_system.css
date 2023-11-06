@@ -437,6 +437,75 @@ a.active {
     font-size: .8rem;
 }
 
+/*INPUT*/
+
+.responsive-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.responsive-inputs > div {
+    max-width: 49%;
+}
+
+.div-input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.div-input > label {
+    position: absolute;
+    padding: 0 10px;
+    background-color: #fff;
+    transition: .1s;
+}
+
+.disabled-label {
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    font-size: 1.005rem;
+    color: rgb(120, 120, 120);
+}
+
+.non-disabled-label {
+    top: 0;
+    left: 15px;
+    transform: translate(0, -50%);
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.filled-input {
+    top: 0;
+    left: 15px;
+    transform: translate(0, -50%);
+    color: #000;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: rgb(120, 120, 120);
+}
+
+.div-input > input {
+    display: block;
+    width: 98%;
+    margin: auto;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: 1px solid rgb(220, 220, 220);
+    font-size: 1.005rem;
+    transition: .1s;
+}
+
+.div-input > input:focus {
+    outline: none;
+    outline: 2px solid var(--second-color);
+}
+
 
 @media (max-width: 1500px) {
 
@@ -598,4 +667,33 @@ a.active {
         margin: 0 15px;
     }
 
+}
+
+@media (max-width: 700px) {
+    .responsive-inputs {
+        display: block;
+    }
+
+    .responsive-inputs > div {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .div-input > label,.div-input > input {
+        font-size: .9rem;
+    }
+
+    .disabled-label {
+        font-size: 0.9rem;
+    }
+    
+    .non-disabled-label, .filled-input {
+        font-size: 0.8rem;
+    }
+
+    .not-register > a {
+        display: block;
+    }
 }
