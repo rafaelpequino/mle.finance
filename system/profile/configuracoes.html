@@ -43,6 +43,34 @@
 
     </header>
 
+    <div id="modalAlterPassword" class="modal">
+        <div class="modal-content modalAlterPassword">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalAlterPassword">Alterar senha</h3>
+                    <div class="close" onclick="closeModal('modalAlterPassword')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="ex-password">Senha atual</label>
+                        <input type="password" name="ex-password" id="ex-password" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="new-password">Nova senha</label>
+                        <input type="password" name="new-password" id="new-password" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="repeat-new-password">Repita a nova senha</label>
+                        <input type="password" name="repeat-new-password" id="repeat-new-password" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal" id="submitAlterPassword">
+                        <input type="submit" name="submit" id="submit" value="Alterar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <main class="main">
         <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
             <div id="links-sidebar">
@@ -117,8 +145,8 @@
                             <input type="text" name="cellphone" id="input-cellphone" autocomplete="off" required>
                         </div>
                     </div>
-                    <a href="#">Alterar senha</a>
-                    <button type="submit" id="btn-save-changes">Salvar alterações</button>
+                    <div id="alter-password" onclick="openModal('modalAlterPassword')">Alterar senha</div>
+                    <button type="submit" id="btn-save-changes" >Salvar alterações</button>
                 </form>
             </div>
 

@@ -14,6 +14,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
+    <div id="modalForgotPassword" class="modal">
+        <div class="modal-content modalForgotPassword">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalForgotPassword">Recuperar senha</h3>
+                    <div class="close" onclick="closeModal('modalForgotPassword')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="email-fp">Informe o seu e-mail</label>
+                        <input type="email" name="email-fp" id="email-fp" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal" id="submitForgotPassword">
+                        <input type="submit" name="submit" id="submit" value="Recuperar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <main>
         <div class="login-content">
             <div class="login-data">
@@ -25,7 +45,7 @@
                 <form action="" method="post" id="form-login">
                     <div class="div-input input-container">
                         <label for="email" class="disabled-label" id="label-email">E-mail</label>
-                        <input type="text" name="email" id="input-email" autocomplete="off" required>
+                        <input type="email" name="email" id="input-email" autocomplete="off" required>
                     </div>
 
                     <div class="div-input input-container">
@@ -33,7 +53,8 @@
                         <input type="password" name="password" id="input-senha" autocomplete="off" required>
                     </div>
 
-                    <a href="#">Esqueceu a Senha?</a>
+                    <div id="forgot-password" onclick="openModal('modalForgotPassword')">Esqueceu a Senha?</div>
+
 
                     <button type="submit">Entrar</button>
                 </form>
