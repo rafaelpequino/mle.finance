@@ -757,6 +757,7 @@ footer {
 
     #inside-resources > h2 {
         text-align: center;
+        margin-bottom: -10px;
     }
 
     .resource {
@@ -784,7 +785,7 @@ footer {
 
     div#inside-article {
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
     }
 
 
@@ -897,6 +898,6 @@ footer {
     #inside-article > h2 {
         font-size: 2rem;
         line-height: 2.5rem;
-        margin: 15px 0 2%;
+        margin: 20px 0;
     }
 }

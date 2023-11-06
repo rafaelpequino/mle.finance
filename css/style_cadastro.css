@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --first-color: #39b54a;
+    --second-color: #257830;
+    --yellow-color: #ffbd3d;
+    --dark-color: #414f43;
+    --white-color: #f9f9f9;
+    --black-color: #262626;
+    --font: 'Poppins', sans-serif;
+
+    --expenses-color: #B53939;
+    --investments-color: #395CB5;
+    --transfers-color: #bba004;
+    --personal-transfers-color: rgb(70,70,70);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0303033f;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+} 
+
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    padding: 10px;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    height: max-content;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 70px 0;
+}
+
+.cadastro-content {
+    height: max-content;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cadastro-data {
+    width: 100%;
+}
+
+.cadastro-data > img {
+    width: 80vw;
+    max-width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.cadastro-data > h1 {
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.responsive-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.responsive-inputs > div {
+    max-width: 49%;
+}
+
+.div-input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.div-input > label {
+    position: absolute;
+    padding: 0 10px;
+    background-color: #fff;
+    transition: .1s;
+}
+
+.disabled-label {
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    font-size: 1.005rem;
+    color: rgb(120, 120, 120);
+}
+
+.non-disabled-label {
+    top: 0;
+    left: 15px;
+    transform: translate(0, -50%);
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.filled-input {
+    top: 0;
+    left: 15px;
+    transform: translate(0, -50%);
+    color: #000;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: rgb(120, 120, 120);
+}
+
+.div-input > input {
+    display: block;
+    width: 98%;
+    margin: auto;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: 1px solid rgb(220, 220, 220);
+    font-size: 1.005rem;
+    transition: .1s;
+}
+
+.div-input > input:focus {
+    outline: none;
+    outline: 2px solid var(--second-color);
+}
+
+#form-cadastro > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    opacity: .8;
+    font-size: .8rem;
+}
+
+#form-cadastro > button {
+    display: block;
+    margin: 10px auto;
+    width: 98%;
+    border: none;
+    padding: 10px;
+    background-color: var(--first-color);
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.not-register {
+    margin-top: 20px;
+    text-align: center;
+    font-size: .8rem;
+    opacity: .8;
+}
+
+.not-register > a {
+    text-decoration: none;
+    color: #000;
+    opacity: .8;
+    font-size: .8rem;
+}
+
+
+@media (max-width: 700px) {
+    .responsive-inputs {
+        display: block;
+    }
+
+    .responsive-inputs > div {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .div-input > label,.div-input > input {
+        font-size: .9rem;
+    }
+
+    .disabled-label {
+        font-size: 0.9rem;
+    }
+    
+    .non-disabled-label, .filled-input {
+        font-size: 0.8rem;
+    }
+
+    .not-register > a {
+        display: block;
+    }
+}
