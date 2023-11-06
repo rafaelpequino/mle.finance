@@ -153,11 +153,13 @@ main {
 
 #form-login > a {
     display: block;
+    width: 98%;
+    margin: auto;
     text-align: center;
     text-decoration: none;
     color: #000;
     opacity: .8;
-    font-size: .8rem;
+    font-size: .9rem;
 }
 
 #form-login > button {
