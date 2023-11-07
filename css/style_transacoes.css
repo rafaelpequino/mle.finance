@@ -365,18 +365,6 @@
         margin: 0;
         padding: 12px 4px;
     }
-
-    .name-transaction {
-        font-size: .8rem;
-    }
-
-    .name-category {
-        font-size: .7rem;
-    }
-
-    .account-reference {
-        font-size: .7rem;
-    }
     
     .status-transactions {
         margin-left: 10px;
@@ -387,33 +375,8 @@
         min-width: 40px;
     }
     
-    .btn-new > i {
-        font-size: 1.2rem;
-    }
-
-    .value-total {
-        font-size: 1.2rem;
-    }
-
-    .title-name, .title-balance {
-        font-size: .85rem;
-    }
-    
-    .subtitle-name, .subtitle-balance {
-        font-size: .75rem;
-    }
-
-    .fa-triangle-exclamation {
-        font-size: .8rem;
-    }
-
     label {
         display: block;
-        font-size: .8rem;
-    }
-
-    select {
-        font-size: .7rem;
     }
     
 }

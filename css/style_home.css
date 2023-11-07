@@ -610,7 +610,6 @@ button.btn-new {
 
     .fa-building-columns, .fa-money-bill {
         margin-right: 4px;
-        font-size: 1.4rem;
         width: 40px;
     }
     
@@ -630,7 +629,6 @@ button.btn-new {
     }
     
     #balance {
-        font-size: 1.3rem;
         font-weight: 700;
         margin: 0;
     }
@@ -638,7 +636,6 @@ button.btn-new {
     .btn-new {
         text-align: center;
         padding: 12px 5px 8px;
-        font-size: .6rem;
         cursor: pointer;
         border-radius: 10px;
         transition: .3s;
@@ -647,54 +644,33 @@ button.btn-new {
     
     .btn-new > i {
         display: block;
-        font-size: 1.2rem;
         margin-bottom: 8px;
     }
 
 
     .name-account, .name-card {
-        font-size: .8rem;
         overflow: hidden;
     }
 
     .total-account {
         font-weight: 400;
-        font-size: .9rem;
         margin-left: 20px;
     }
 
     .type-account {
         opacity: .7;
-        font-size: .6rem;
     }
 
-    .fa-credit-card {
+    .fa-credit-card, .fa-building-columns, .fa-money-bill {
         margin-right: 10px;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     /*CARDS*/
-
-    .invoice-card {
-        font-size: .9rem;
-    }
-
-    .title-invoices {
-        font-size: .8rem;
-    }
-
-    .total-invoices {
-        font-size: .9rem;
-    }
-
-    .title-invoice-card {
-        font-size: .7rem;
-    }
     
     .limit-card > div {
         display: flex;
         flex-direction: column;
-        font-size: .8rem;
     }
 
     .limit-card > div > span {
@@ -707,18 +683,6 @@ button.btn-new {
     
     .limit-card > div:last-child {
         align-items: flex-end;
-    }
-
-    .title-revenue, .title-expense {
-        font-size: .8rem;
-    }
-
-    .subtitle-revenue, .subtitle-expense {
-        font-size: .65rem;
-    }
-
-    .total-transaction {
-        font-size: .8rem;
     }
 }
 
