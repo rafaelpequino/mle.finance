@@ -199,6 +199,10 @@ main {
 
 
 @media (max-width: 700px) {
+    main {
+        max-width: 370px;
+    }
+
     .responsive-inputs {
         display: block;
     }
