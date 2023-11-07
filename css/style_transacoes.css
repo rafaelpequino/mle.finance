@@ -263,6 +263,33 @@
     display: block;
 }
 
+.account {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.title-card {
+    display: flex;
+    align-items: center;
+}
+
+.fa-credit-card {
+    display: block;
+    margin-right: 15px;
+    font-size: 2rem;
+}
+
+.invoice {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 
 @media (max-width: 1000px) {
 

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faturas - MLE finance</title>
+    <!--ESTILO PRINCIPAL SISTEMA-->
+    <link rel="stylesheet" href="../css/style_system.css">
+    <!--ESTILO TRANSAÇÕES DO SISTEMA-->
+    <link rel="stylesheet" href="../css/style_transacoes.css">
+    <!--SCRIPT PRINCIPAL SISTEMA-->
+    <script src="../js/script_sytem.js" defer></script>
+    <!--SCRIPT TRANSAÇÕES DO SISTEMA-->
+    <script src="../js/script_transacoes.js" defer></script>
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/a474f4b275.js" crossorigin="anonymous"></script>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+</head>
+<body>
+    <div id="blackout"></div>
+    <header class="header">
+        <a href="../system/index.html" class="first-logo">
+            <img src="../img/logo_MLEfinance.png" alt="Logo MLE finance">
+        </a>
+
+        <div class="user-space">
+            <div id="user-info">
+                <i class="fa-solid fa-circle-user" id="icon-user-photo"></i> 
+                <h5 id="user-name">Rafael Freire</h5>
+                <i class="fa-solid fa-chevron-down" id="dropdown-icon"></i> 
+            </div>
+            <div id="open-close-sidebar" class="btn-sidebar-close">
+                <div class="feature"></div>
+                <div class="feature"></div>
+                <div class="feature"></div>
+            </div>
+            <div id="dropdown-menu" class="hide-dropdown" data-status="close">
+                <a href="./profile/configuracoes.html"><i class="fa-solid fa-gear"></i>Configurações</a>
+                <a href="./profile/convidar.html"><i class="fa-solid fa-plus"></i>Convidar</a>
+                <a href="./profile/ajuda.html"><i class="fa-solid fa-question"></i>Ajuda</a>
+            </div>
+        </div>
+
+    </header>
+
+    <div id="modalDespesa" class="modal">
+        <div class="modal-content modalNewTransaction">
+            <div class="rounded-container">
+                <div class="header-modal">
+                    <h3 id="titleModalDespesa">Nova despesa</h3>
+                    <div class="close" onclick="closeModal('modalDespesa')"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <form action="" method="post">
+                    <div class="input-modal">
+                        <label for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Ex.: Aluguel" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="value">Valor</label>
+                        <input type="text" name="value" class="valueNew" placeholder="0,00" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date" autocomplete="off" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="exit">Saída</label>
+                        <select name="exit" id="exit" required>
+                            <option value="" selected disabled>Selecione a saída</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category" required>
+                            <option value="" selected disabled>Selecione a categoria</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-modal" id="submitNewExpense">
+                        <input type="submit" name="submit" id="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <nav id="sidebar" class="sidebar-close" data-sidebarStatus="close">
+            <div id="links-sidebar">
+                <a href="./index.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <span class="name-sidebar">Home</span>
+                </a>
+                <a href="./transacoes.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-right-left"></i></div>
+                    <span class="name-sidebar">Transações</span>
+                </a>
+                <a href="./metas.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <span class="name-sidebar">Metas</span>
+                </a>
+                <a href="./dividas.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                    <span class="name-sidebar">Dívidas</span>
+                </a>
+                <a href="./investimentos.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
+                    <span class="name-sidebar">Investimentos</span>
+                </a>
+                <a href="./categorias.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-pencil"></i></i></div>
+                    <span class="name-sidebar">Categorias</span>
+                </a>
+
+                <hr class="hr-sidebar">
+
+                <a href="./relatorios.html" class="link-sidebar link-normal">
+                    <div class="icon"><i class="fa-solid fa-square-poll-horizontal"></i></div>
+                    <span class="name-sidebar">Relatórios</span>
+                </a>
+
+                <hr class="hr-sidebar">
+
+                <a href="#" class="link-sidebar link-logout">
+                    <div class="icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+                    <span class="name-sidebar">Sair</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="container">
+            <div class="box">
+                
+                <div class="month-reference">
+                    <i class="fa-solid fa-angles-left"></i>
+                    <h5>Setembro 2023</h5>
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+                
+            </div>
+
+            <div class="account">
+                <div class="title-card">
+                    <i class="fa-solid fa-credit-card" style="color: rgb(216, 137, 10);"></i>
+                    <div class="name-account">Banco Inter</div>
+                </div>
+            </div>
+
+            <div class="columns-transactions">
+                <div class="box" id="transactions-container">
+
+                    <div id="transactions">
+                        <div class="date">
+                            <div class="day">10 set 2023</div>
+                        </div>
+
+                        <div href="" class="transaction">
+                            <div class="info-transaction">
+                                <div class="color" style="background-color: #66b9d2;">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                                <div class="info-data">
+                                    <div class="name-transaction">Pizza</div>
+                                    <div class="name-category">Alimentação</div>
+                                </div>
+                            </div>
+
+                            <div class="second-info-transaction">
+                                <div class="value-transaction">
+                                    <div class="value" style="color: var(--expenses-color);">2000</div>
+                                </div>
+                                <div class="status-transactions">
+                                    <div class="actions icons-options">
+                                        <form action="" method="post">
+                                            <input type="hidden" name="idTransactionToEdit">
+                                            <button type="button"><i class="fa-solid fa-pencil"></i></button>
+                                        </form>
+                                        <form action="" method="post">
+                                            <input type="hidden" name="idTransaction">
+                                            <button type="button"><i class="fa-regular fa-trash-can"></i></button>
+                                        </form>
+                                    </div>
+                                    <div class="control icons-options">
+                                        <form action="" method="post">
+                                            <input type="hidden" name="idTransaction">
+                                            <button type="button"><i class="fa-regular fa-square"></i></button>
+                                        </form>
+                                        <i class="fa-solid fa-triangle-exclamation"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                </div>
+
+                <div class="month-balance">
+                    <div class="box">
+                        <div class="see-all">
+                            <div id="expenses" style="margin-top: 0px;">
+                                <div class="inside-see-all">
+                                    <div class="color color-expense" onclick="openModal('modalDespesa')"><i class="fa-solid fa-minus"></i></div>
+                                    <div class="name-see-all name-expense">
+                                        <div class="title-name">Fatura</div>
+                                    </div>
+                                </div>
+                                <div class="info-see-all info-expense">
+                                    <div class="balance title-balance">3500</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="alert-new-transaction"><i class="fa-solid fa-circle-info"></i> clique no ícone para adicionar uma nova despesa</div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+</html>
